@@ -1,23 +1,108 @@
 <!DOCTYPE html>
-<html lang="VI"></html>
+<html lang="VI">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wtdth=device-width, initial-scale=1.0">
-    <title>Find-Flight</title>
-    <link rel="stylesheet" herf="/assets/css/find-flight.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find-flight</title>
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/find-flight.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
+
 <body>
-    <header class="hero-section">
-        <nav class="navbar-left">
-            <a href=""><img src="">Find Flight</a>
-            <a href=""><img src="">Stays</a>
-        </nav>
-        <div class="nav-logo">
-            <img src="">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Left Menu -->
+            <nav class="navbar-left-find-flight">
+                <ul id="navbar__list">
+                    <li class="navbar__item navbar__item--active">
+                        <img src="assets/image/airplane_light.png" alt="Flight" class="header__icon" />
+                        <a href="find-flight.html" class="navbar__link">Find Flight</a>
+                    </li>
+                    <li class="navbar__item">
+                        <img src="assets/image/bed_light.png" alt="Stays" class="header__icon" />
+                        <a href="find-stays.html" class="navbar__link">Find Stays</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Logo Center -->
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/image/logo-small.png" alt="Golobe" />
+                </a>
+            </div>
+
+            <!-- Right Menu -->
+            <div class="navbar-right-find-flight">
+                <div class="navbar_list">
+                    <a href="" class="btn-login">Login</a>
+                    <a href="" class="btn-sign">Sign Up</a>
+                </div>
+            </div>
         </div>
-        <nav class="navbar-right">
-            <a href="" class="btn-login">Login</a>
-            <a href="" class="btn-signup">Sign Up</a>
-        </nav>
     </header>
+
+    <!-- BANNER MAIN -->
+    <section class="banner">
+        <div class="banner-continer">
+            <h1 class="banner-heading">Make your travel whishlist, we’ll do the rest</h1>
+            <p class="banner-desc">Special offers to suit your plan</p>
+        </div>
+    </section>
+
+    <!-- KHỐI FORM TÌM KIẾM ĐÈ LÊN BANNER (Đã đưa ra ngoài section banner) -->
+    <div class="booking-find-flight">
+        <div class="booking-card-find-flight">
+            <h3 class="booking-title-find-flight">Where are you flying?</h3>
+
+            <div class="booking-form-find-flight">
+                <div class="input-group-find-flight">
+                    <label>From - To</label>
+                    <select name="from-to-find-flight">
+                        <option value="">Lahore - Karachi</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                    </select>
+                </div>
+
+                <div class="input-group-find-flight">
+                    <label>Trip</label>
+                    <select name="trip-find-flight">
+                        <option value="">Return</option>
+                        <option value="">One Way</option>
+                    </select>
+                </div>
+
+                <div class="input-group-find-flight">
+                    <label>Depart - Return</label>
+                    <input type="text" value="07 Nov 22 - 13 Nov 22">
+                </div>
+
+                <div class="input-group-find-flight">
+                    <label>Passenger - Class</label>
+                    <input type="text" value="1 Passenger, Economy">
+                </div>
+            </div>
+
+            <div class="booking-action-find-flight">
+                <button class="btn-promo-find-flight"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
+                <button class="btn-seach-find-flight"><i class="fa-solid fa-paper-plane"></i> Show Flights</button>
+            </div>
+        </div>
+    </div>
+<main class="main-container">
+   <section class="section-places">
+            <div>
+                <h2>Let's go places together</h2>
+                <p class="section-subtitle">Discover the latest offers and news and start planning your next trip with us.</p>
+            </div>
+            <button class="btn-outline"> See All Places</button>
+        </section>
+</main>
+</body>
 </html>
