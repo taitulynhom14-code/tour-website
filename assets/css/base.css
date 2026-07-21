@@ -1,9 +1,45 @@
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+:root {
+  --blackish-green-color: #112211;
+  --mint-green-color: #8dd3bb;
+  --slamon-color: #ff8682;
+  --text-color: #000000;
+  --white-color: #ffffff;
 }
 
-h1,
-h2 {
-  font-weight: 500;
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem; /* 16px */
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+.grid {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.grid--full-width {
+  width: 100%;
+}
+
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Animatrion */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
