@@ -200,6 +200,7 @@
   font-size: 45px;
   font-weight: 700;
   margin: 0;
+  user-select: none;
 }
 
 .banner__desc {
@@ -208,6 +209,7 @@
   font-weight: 500;
   font-size: 20px;
   margin: 0;
+  user-select: none;
 }
 
 /* HOTEL SEARCH */
@@ -237,6 +239,7 @@
   font-size: 20px;
   line-height: 1;
   font-weight: 600;
+  user-select: none;
 }
 
 .search-form__group {
@@ -311,6 +314,6 @@
   align-items: center;
   border: none;
   border-radius: 4px;
-
+  cursor: pointer;
   gap: 10px;
 }
