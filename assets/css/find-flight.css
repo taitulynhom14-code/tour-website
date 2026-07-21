@@ -1,4 +1,9 @@
-
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
 /* --- 1. HERO SECTION & NAVBAR --- */
 .hero-section {
   position: relative;
