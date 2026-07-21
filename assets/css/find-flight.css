@@ -12,6 +12,7 @@ body {
 }
 
 .hero-section {
+  display:flex;
   position: relative;
   height: 650px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)), url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.png");
