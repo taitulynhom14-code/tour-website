@@ -1,175 +1,235 @@
+/* ==========================================
+   RESET & CẤU HÌNH CƠ BẢN
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* ==========================================
+   1. THANH HEADER NAV
+========================================== */
 .header {
-  display: flex;
-  padding: 20px 104px;
-  height: 88px;
-  align-items: center;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 36px;
-  width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-/* NAVBAR & USER ACTION BLOCK */
-.navbar {
-  display: flex;
-  flex: 1;
-}
-
-.user-action {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-}
-
-.user-action__profile {
-  display: flex;
-  align-items: center;
-  height: auto;
-  gap: 8px;
-}
-
-.navbar__list,
-.user-action__list {
-  margin: 0;
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  gap: 32px;
+/* Menu bên trái */
+#navbar__list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    padding: 0;
 }
 
 .navbar__item {
-  position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    padding-bottom: 12px;
 }
 
+/* Dải gạch chân màu xanh ngọc của thẻ Active */
 .navbar__item--active::after {
-  position: absolute;
-  content: "";
-  bottom: -132%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--mint-green-color);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #8dd3bb;
+    border-radius: 2px;
 }
 
-.navbar__item,
-.user-action__item {
-  font-size: 1.4rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+.header__icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
 
-.navbar__link,
-.user-action__link {
-  height: 16px;
-  color: var(--blackish-green-color);
-  text-decoration: none;
+.navbar__link {
+    text-decoration: none;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.user-action__item {
-  position: relative;
+/* Logo ở giữa */
+.logo-link img {
+    height: 36px;
+    display: block;
 }
 
-.header__avatar-wrap {
-  position: relative;
-  display: inline-flex;
+/* Menu bên phải */
+.navbar_list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
-.user-action__arrow {
-  width: 12px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.btn-login {
+    text-decoration: none;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.user-action__ellipse {
-  width: 10px;
-  position: absolute;
-  bottom: 1px;
-  right: 1.5px;
+.btn-sign {
+    text-decoration: none;
+    background-color: #121e17;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-/* USER MENU BLOCK */
-.user-menu {
-  position: absolute;
-  padding: 32px;
-  right: 5%;
-  top: calc(100% + 20px);
-  width: 330px;
-  border-radius: 12px;
-  gap: 24px;
-  background-color: var(--white-color);
-  display: none;
+.btn-sign:hover {
+    background-color: #000000;
+}
+.banner {
+    position: relative;
+    /* Gộp tất cả vào background shortcut để tránh bị đè thuộc tính */
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                url('../image/find-flight.jpg') no-repeat center 20% / cover;
+    height: 520px;
+    margin: 0 0px;
+    padding: 80px 60px 0 0px;
 }
 
-.user-menu__list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  gap: 16px;
+.banner-continer {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
 }
 
-.user-menu__link {
-  display: flex;
-  text-decoration: none;
-  line-height: 1;
-  font-weight: 500;
-  color: var(--blackish-green-color);
-  align-items: center;
-  gap: 16px;
+.banner-heading {
+    font-size: 44px;
+    font-weight: 800;
+    max-width: 440px;
+    line-height: 1.15;
+    margin-bottom: 12px;
 }
 
-.user__icon-arrow {
-  margin-left: auto;
+.banner-desc {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.95;
 }
 
-.user-menu__header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+
+.booking-find-flight {
+    position: relative;
+    max-width: 1200px;
+    margin: -120px auto 60px auto;
+    padding: 0 20px;
+    z-index: 20;
 }
 
-.user-menu__info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 4px;
-  /* margin: 12px 0px; */
+.booking-card-find-flight {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-.user-menu__info-name {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--blackish-green-color);
+.booking-title-find-flight {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 24px;
+}
+.booking-form-find-flight{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.input-group-find-flight {
+    position: relative;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #ffffff;
 }
 
-.user-menu__info-status {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--blackish-green-color);
-  opacity: 0.75;
+.input-group-find-flight label {
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background-color: #ffffff;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #111111;
+    font-weight: 500;
 }
 
-.user-menu__separator {
-  height: 0.5px;
-  width: 266px;
-  background-color: var(--blackish-green-color);
-  opacity: 0.25;
-  margin: 22px 0;
+.input-group-find-flight select,
+.input-group-find-flight input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+
+.booking-action-find-flight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn-promo-find-flight {
+    background: none;
+    border: none;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-seach-find-flight {
+    background-color: #8dd3bb; 
+    color: #111111;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+}
+
+.btn-seach-find-flight:hover {
+    background-color: #71beaa;
 }

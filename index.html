@@ -7,14 +7,15 @@
     <title>Home - Tour Du lịch</title>
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
+<style>
 
-<body>
-   <header class="hero-section">
+</style>
+<header class="hero-section">
         <nav class="navbar">
             <nav class="navbar-left">
                 <a href="find-flight.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxIMMsh4kb3fGk7-AwOayb3R_K7KEE9z2ujRz2xFZPUXNtxWcdbEqMWFyOQYVf_KC5YZ9liB9xHBEqX5Y7ctKkM9MM3SeJbl8mw58LalAnwrnIID2rokywXi7csT2gsQkpGTW7Vka-quFHOaa0MawgcYPnCpnsM9AEFXQZOyF9tj0zqozojfJAdt0IgCw/s23/Vector-plane.png">Find
                     Flights</a>
-                <a href="find-stays.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihOBnb7klNFwSzAaIDa_6t9rOoHEe3Ea-c-bo0PWbDwH1Lz_CjL5DVVC0-bxXB60BAVn9DB7-maeXxydG54J0B3dxyyUUWpKAH45GjcSvZ6bIk0hC32pSD69pDqB_2UfHtOFRaw8Adm7Eo1WVczAsTIzMpNtRO9m97Emg-xBOswQ_BALaYnCHsXSF06Rc/s21/Vector-bed.png"> Find
+                <a href="#"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihOBnb7klNFwSzAaIDa_6t9rOoHEe3Ea-c-bo0PWbDwH1Lz_CjL5DVVC0-bxXB60BAVn9DB7-maeXxydG54J0B3dxyyUUWpKAH45GjcSvZ6bIk0hC32pSD69pDqB_2UfHtOFRaw8Adm7Eo1WVczAsTIzMpNtRO9m97Emg-xBOswQ_BALaYnCHsXSF06Rc/s21/Vector-bed.png"> Find
                     Stayss</a>
             </nav>
             <div class="nav-logo">
@@ -62,10 +63,10 @@
                         <label>Passenger - Class</label>
                         <input type="text" value="1 Passenger, Economy">
                     </div>
-                    <div class="booking-action">
-                        <button class="btn-promo"><i class="fa-solid fa-plus"></i>Add Promo Code </button>
-                        <button class="btn-seach"><i class="fa-solid fa-plane"></i> Show Flights</button>
-                    </div>
+                     <div class="booking-action">
+                <button class="btn-promo"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
+                <button class="btn-seach"><i class="fa-solid fa-paper-plane"></i> Show Flights</button>
+            </div>
                 </div>
             </div>
         </div>
@@ -209,7 +210,7 @@
         </section>
         <div class="review-list">
             <div class="review-menu" id="menuReview">
-                <button class="arrow left" onclick="scrollMenu(-1)">❮</button>
+                <button class="arrow left" onclick="scrollMenu(-1)"></button>
                 <div class="review-item">
                     <div class="review-card">
                         <h3 class="review-title">“A real sense of community, nurtured”</h3>
@@ -239,9 +240,9 @@
                     <div class="review-card">
                         <h3 class="review-title">“The facilities are superb. Clean, slick, bright.”</h3>
                         <p class="review-text">
-                            “A real sense of community, nurtured”Really
-                            appreciate the help and support from the staff during these tough times.
-                            Shoutout to Katie for helping me always, even when I was out of the country.
+                            “A real sense of community, nurtured”Really 
+                            appreciate the help and support from the staff during these tough times. 
+                            Shoutout to Katie for helping me always, even when I was out of the country. 
                             And always available when needed.View moreOlgaWeave Studios – Kai TakGoogle
                         </p>
                         <button class="view-more" onclick="toggleReview(this)">View more</button>
@@ -267,7 +268,7 @@
                         <h3 class="review-title">“A real sense of community, nurtured”</h3>
                         <p class="review-text">
                            Really appreciate the help and support from the staff during these tough times.
-                           Shoutout to Katie for helping me always, even when I was out of the country.
+                           Shoutout to Katie for helping me always, even when I was out of the country. 
                            And always available when needed.
                         </p>
                         <button class="view-more" onclick="toggleReview(this)">View more</button>
@@ -287,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="arrow right" onclick="scrollMenu(1)">❯</button>
+                <button class="arrow right" onclick="scrollMenu(1)"></button>
             </div>
         </div>
         </div>
@@ -372,6 +373,21 @@
             </div>
         </footer>
     </div>
-</body>
-<script src="animaition.js"></script>
+<script>
+function toggleReview(buttonElement) {
+    // 1. Tìm thẻ cha .review-card chứa nút bấm này
+    const card = buttonElement.closest('.review-card');
+    
+    // 2. Tìm thẻ .review-text nằm bên trong card đó
+    const reviewText = card.querySelector('.review-text');
+
+    // 3. Bật/tắt class collapsed và đổi chữ
+    reviewText.classList.toggle('collapsed');
+
+    if (reviewText.classList.contains('collapsed')) {
+        buttonElement.innerText = 'View more';
+    } else {
+        buttonElement.innerText = 'Show less';
+    }
+}</script>
 </html>
