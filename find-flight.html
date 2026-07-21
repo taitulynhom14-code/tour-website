@@ -9,23 +9,104 @@
 </head>
 
 <body>
-   <header class="hero-section">
+    <header class="header">
+      <div class="header__container">
+        <!-- Left Menu -->
         <nav class="navbar">
-            <nav class="navbar-left">
-                <a href="find-flight.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxIMMsh4kb3fGk7-AwOayb3R_K7KEE9z2ujRz2xFZPUXNtxWcdbEqMWFyOQYVf_KC5YZ9liB9xHBEqX5Y7ctKkM9MM3SeJbl8mw58LalAnwrnIID2rokywXi7csT2gsQkpGTW7Vka-quFHOaa0MawgcYPnCpnsM9AEFXQZOyF9tj0zqozojfJAdt0IgCw/s23/Vector-plane.png">Find
-                    Flights</a>
-                <a href="find-stays.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihOBnb7klNFwSzAaIDa_6t9rOoHEe3Ea-c-bo0PWbDwH1Lz_CjL5DVVC0-bxXB60BAVn9DB7-maeXxydG54J0B3dxyyUUWpKAH45GjcSvZ6bIk0hC32pSD69pDqB_2UfHtOFRaw8Adm7Eo1WVczAsTIzMpNtRO9m97Emg-xBOswQ_BALaYnCHsXSF06Rc/s21/Vector-bed.png"> Find
-                    Stayss</a>
-            </nav>
-            <div class="nav-logo">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFn2WoJNWLyXoVcMSTCwa895sID0lZUrReX8XDJd4l4OwFX7ko6c-xx4v9OoPkp8MGzsWg133FaOotfB7LrwvoJggQ6_jHcp5h3GgHKDlfbYrEZ0YGyjDiGhUeC2yEQqYdIW0K23Kgn2Lz97KRHIUc19v3yTFKGgjhPkry7rnmduBQgZLGGuGJDLn_Tho/s111/logo.home.png">
-            </div>
-            <nav class="navbar-right">
-                <a href="/login.html" class="btn-login"> Login</a>
-                <a href="#" class="btn-signup">Sign Up</a>
-            </nav>
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <img src="assets/image/airplane_light.png" alt="Flight" class="header__icon" />
+              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+            </li>
+            <li class="navbar__item navbar__item--active">
+              <img src="assets/image/bed_light.png" alt="Stays" class="header__icon" />
+              <a href="find-stays.html" class="navbar__link">Find Stays</a>
+            </li>
+          </ul>
         </nav>
-    </header>
 
+        <!-- Logo Center -->
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <img src="assets/image/logo-small.png" alt="Golobe" />
+          </a>
+        </div>
+
+        <!-- Right Menu -->
+        <div class="user-action">
+          <ul class="user-action__list">
+            <li class="user-action__item">
+              <img src="assets/image/heart_light.png" alt="Heart" class="header__icon" />
+              <a href="#" class="user-action__link">Favourites</a>
+            </li>
+            <li class="user-action__item user-action__separator">|</li>
+            <li class="user-action__item">
+              <a href="#" class="user-action__link user-action__profile">
+                <div class="header__avatar-wrap">
+                  <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
+                  <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
+                </div>
+                John D.
+              </a>
+              <!-- User Menu -->
+              <div class="user-menu">
+                <div class="user-menu__header">
+                  <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
+                  <div class="user-menu__info">
+                    <span class="user-menu__info-name">John Doe.</span>
+                    <span class="user-menu__info-status">Online</span>
+                  </div>
+                </div>
+
+                <div class="user-menu__separator"></div>
+
+                <ul class="user-menu__list account-menu">
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/user_light.png" alt="#" class="user__icon" />
+                      My account
+                      <img src="assets/image/chevron-forward_light.svg" alt="#" class="user__icon-arrow" />
+                    </a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/card_light.png" alt="#" class="user__icon" />
+                      Payments
+                      <img src="assets/image/chevron-forward_light.svg" alt="#" class="user__icon-arrow" />
+                    </a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
+                      Setting
+                      <img src="assets/image/chevron-forward_light.svg" alt="#" class="user__icon-arrow" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="user-menu__separator"></div>
+
+                <ul class="user-menu__list system-menu">
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/support_light.png" alt="#" class="user__icon" />
+                      Support
+                      <img src="assets/image/chevron-forward_light.svg" alt="#" class="user__icon-arrow" />
+                    </a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 </body>
 </html>

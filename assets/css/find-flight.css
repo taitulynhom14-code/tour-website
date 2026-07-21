@@ -1,112 +1,175 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+.header {
+  display: flex;
+  padding: 20px 104px;
+  height: 88px;
+  align-items: center;
 }
 
-body {
-  background-color: #f9fafb;
-  color: #1f2937;
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-/* --- 1. HERO SECTION & NAVBAR --- */
-.hero-section {
-  position: relative;
-  height: 650px;
-  background-image:linear-gradient(90deg, rgba(0, 35, 77, 0.63), rgba(0, 35, 77, 0)), url(../image/find-flight.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-}
-
-.navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 36px;
+  width: 100%;
 }
 
-.navbar-left a {
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+/* NAVBAR & USER ACTION BLOCK */
+.navbar {
+  display: flex;
+  flex: 1;
+}
+
+.user-action {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.user-action__profile {
+  display: flex;
+  align-items: center;
+  height: auto;
+  gap: 8px;
+}
+
+.navbar__list,
+.user-action__list {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  gap: 32px;
+}
+
+.navbar__item {
+  position: relative;
+}
+
+.navbar__item--active::after {
+  position: absolute;
+  content: "";
+  bottom: -132%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--mint-green-color);
+}
+
+.navbar__item,
+.user-action__item {
+  font-size: 1.4rem;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
-  margin-right: 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: color 0.3s;
+  gap: 4px;
+}
+
+.navbar__link,
+.user-action__link {
+  height: 16px;
+  color: var(--blackish-green-color);
   text-decoration: none;
-  color: white;
 }
 
-.navbar-left img {
-  margin-right: 0.5rem;
+.user-action__item {
+  position: relative;
 }
 
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+.header__avatar-wrap {
+  position: relative;
+  display: inline-flex;
 }
 
-.navbar-right a {
-  margin-left: 1rem;
-  font-size: 0.875rem;
+.user-action__arrow {
+  width: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.user-action__ellipse {
+  width: 10px;
+  position: absolute;
+  bottom: 1px;
+  right: 1.5px;
+}
+
+/* USER MENU BLOCK */
+.user-menu {
+  position: absolute;
+  padding: 32px;
+  right: 5%;
+  top: calc(100% + 20px);
+  width: 330px;
+  border-radius: 12px;
+  gap: 24px;
+  background-color: var(--white-color);
+  display: none;
+}
+
+.user-menu__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 16px;
+}
+
+.user-menu__link {
+  display: flex;
+  text-decoration: none;
+  line-height: 1;
   font-weight: 500;
+  color: var(--blackish-green-color);
+  align-items: center;
+  gap: 16px;
 }
 
-.btn-signup {
-  background-color: #ffffff;
-  color: #111827;
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.5rem;
+.user__icon-arrow {
+  margin-left: auto;
+}
+
+.user-menu__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-menu__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  /* margin: 12px 0px; */
+}
+
+.user-menu__info-name {
+  font-size: 1.6rem;
   font-weight: 600;
+  color: var(--blackish-green-color);
 }
 
-.navbar-left a:hover,
-.navbar-right a:hover {
-  color: #2dd4bf;
+.user-menu__info-status {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--blackish-green-color);
+  opacity: 0.75;
 }
 
-.btn-signup:hover {
-  background-color: #0d9488;
-  color: #ffffff;
+.user-menu__separator {
+  height: 0.5px;
+  width: 266px;
+  background-color: var(--blackish-green-color);
+  opacity: 0.25;
+  margin: 22px 0;
 }
-
-.hero-content {
-  text-align: center;
-  margin-top: 6rem;
-}
-
-.hero-content h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.hero-content h1 {
-  font-size: 3.75rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.hero-content p {
-  font-size: 1.125rem;
-  font-weight: 500;
-  opacity: 0.9;
-}
-
