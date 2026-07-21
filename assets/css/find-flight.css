@@ -25,7 +25,7 @@ button {
 .hero-section {
   position: relative;
   height: 650px;
-  background-image:url("D:\DAIHOCMO\Lập trình Web\sản phẩm nộp giữa kỳ\tour-website\assets\image\find-flight.jpg");
+  background-image:linear-gradient(90deg, rgba(0, 35, 77, 0.63), rgba(0, 35, 77, 0)), url(../image/Banner.png);;
   background-size: cover;
   background-position: center;
   color: #ffffff;
