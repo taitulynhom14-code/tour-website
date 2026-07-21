@@ -1,0 +1,62 @@
+.hero-section {
+  position: relative;
+  height: 650px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)), url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left a {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-left img {
+  margin-right: 0.5rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.navbar-right a {
+  margin-left: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn-signup {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.navbar-left a:hover,
+.navbar-right a:hover {
+  color: #2dd4bf;
+}
+
+.btn-signup:hover {
+  background-color: #0d9488;
+  color: #ffffff;
+}
