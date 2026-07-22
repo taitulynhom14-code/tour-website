@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tour Website</title>
+    <title>Golobe - Tour Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="find-flight.html" />
     <link rel="stylesheet" href="index.html" />
@@ -22,7 +22,7 @@
               <a href="find-flight.html" class="navbar__link">Find Flight</a>
             </li>
             <li class="navbar__item navbar__item--active">
-              <img src="assets/image/bed_light.png" alt="Stays" class="header__icon" />
+              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
               <a href="find-stays.html" class="navbar__link">Find Stays</a>
             </li>
           </ul>
@@ -112,11 +112,63 @@
       </div>
     </header>
 
-    <section class="banner">
-      <div class="banner__container">
-        <h1 class="banner__heading">Make your travel whishlist, we'll do the rest</h1>
-        <p class="banner__desc">Special offers to suit your plan</p>
-      </div>
+    <section class="hotel-search">
+      <section class="banner">
+        <div class="banner__container">
+          <h1 class="banner__heading">Make your travel whishlist, we'll do the rest</h1>
+          <p class="banner__desc">Special offers to suit your plan</p>
+        </div>
+      </section>
+
+      <form class="search-form" action="hotel-listing.html" method="get">
+        <h2 class="search-form__title">Where are you flying?</h2>
+        <div class="search-form__fields">
+          <!-- Destination -->
+          <div class="search-form__group">
+            <label class="search-form__label" for="destination">Enter Destination</label>
+            <div class="search-form__input-wrapper">
+              <img src="assets/image/bed_light.svg" alt="bed" />
+              <input class="search-form__input" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
+            </div>
+          </div>
+          <!-- Check In -->
+          <div class="search-form__group">
+            <label class="search-form__label" for="checkin">Check In</label>
+            <div class="search-form__input-wrapper">
+              <input class="search-form__input" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
+              <img src="assets/image/calendar_light.svg" alt="calendar" />
+            </div>
+          </div>
+          <!-- Check Out -->
+          <div class="search-form__group">
+            <label class="search-form__label" for="checkout">Check Out</label>
+            <div class="search-form__input-wrapper">
+              <input class="search-form__input" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
+              <img src="assets/image/calendar_light.svg" alt="calendar" />
+            </div>
+          </div>
+          <!-- Rooms & Guests -->
+          <div class="search-form__group">
+            <label class="search-form__label" for="guests">Rooms & Guests</label>
+            <div class="search-form__input-wrapper">
+              <img src="assets/image/user_light.svg" alt="user" />
+              <input class="search-form__input" id="guests" type="text" name="guests" value="1 room, 2 guests" />
+              <img src="assets/image/chevron_down.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="search-form__actions">
+          <button class="search-form__promo">
+            <img src="assets/image/plus.svg" alt="plus" />
+            Add Promo Code
+          </button>
+          <button class="search-form__submit" type="submit">
+            <img src="assets/image/building(16x16)_light.svg" alt="building" />
+            Show Places
+          </button>
+        </div>
+      </form>
     </section>
   </body>
 </html>
