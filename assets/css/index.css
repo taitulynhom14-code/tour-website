@@ -1,9 +1,19 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+}
   
 a {
     text-decoration: none;
     color: inherit;
 }
-
 button {
     cursor: pointer;
     border: none;
@@ -102,104 +112,6 @@ button {
 
 /* --- 2. BOOKING BAR --- */
 /* --- Global Styles & Reset --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    background-color: #f3f4f6;
-}
-
-/* --- Hero Section --- */
-.hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 540px;
-    /* Ảnh nền núi và hồ nước */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.pn0') center/cover no-repeat;
-    border-radius: 0 0 24px 24px;
-    padding: 24px 80px;
-    color: #ffffff;
-}
-
-/* --- Navigation Bar --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-left, .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.navbar-left a, .navbar-right a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.navbar-left img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1); /* Chuyển icon sang màu trắng */
-}
-
-/* Nút Sign Up */
-.btn-signup {
-    background-color: #ffffff;
-    color: #111827 !important;
-    padding: 10px 24px;
-    border-radius: 8px;
-    transition: background-color 0.2s;
-}
-
-.btn-signup:hover {
-    background-color: #e5e7eb;
-}
-
-.nav-logo img {
-    height: 36px;
-    object-fit: contain;
-}
-
-/* --- Hero Content Text --- */
-.hero-content {
-    text-align: center;
-    margin-top: 80px;
-}
-
-.hero-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 4px;
-}
-
-.hero-content h1 {
-    font-size: 80px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 1;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-}
-
-.hero-content p {
-    font-size: 18px;
-    font-weight: 500;
-    opacity: 0.9;
-}
 
 /* --- Booking Card Container --- */
 .booking {
@@ -333,21 +245,11 @@ body {
     margin: 10rem auto 0 auto;
     padding: 0 1.5rem;
 }
-
-.main-container > section {
-    margin-bottom: 6rem;
-}
-
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 2rem;
-}
-
-.section-header h2 {
-    font-size: 1.875rem;
-    font-weight: 700;
 }
 
 .section-subtitle {
@@ -357,15 +259,16 @@ body {
 
 .btn-outline {
     color:black;
-    background-color:#8DD3BB ;
-    padding: 0.5rem 1rem;
+    border: #0d9488;
+    background-color: white ;
+    padding: 14px 18px;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 2rem;
 }
 
-.btn-outline:hover { background-color:#cccecd; }
+.btn-outline:hover { background-color:#8DD3BB; }
 
 /* --- 3. PLAN YOUR PERFECT TRIP --- */
 .destinations-grid {
@@ -579,8 +482,8 @@ select:focus {
 }
 .section-places{
     display:flex;
-    padding: 0 20px;
     justify-content: space-between;
+    font-size: 14px;
 }
 /*Danh sách địa điểm du lịch*/
 .git{
