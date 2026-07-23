@@ -105,6 +105,14 @@
   right: 1.5px;
 }
 
+.user-action__item:focus-within ~ .user-menu {
+  display: block;
+}
+
+.user-action__item:hover .user-menu {
+  display: block;
+}
+
 /* USER MENU BLOCK */
 .user-menu {
   position: absolute;
@@ -114,7 +122,9 @@
   width: 330px;
   border-radius: 12px;
   gap: 24px;
+  z-index: 999;
   background-color: var(--white-color);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
   display: none;
 }
 
@@ -180,6 +190,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 17.8%;
 
   padding: 80px 174px 120px 126px;
   aspect-ratio: 2.68 / 1;
@@ -229,9 +240,9 @@
   flex-direction: column;
   background-color: var(--white-color);
   padding: 32px 24px;
-  margin: 0 auto;
   gap: 32px;
   border-radius: 16px;
+  box-shadow: 0px 4px 16px 0px rgba(17, 34, 17, 0.05);
 }
 
 .search-form__title {
@@ -316,4 +327,186 @@
   border-radius: 4px;
   cursor: pointer;
   gap: 10px;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1232px;
+  width: 100%;
+  margin: 0px auto;
+  gap: 32px;
+}
+
+/* Recent searches */
+.recent-searches {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.recent-searches__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-searches__item {
+  display: flex;
+  gap: 16px;
+}
+
+.recent-searches__item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.recent-searches__heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--blackish-green-color);
+  margin: 0;
+}
+.recent-searches__desc {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--blackish-green-color);
+  margin: 0;
+}
+
+.recent-searches__img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+/* Travel Cards */
+.travel-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.section-header__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.section-desc {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section-header__btn {
+  height: 40px;
+  width: 80px;
+  border-radius: 4px;
+  border: 1px solid var(--mint-green-color);
+  padding: 8px 16px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.travel-cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.travel-cards__item {
+  min-width: 296px;
+  height: 420px;
+  border-radius: 12px;
+  padding: 24px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.travel-cards__item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.travel-cards__item-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.travel-cards__heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--white-color);
+  margin: 0;
+  user-select: none;
+}
+
+.travel-cards__desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--white-color);
+  margin: 0;
+  user-select: none;
+}
+
+.travel-cards__cost {
+  align-items: flex-end;
+  user-select: none;
+}
+
+.travel-cards__btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.23;
+  background-color: var(--mint-green-color);
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#Melbourne {
+  background-image: url(../image/Melbourne.png);
+}
+
+#Paris {
+  background-image: url(../image/Paris.png);
+}
+
+#London {
+  background-image: url(../image/London.png);
+}
+
+#Columbia {
+  background-image: url(../image/Columbia.png);
 }
