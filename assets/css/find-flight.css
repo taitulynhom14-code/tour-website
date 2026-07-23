@@ -1,318 +1,324 @@
-
 .header {
-    background-color: #ffffff;
-    padding: 20px 40px;
-    width: 100%;
-    position: relative;
-    z-index: 10;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .header__container {
-    max-width: 1240px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #navbar__list {
-    display: flex;
-    list-style: none;
-    gap: 32px;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  padding: 0;
 }
 
 .navbar__item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  padding-bottom: 12px;
 }
 .navbar__item--active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #8dd3bb;
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #8dd3bb;
+  border-radius: 2px;
 }
 
 .header__icon {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .navbar__link {
-    text-decoration: none;
-    color: #111111;
-    font-size: 14px;
-    font-weight: 600;
+  text-decoration: none;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /* Logo ở giữa */
 .logo-link img {
-    height: 36px;
-    display: block;
+  height: 36px;
+  display: block;
 }
 
 /* Menu bên phải */
 .navbar_list {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .btn-login {
-    text-decoration: none;
-    color: #111111;
-    font-size: 14px;
-    font-weight: 600;
+  text-decoration: none;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .btn-sign {
-    text-decoration: none;
-    background-color: #121e17;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
+  text-decoration: none;
+  background-color: #121e17;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .btn-sign:hover {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .banner {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                url('../image/find-flight.jpg') no-repeat center 20% / cover;
-    height: 520px;
-    margin: 0 0px;
-    padding: 80px 60px 0 0px;
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("../image/find-flight.jpg") no-repeat center 20% / cover;
+  height: 520px;
+  margin: 0 0px;
+  padding: 80px 60px 0 0px;
 }
 
 .banner-continer {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #ffffff;
 }
 
 .banner-heading {
-    font-size: 44px;
-    font-weight: 800;
-    max-width: 440px;
-    line-height: 1.15;
-    margin-bottom: 12px;
+  font-size: 44px;
+  font-weight: 800;
+  max-width: 440px;
+  line-height: 1.15;
+  margin-bottom: 12px;
 }
 .banner-desc {
-    font-size: 18px;
-    font-weight: 500;
-    opacity: 0.95;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.95;
 }
 
-
 .booking-find-flight {
-    position: relative;
-    max-width: 1200px;
-    margin: -120px auto 60px auto;
-    padding: 0 20px;
-    z-index: 20;
+  position: relative;
+  max-width: 1200px;
+  margin: -120px auto 60px auto;
+  padding: 0 20px;
+  z-index: 20;
 }
 
 .booking-card-find-flight {
-    background-color: #ffffff;
-    border-radius: 16px;
-    padding: 32px 24px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .booking-title-find-flight {
-    font-size: 20px;
-    font-weight: 700;
-    color: #111111;
-    margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 24px;
 }
-.booking-form-find-flight{
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
-    gap: 16px;
-    margin-bottom: 24px;
+.booking-form-find-flight {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 .input-group-find-flight {
-    position: relative;
-    border: 1px solid #79747e;
-    border-radius: 4px;
-    padding: 8px 12px;
-    background-color: #ffffff;
+  position: relative;
+  border: 1px solid #79747e;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #ffffff;
 }
 
 .input-group-find-flight label {
-    position: absolute;
-    top: -10px;
-    left: 12px;
-    background-color: #ffffff;
-    padding: 0 4px;
-    font-size: 12px;
-    color: #111111;
-    font-weight: 500;
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background-color: #ffffff;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #111111;
+  font-weight: 500;
 }
 
 .input-group-find-flight select,
 .input-group-find-flight input {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 14px;
-    font-weight: 600;
-    color: #111111;
-    cursor: pointer;
-    padding-top: 4px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  padding-top: 4px;
 }
 
-
 .booking-action-find-flight {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
 }
 
 .btn-promo-find-flight {
-    background: none;
-    border: none;
-    color: #111111;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  background: none;
+  border: none;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-seach-find-flight {
-    background-color: #8dd3bb; 
-    color: #111111;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  
+  background-color: #8dd3bb;
+  color: #111111;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-seach-find-flight:hover {
-    background-color: #71beaa;
+  background-color: #71beaa;
 }
 .destinations-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
-    .destinations-grid { grid-template-columns: repeat(2, 1fr); }
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 480px) {
-    .destinations-grid { grid-template-columns: 1fr; }
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .btn-outline {
-    color:black;
-    background-color:#8DD3BB ;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
+  color: black;
+  background-color: #8dd3bb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
-.btn-outline:hover { background-color:#cccecd; }
+.btn-outline:hover {
+  background-color: #cccecd;
+}
 /* Container chính */
 .banner-2 {
-    background: #8DD3BB url("../image/Frame\ 2608705.png") no-repeat center center;
-    background-size: cover;
-    height: 520px;
-    position: relative;
-    overflow: hidden;
-    font-family: system-ui, -apple-system, sans-serif;
+  background: #8dd3bb url("../image/Frame\ 2608705.png") no-repeat center center;
+  background-size: cover;
+  height: 520px;
+  position: relative;
+  overflow: hidden;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 /* Layout chính chứa các card */
 .travel {
-    display: flex;
-    gap: 16px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif, system-ui;
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif, system-ui;
 }
 .travel-card {
-    flex: 1;
-    height: 420px;
-    border-radius: 16px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  flex: 1;
+  height: 420px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%);
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 1;
 }
 .card-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .card-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #ffffff;
 }
 
 .card-info .title {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.2;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .card-info .des {
-    margin: 4px 0 0 0;
-    font-size: 12px;
-    color: #e0e0e0;
-    font-weight: 400;
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #e0e0e0;
+  font-weight: 400;
 }
 .btn-book {
-    display: block;
-    width: 100%;
-    padding: 12px 0;
-    background-color: #8DD3BB; 
-    color: #111827;
-    text-align: center;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 8px;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #8dd3bb;
+  color: #111827;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .btn-book:hover {
-    background-color: #72c4a8;
+  background-color: #72c4a8;
 }
