@@ -1,4 +1,4 @@
-a {
+ a {
   text-decoration: none;
   color: inherit;
 }
@@ -15,7 +15,7 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -28,9 +28,8 @@ body {
   width: 100%;
   min-height: 540px;
   height: 650px;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)),
-    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2)),
+              url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.png") center/cover no-repeat;
   border-radius: 0 0 24px 24px;
   padding: 24px 80px;
   color: #ffffff;
@@ -45,7 +44,7 @@ body {
   align-items: center;
 }
 
-.navbar-left,
+.navbar-left, 
 .navbar-right {
   display: flex;
   align-items: center;
@@ -56,7 +55,7 @@ body {
   display: inline-flex;
   align-items: center;
   margin-right: 24px; /* 1.5rem -> 24px */
-  font-size: 14px; /* 0.875rem -> 14px */
+  font-size: 14px;     /* 0.875rem -> 14px */
   font-weight: 600;
   transition: color 0.3s;
   text-decoration: none;
@@ -84,7 +83,7 @@ body {
 
 .navbar-right a {
   margin-left: 16px; /* 1rem -> 16px */
-  font-size: 14px; /* 0.875rem -> 14px */
+  font-size: 14px;   /* 0.875rem -> 14px */
   font-weight: 600;
   color: #ffffff;
   text-decoration: none;
@@ -132,110 +131,6 @@ body {
 
 .hero-content p {
   font-size: 18px; /* 1.125rem -> 18px */
-  font-weight: 500;
-  opacity: 0.9;
-}
-
-/* --- 2. BOOKING BAR --- */
-/* --- Global Styles & Reset --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  background-color: #f3f4f6;
-}
-
-/* --- Hero Section --- */
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 540px;
-  /* Ảnh nền núi và hồ nước */
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.pn0") center/cover no-repeat;
-  border-radius: 0 0 24px 24px;
-  padding: 24px 80px;
-  color: #ffffff;
-}
-
-/* --- Navigation Bar --- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-left,
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.navbar-left a,
-.navbar-right a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.navbar-left img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1); /* Chuyển icon sang màu trắng */
-}
-
-/* Nút Sign Up */
-.btn-signup {
-  background-color: #ffffff;
-  color: #111827 !important;
-  padding: 10px 24px;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-}
-
-.btn-signup:hover {
-  background-color: #e5e7eb;
-}
-
-.nav-logo img {
-  height: 36px;
-  object-fit: contain;
-}
-
-/* --- Hero Content Text --- */
-.hero-content {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.hero-content h3 {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
-}
-
-.hero-content h1 {
-  font-size: 80px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  line-height: 1;
-  margin-bottom: 16px;
-  text-transform: uppercase;
-}
-
-.hero-content p {
-  font-size: 18px;
   font-weight: 500;
   opacity: 0.9;
 }
@@ -368,44 +263,45 @@ body {
 /* --- GLOBAL LAYOUT CONTAINER --- */
 .main-container {
   max-width: 1200px;
-  margin: 160px auto 0 auto; /* 10rem -> 160px */
-  padding: 0 24px; /* 1.5rem -> 24px */
+  padding: 0 0px;         
+  margin: 12 0px; /* 1.5rem -> 24px */
 }
 
 .main-container > section {
-  margin-bottom: 96px; /* 6rem -> 96px */
+  margin-bottom: 96px; 
+  margin: top 120px;      /* 6rem -> 96px */
 }
 
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 32px; /* 2rem -> 32px */
+  margin-bottom: 32px;       /* 2rem -> 32px */
 }
 
 .section-header h2 {
-  font-size: 30px; /* Cỡ chữ tiêu đề chuẩn (tương đương 1.875rem) */
+  font-size: 30px;           /* Cỡ chữ tiêu đề chuẩn (tương đương 1.875rem) */
   font-weight: 700;
 }
 
 .section-subtitle {
-  font-size: 14px; /* Cỡ chữ phụ (tương đương 0.875rem) */
+  font-size: 14px;           /* Cỡ chữ phụ (tương đương 0.875rem) */
   color: #6b7280;
-  margin-top: 4px; /* 0.25rem -> 4px */
+  margin-top: 4px;           /* 0.25rem -> 4px */
 }
 
 .btn-outline {
   color: black;
-  background-color: #8dd3bb;
-  padding: 8px 16px; /* 0.5rem 1rem -> 8px 16px */
-  border-radius: 8px; /* 0.5rem -> 8px */
-  font-size: 14px; /* Cỡ chữ nút bấm (tương đương 0.875rem) */
+  background-color: #8DD3BB;
+  padding: 8px 16px;         /* 0.5rem 1rem -> 8px 16px */
+  border-radius: 8px;        /* 0.5rem -> 8px */
+  font-size: 14px;           /* Cỡ chữ nút bấm (tương đương 0.875rem) */
   font-weight: 600;
-  margin-bottom: 32px; /* 2rem -> 32px */
+  margin-bottom: 32px;       /* 2rem -> 32px */
 }
 
-.btn-outline:hover {
-  background-color: #cccecd;
+.btn-outline:hover { 
+  background-color: #cccecd; 
 }
 /* --- 3. PLAN YOUR PERFECT TRIP --- */
 .destinations-grid {
@@ -430,7 +326,7 @@ body {
 .newsletter-card {
   background-color: #f0fdfa;
   border-radius: 16px; /* 1rem -> 16px */
-  padding: 32px; /* 2rem -> 32px */
+  padding: 32px;       /* 2rem -> 32px */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -467,8 +363,8 @@ body {
 .subscribe-form input {
   flex: 1;
   padding: 12px 16px; /* 0.75rem 1rem -> 12px 16px */
-  border-radius: 8px; /* 0.5rem -> 8px */
-  font-size: 14px; /* 0.875rem -> 14px */
+  border-radius: 8px;  /* 0.5rem -> 8px */
+  font-size: 14px;     /* 0.875rem -> 14px */
   border: 1px solid #e5e7eb;
   outline: none;
 }
@@ -481,9 +377,9 @@ body {
   background-color: #111827;
   color: #ffffff;
   font-weight: 600;
-  font-size: 14px; /* 0.875rem -> 14px */
-  padding: 12px 20px; /* 0.75rem 1.25rem -> 12px 20px */
-  border-radius: 8px; /* 0.5rem -> 8px */
+  font-size: 14px;     /* 0.875rem -> 14px */
+  padding: 12px 20px;  /* 0.75rem 1.25rem -> 12px 20px */
+  border-radius: 8px;  /* 0.5rem -> 8px */
 }
 
 .btn-subscribe:hover {
@@ -492,7 +388,7 @@ body {
 
 .newsletter-right {
   position: relative;
-  width: 256px; /* 16rem -> 256px */
+  width: 256px;  /* 16rem -> 256px */
   height: 160px; /* 10rem -> 160px */
 }
 
@@ -508,9 +404,9 @@ body {
 
 .mailbox-box {
   position: absolute;
-  right: 16px; /* 1rem -> 16px */
+  right: 16px;   /* 1rem -> 16px */
   bottom: 0;
-  width: 192px; /* 12rem -> 192px */
+  width: 192px;  /* 12rem -> 192px */
   height: 128px; /* 8rem -> 128px */
   background-color: #115e59;
   border-radius: 16px; /* 1rem -> 16px */
@@ -529,27 +425,27 @@ body {
 .mailbox-flag {
   position: absolute;
   right: 0;
-  top: 16px; /* 1rem -> 16px */
-  width: 48px; /* 3rem -> 48px */
-  height: 80px; /* 5rem -> 80px */
+  top: 16px;     /* 1rem -> 16px */
+  width: 48px;   /* 3rem -> 48px */
+  height: 80px;  /* 5rem -> 80px */
   background-color: #f87171;
   border-radius: 24px 24px 0 0; /* 1.5rem -> 24px */
   transform: rotate(12deg);
-} /* --- 7. FOOTER --- */
+}/* --- 7. FOOTER --- */
 .main-footer {
   background-color: #2dd4bf;
   color: #111827;
-  margin-top: 96px; /* 6rem -> 96px */
-  padding: 64px 0; /* 4rem -> 64px */
+  margin-top: 96px;  /* 6rem -> 96px */
+  padding: 64px 0;   /* 4rem -> 64px */
 }
 
 .footer-grid {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px; /* 1.5rem -> 24px */
+  padding: 0 24px;   /* 1.5rem -> 24px */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 32px; /* 2rem -> 32px */
+  gap: 32px;        /* 2rem -> 32px */
 }
 
 @media (max-width: 768px) {
@@ -566,14 +462,14 @@ body {
 }
 
 .footer-brand h3 {
-  font-size: 24px; /* 1.5rem -> 24px */
+  font-size: 24px;   /* 1.5rem -> 24px */
   font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 16px; /* 1rem -> 16px */
 }
 
 .social-icons a {
-  font-size: 18px; /* 1.125rem -> 18px */
+  font-size: 18px;   /* 1.125rem -> 18px */
   margin-right: 16px; /* 1rem -> 16px */
   transition: color 0.3s;
 }
@@ -583,7 +479,7 @@ body {
 }
 
 .footer-grid h5 {
-  font-size: 14px; /* 0.875rem -> 14px */
+  font-size: 14px;   /* 0.875rem -> 14px */
   font-weight: 700;
   margin-bottom: 16px; /* 1rem -> 16px */
 }
@@ -597,10 +493,10 @@ body {
 }
 
 .footer-grid a {
-  font-size: 12px; /* 0.75rem -> 12px */
+  font-size: 12px;   /* 0.75rem -> 12px */
   font-weight: 500;
   opacity: 0.8;
-} /* =======================================================
+}/* =======================================================
    ĐOẠN CSS ĐÁP ỨNG DI ĐỘNG (RESPONSIVE) ĐÃ ĐƯỢC CẬP NHẬT
    ======================================================= */
 @media (max-width: 768px) {
@@ -668,9 +564,7 @@ select:focus {
   align-items: center;
   gap: 20px; /* Khoảng cách giữa ảnh và chữ */
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03); /* Đổ bóng nhẹ */
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
 
@@ -837,7 +731,7 @@ select:focus {
 .subscribe-card {
   background-color: #ffffff;
   color: #111827;
-  padding: 24px; /* 1.5rem -> 24px */
+  padding: 24px;     /* 1.5rem -> 24px */
   border-radius: 12px; /* 0.75rem -> 12px */
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
