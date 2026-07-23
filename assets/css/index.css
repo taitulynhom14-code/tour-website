@@ -263,12 +263,13 @@ body {
 /* --- GLOBAL LAYOUT CONTAINER --- */
 .main-container {
   max-width: 1200px;
-  margin: 160px auto 0 auto; /* 10rem -> 160px */
-  padding: 0 24px;          /* 1.5rem -> 24px */
+  padding: 0 0px;         
+  margin: 12 0px; /* 1.5rem -> 24px */
 }
 
 .main-container > section {
-  margin-bottom: 96px;       /* 6rem -> 96px */
+  margin-bottom: 96px; 
+  margin: top 120px;      /* 6rem -> 96px */
 }
 
 .section-header {
