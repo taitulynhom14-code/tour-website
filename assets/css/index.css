@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
 }
 
 body {
@@ -43,8 +43,9 @@ button {
 .hero-section {
   position: relative;
   min-height: 520px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%),
-              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
   margin: 20px;
   border-radius: 24px;
   padding: 24px 32px 160px;
@@ -58,7 +59,8 @@ button {
   align-items: center;
 }
 
-.navbar-left, .navbar-right {
+.navbar-left,
+.navbar-right {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -98,7 +100,7 @@ button {
 }
 
 .btn-signup:hover {
-  background-color: #8DD3BB;
+  background-color: #8dd3bb;
 }
 
 /* Hero Content */
@@ -164,7 +166,7 @@ button {
 }
 
 .tab-btn.active {
-  border-bottom-color: #8DD3BB;
+  border-bottom-color: #8dd3bb;
 }
 
 .booking-form {
@@ -176,7 +178,7 @@ button {
 .input-group {
   display: flex;
   flex-direction: column;
-  border: 1px solid #79747E;
+  border: 1px solid #79747e;
   border-radius: 4px;
   padding: 8px 16px;
   position: relative;
@@ -222,7 +224,7 @@ button {
 }
 
 .btn-seach {
-  background-color: #8DD3BB;
+  background-color: #8dd3bb;
   color: #112211;
   padding: 12px 24px;
   border-radius: 4px;
@@ -260,7 +262,7 @@ button {
 }
 
 .btn-outline {
-  border: 1px solid #8DD3BB;
+  border: 1px solid #8dd3bb;
   padding: 10px 16px;
   border-radius: 4px;
   font-weight: 500;
@@ -270,7 +272,7 @@ button {
 }
 
 .btn-outline:hover {
-  background-color: #8DD3BB;
+  background-color: #8dd3bb;
 }
 
 /* Grid places */
@@ -339,9 +341,12 @@ button {
 }
 
 .option::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
 
@@ -369,7 +374,7 @@ button {
 }
 
 .option .btn-outline {
-  background-color: #8DD3BB;
+  background-color: #8dd3bb;
   border: none;
   color: #112211;
   font-weight: 600;
@@ -429,7 +434,7 @@ button {
 }
 
 .star {
-  color: #FFC107;
+  color: #ffc107;
   font-size: 18px;
   margin-bottom: 12px;
 }
@@ -473,140 +478,140 @@ button {
 /* ==========================================================================
    7. FOOTER & NEWSLETTER (OVERLAPPING LAYOUT)
    ========================================================================== */
-.footer-wrapper {
-  background-color: #8DD3BB;
-  position: relative;
-  padding-top: 180px;
-  padding-bottom: 60px;
-}
-
-.newsletter-card {
-  position: absolute;
-  top: -140px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 40px);
-  max-width: 1230px;
-  background: #CDEAE1;
-  border-radius: 20px;
-  padding: 24px 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.newsletter-content h2 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #112211;
-}
-
-.newsletter-content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 12px;
-  opacity: 0.8;
-}
-
-.newsletter-content p {
-  font-size: 14px;
-  margin-top: 4px;
-  margin-bottom: 24px;
-  opacity: 0.7;
-}
-
-.subscribe-form {
-  display: flex;
-  gap: 16px;
-}
-
-.subscribe-form input {
-  padding: 16px;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  width: 300px;
-  font-size: 14px;
-}
-
-.subscribe-form button {
-  background: #112211;
-  color: #ffffff;
-  padding: 16px 24px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.newsletter-image img {
-  max-width: 360px;
-  height: auto;
-}
+/* .footer-wrapper { */
+/*   background-color: #8DD3BB; */
+/*   position: relative; */
+/*   padding-top: 180px; */
+/*   padding-bottom: 60px; */
+/* } */
+/**/
+/* .newsletter-card { */
+/*   position: absolute; */
+/*   top: -140px; */
+/*   left: 50%; */
+/*   transform: translateX(-50%); */
+/*   width: calc(100% - 40px); */
+/*   max-width: 1230px; */
+/*   background: #CDEAE1; */
+/*   border-radius: 20px; */
+/*   padding: 24px 48px; */
+/*   display: flex; */
+/*   justify-content: space-between; */
+/*   align-items: center; */
+/* } */
+/**/
+/* .newsletter-content h2 { */
+/*   font-size: 44px; */
+/*   font-weight: 700; */
+/*   line-height: 1.1; */
+/*   color: #112211; */
+/* } */
+/**/
+/* .newsletter-content h4 { */
+/*   font-size: 20px; */
+/*   font-weight: 700; */
+/*   margin-top: 12px; */
+/*   opacity: 0.8; */
+/* } */
+/**/
+/* .newsletter-content p { */
+/*   font-size: 14px; */
+/*   margin-top: 4px; */
+/*   margin-bottom: 24px; */
+/*   opacity: 0.7; */
+/* } */
+/**/
+/* .subscribe-form { */
+/*   display: flex; */
+/*   gap: 16px; */
+/* } */
+/**/
+/* .subscribe-form input { */
+/*   padding: 16px; */
+/*   border-radius: 4px; */
+/*   border: none; */
+/*   outline: none; */
+/*   width: 300px; */
+/*   font-size: 14px; */
+/* } */
+/**/
+/* .subscribe-form button { */
+/*   background: #112211; */
+/*   color: #ffffff; */
+/*   padding: 16px 24px; */
+/*   border-radius: 4px; */
+/*   font-weight: 600; */
+/* } */
+/**/
+/* .newsletter-image img { */
+/*   max-width: 360px; */
+/*   height: auto; */
+/* } */
 
 /* Footer Content */
-.footer-main {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.footer-brand .logo img {
-  height: 36px;
-  filter: brightness(0);
-}
-
-.social-icons {
-  display: flex;
-  gap: 12px;
-}
-
-.social-icons img {
-  width: 20px;
-  height: 20px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 850px;
-}
-
-.link-column h4 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #112211;
-}
-
-.link-column ul {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.link-column li {
-  font-size: 14px;
-  opacity: 0.7;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.link-column li:hover {
-  opacity: 1;
-}
+/* .footer-main { */
+/*   max-width: 1230px; */
+/*   margin: 0 auto; */
+/*   padding: 0 20px; */
+/* } */
+/**/
+/* .footer-container { */
+/*   display: flex; */
+/*   justify-content: space-between; */
+/*   gap: 40px; */
+/* } */
+/**/
+/* .footer-brand { */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   gap: 24px; */
+/* } */
+/**/
+/* .footer-brand .logo img { */
+/*   height: 36px; */
+/*   filter: brightness(0); */
+/* } */
+/**/
+/* .social-icons { */
+/*   display: flex; */
+/*   gap: 12px; */
+/* } */
+/**/
+/* .social-icons img { */
+/*   width: 20px; */
+/*   height: 20px; */
+/* } */
+/**/
+/* .footer-links { */
+/*   display: flex; */
+/*   justify-content: space-between; */
+/*   width: 100%; */
+/*   max-width: 850px; */
+/* } */
+/**/
+/* .link-column h4 { */
+/*   font-size: 16px; */
+/*   font-weight: 700; */
+/*   margin-bottom: 16px; */
+/*   color: #112211; */
+/* } */
+/**/
+/* .link-column ul { */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   gap: 12px; */
+/* } */
+/**/
+/* .link-column li { */
+/*   font-size: 14px; */
+/*   opacity: 0.7; */
+/*   cursor: pointer; */
+/*   transition: opacity 0.2s; */
+/* } */
+/**/
+/* .link-column li:hover { */
+/*   opacity: 1; */
+/* } */
 
 /* ==========================================================================
    8. RESPONSIVE DESIGN (MOBILE & TABLET)
@@ -615,7 +620,7 @@ button {
   .git {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .booking-form {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -670,3 +675,4 @@ button {
     width: 100%;
   }
 }
+
