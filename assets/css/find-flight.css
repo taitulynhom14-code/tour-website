@@ -238,31 +238,31 @@
 .btn-outline:hover {
   background-color: #cccecd;
 }
-.plan{
-   max-width: 1200px;
-    margin: 10rem auto 0 auto;
-    padding: 0 1.5rem;
+.plan {
+  max-width: 1200px;
+  margin: 10rem auto 0 auto;
+  padding: 0 1.5rem;
 }
-.plan-section{
-  display:flex;
-    padding: 0 20px;
-    justify-content: space-between;
+.plan-section {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
 }
-.plan-subtitle{
-  font-size:14px;
-  margin-top:12px;
+.plan-subtitle {
+  font-size: 14px;
+  margin-top: 12px;
 }
-.plan h2{
+.plan h2 {
   font-size: 24px;
 }
-.btn-subtitle{
+.btn-subtitle {
   color: black;
-background-color: #f2f4f3;
-padding: 1rem 2rem;
-border-radius: 0.5rem;
-font-weight: 600;
-margin-bottom: 2rem;
-border: 1px solid #8DD3BB;
+  background-color: #f2f4f3;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border: 1px solid #8dd3bb;
 }
 /* Container chính */
 .banner-2 {
@@ -331,8 +331,8 @@ border: 1px solid #8DD3BB;
   color: #e0e0e0;
   font-weight: 400;
 }
-.price{
-  font-size:24px;
+.price {
+  font-size: 24px;
 }
 .btn-book {
   display: block;
@@ -351,8 +351,8 @@ border: 1px solid #8DD3BB;
 .btn-book:hover {
   background-color: #72c4a8;
 }
-.backpacking{
-  padding:54px;
+.backpacking {
+  padding: 54px;
 }
 .travel-destinations {
   display: flex;
