@@ -1,0 +1,13 @@
+.search-form {
+  position: static;
+  transform: none;
+  margin: 0px auto;
+}
+
+.search-form__group:first-child {
+  flex: 1.5;
+}
+
+.search-form__group {
+  flex: 1;
+}

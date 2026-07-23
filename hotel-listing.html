@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/find-stays.css" />
+    <link rel="stylesheet" href="assets/css/hotel-listing.css" />
   </head>
 
   <body>
-    <header class="header header--no-margin">
+    <header class="header">
       <div class="header__container">
         <!-- Left Menu -->
         <nav class="navbar">
@@ -111,15 +112,7 @@
     </header>
 
     <section class="hotel-search">
-      <section class="banner">
-        <div class="banner__container">
-          <h1 class="banner__heading">Make your travel whishlist, we'll do the rest</h1>
-          <p class="banner__desc">Special offers to suit your plan</p>
-        </div>
-      </section>
-
       <form class="search-form" action="hotel-listing.html" method="get">
-        <h2 class="search-form__title">Where are you flying?</h2>
         <div class="search-form__fields">
           <!-- Destination -->
           <div class="search-form__group">
@@ -154,151 +147,13 @@
               <img src="assets/image/chevron_down.svg" alt="" />
             </div>
           </div>
-        </div>
-        <!-- Button -->
-        <div class="search-form__actions">
-          <button class="search-form__promo">
-            <img src="assets/image/plus.svg" alt="plus" />
-            Add Promo Code
-          </button>
+          <!-- Button -->
           <button class="search-form__submit" type="submit">
-            <img src="assets/image/building(16x16)_light.svg" alt="building" />
-            <a class="link-hotel-listing" href="hotel-listing.html">Show Places</a>
+            <img src="assets/image/search_light.svg" alt="building" />
           </button>
         </div>
       </form>
     </section>
-
-    <main class="main-content">
-      <section class="recent-searches">
-        <h2 class="section-title">Your recent searches</h2>
-        <div class="recent-searches__list">
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Istanbul, Turkey.png" alt="Instanbul, Turkey" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Istanbul, Turkey</h3>
-              <p class="recent-searches__desc">325 places</p>
-            </div>
-          </div>
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Sydney, Australia.png" alt="Sydney, Australia" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Sydney, Australia</h3>
-              <p class="recent-searches__desc">325 places</p>
-            </div>
-          </div>
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Baku, Azerbajian.png" alt="Baku, Azerbajian" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Bakku, Azerbajian</h3>
-              <p class="recent-searches__desc">325 places</p>
-            </div>
-          </div>
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Malé, Maldives.png" alt="Malé, Maldives" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Malé, Maldivé</h3>
-              <p class="recent-searches__desc">325 places</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="travel-cards">
-        <div class="section-header">
-          <div class="section-header__text">
-            <h2 class="section-title">Fall into travel</h2>
-            <p class="section-desc">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
-          </div>
-          <button class="section-header__btn">
-            <a class="link-hotel-listing" href="hotel-listing.html">See All</a>
-          </button>
-        </div>
-
-        <div class="travel-cards__list">
-          <div id="Melbourne" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">Melbourne</h3>
-                <p class="travel-cards__desc">An a amazing journey</p>
-              </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$700</h3>
-            </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
-          </div>
-          <div id="Paris" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">Paris</h3>
-                <p class="travel-cards__desc">A Paris Adventure</p>
-              </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$600</h3>
-            </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
-          </div>
-          <div id="London" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">London</h3>
-                <p class="travel-cards__desc">London eye adventure</p>
-              </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$350</h3>
-            </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
-          </div>
-          <div id="Columbia" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">Columbia</h3>
-                <p class="travel-cards__desc">Amazing streets</p>
-              </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$700</h3>
-            </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="travel-destinations">
-        <div class="section-header">
-          <div class="section-header__text">
-            <h2 class="section-title">Fall into travel</h2>
-            <p class="section-desc">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
-          </div>
-          <button class="section-header__btn">
-            <a class="link-hotel-listing" href="hotel-listing.html">See All</a>
-          </button>
-        </div>
-
-        <div class="travel-destinations__layout">
-          <div class="travel-destinations__layout-main">
-            <div class="travel-destinations__introduce">
-              <h3 class="travel-destinations__name">Backpacking<br />Sri Lanka</h3>
-              <p class="travel-destinations__desc">Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life. It helps us to forget about our problems, frustrations, and fears at home. During our journey, we experience life in different ways. We explore new places, cultures, cuisines, traditions, and ways of living.</p>
-              <div class="price-badge">
-                <span class="price-badge__label">From</span>
-                <span class="price-badge__amount">$700</span>
-              </div>
-            </div>
-            <div class="travel-destinations__action">
-              <button class="travel-destinations__action-btn">Book Flight</button>
-            </div>
-          </div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(1\).png)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(2\).png)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(3\).png)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(4\).png)"></div>
-        </div>
-      </section>
-    </main>
 
     <footer class="footer-wrapper">
       <div class="footer-main">

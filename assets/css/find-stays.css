@@ -4,6 +4,12 @@
   padding: 20px 104px;
   height: 88px;
   align-items: center;
+  box-shadow: 0px 4px 16px 0px rgba(17, 34, 17, 0.05);
+  margin-bottom: 47px;
+}
+
+.header--no-margin {
+  margin-bottom: 0 !important;
 }
 
 .header__container {
@@ -290,6 +296,8 @@
   background: transparent;
   margin-top: 3px;
   padding: 16px 0px;
+  width: 100%;
+  min-width: 0;
 }
 
 .search-form__actions {
@@ -329,7 +337,7 @@
   flex-direction: column;
   max-width: 1232px;
   width: 100%;
-  margin: 262px auto 248px;
+  margin: 262px auto 0px;
   gap: 32px;
 }
 
@@ -705,6 +713,7 @@
   position: relative;
   background-color: #8dd3bb;
   padding: 217px 0 64px;
+  margin-top: 248px;
 }
 
 .footer-container {
@@ -768,4 +777,9 @@
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+.link-hotel-listing {
+  text-decoration: none;
+  color: var(--blackish-green-color);
 }
