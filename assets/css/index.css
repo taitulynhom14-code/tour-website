@@ -674,8 +674,6 @@ select:focus {
   font-size: 24px;
   font-family: Vertical;
 }
-/* Danh sách review*/
-
 .review-list {
   position: relative;
   display: inline-block;
