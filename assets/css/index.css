@@ -1,4 +1,19 @@
- 
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #112211;
+  line-height: 1.5;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -115,15 +130,14 @@ body {
 
 /* --- Hero Section --- */
 .hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 540px;
-    /* Ảnh nền núi và hồ nước */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjj28OVByEQFbBADVZKAVSIHPx_HvkuOzfXwY18uILpMEG48Hqn5CdFp07C0r7uGErHL483jny60SUd9FZt2SDSq8B5B4RXWy_HT5uU3ZXWInIGZ7SJxGx2ePdlXISEIgBacb1ZFhBwUgG7MrRjc0XRFijm3HUUTK7UIZs-UaFoDy6B6PLnAZTZ5MG4zFA/s1380/theme-home.pn0') center/cover no-repeat;
-    border-radius: 0 0 24px 24px;
-    padding: 24px 80px;
-    color: #ffffff;
+  position: relative;
+  min-height: 520px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  margin: 20px;
+  border-radius: 24px;
+  padding: 24px 32px 160px;
+  color: #ffffff;
 }
 
 /* --- Navigation Bar --- */
@@ -134,9 +148,9 @@ body {
 }
 
 .navbar-left, .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .navbar-left a, .navbar-right a {
@@ -165,12 +179,7 @@ body {
 }
 
 .btn-signup:hover {
-    background-color: #e5e7eb;
-}
-
-.nav-logo img {
-    height: 36px;
-    object-fit: contain;
+  background-color: #8DD3BB;
 }
 
 /* --- Hero Content Text --- */
@@ -237,7 +246,7 @@ body {
 }
 
 .tab-btn.active {
-    border-bottom: 4px solid #8dd3bb; /* Thanh gạch chân màu xanh pastel */
+  border-bottom-color: #8DD3BB;
 }
 
 /* --- Booking Form Layout --- */
@@ -249,9 +258,12 @@ body {
 }
 
 .input-group {
-    position: relative;
-    flex: 1;
-    min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #79747E;
+  border-radius: 4px;
+  padding: 8px 16px;
+  position: relative;
 }
 
 /* Style viền khung theo chuẩn floating label */
@@ -309,18 +321,16 @@ body {
 }
 
 .btn-seach {
-    background-color: #8dd3bb; /* Màu xanh lá nhẹ đặc trưng */
-    color: #111827;
-    border: none;
-    padding: 16px 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.2s;
+  background-color: #8DD3BB;
+  color: #112211;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
 }
 
 .btn-seach:hover {
@@ -356,16 +366,18 @@ body {
 }
 
 .btn-outline {
-    color:black;
-    background-color:#8DD3BB ;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
+  border: 1px solid #8DD3BB;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  background: transparent;
+  transition: all 0.2s;
 }
 
-.btn-outline:hover { background-color:#cccecd; }
+.btn-outline:hover {
+  background-color: #8DD3BB;
+}
 
 /* --- 3. PLAN YOUR PERFECT TRIP --- */
 .destinations-grid {
@@ -467,39 +479,11 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-.mailbox-box i { opacity: 0.4; }
-
-.mailbox-flag {
-    position: absolute;
-    right: 0;
-    top: 1rem;
-    width: 3rem;
-    height: 5rem;
-    background-color: #f87171;
-    border-radius: 1.5rem 1.5rem 0 0;
-    transform: rotate(12deg);
-}
-
-/* --- 7. FOOTER --- */
-.main-footer {
-    background-color: #2dd4bf;
-    color: #111827;
-    margin-top: 6rem;
-    padding: 4rem 0;
-}
-
-.footer-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-}
-
-@media (max-width: 768px) {
-    .footer-grid { grid-template-columns: repeat(2, 1fr); }
-    .footer-brand { grid-column: span 2; }
+.option::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
 
 .footer-brand { grid-column: span 2; }
@@ -551,105 +535,36 @@ body {
         width: 100%;
     }
 
-    /* Giúp 2 ô select chia đều 50/50 không gian hàng đó */
-    .select-row .input-group {
-        flex: 1;
-    }
-}
-/* DANH SÁCH LỰA CHỌN HOME */
-select {
-    width: 250px;
-    padding: 12px 15px;
-    border: 2px solid #dcdcdc;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    background-color: white;
-    cursor: pointer;
-    transition: 0.3s;
+.option-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
-select:hover {
-    border-color: #4CAF50;
+.option-des {
+  font-size: 16px;
+  margin-bottom: 16px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
 }
 
-select:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+.option .btn-outline {
+  background-color: #8DD3BB;
+  border: none;
+  color: #112211;
+  font-weight: 600;
+  padding: 12px 24px;
 }
-.section-places{
-    display:flex;
-    padding: 0 20px;
-    justify-content: space-between;
-}
-/*Danh sách địa điểm du lịch*/
-.git{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 20px; 
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.card{
-    background-color: white;
-    border-radius: 14px;
-    display:flex;
-    padding:20px;
-    align-items: center;
-    gap: 20px; /* Khoảng cách giữa ảnh và chữ */
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03); /* Đổ bóng nhẹ như hình */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-    box-shadow: #090e18;
-    
-}
-.card-img{
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-}
-.card-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
 
+.option .btn-outline a {
+  color: #112211;
 }
-.traval-option{
-   display: flex;
-    gap: 24px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.option{
-    flex:1;
-    height:450px;
-    border-radius:20px;
-    background-size:cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    box-sizing: border-box;
-    align-items: flex-end;
-    box-shadow:  rgba(0, 0, 0, 0.03);
-}
-.option-content{
-    position:relative;
-    text-align: center;
-    color:white;
-    font-size:20px
-}
-.option-title h2{
-    font-size:24px;
-    font-family: Vertical;
-}
-/* Danh sách review*/
 
+/* ==========================================================================
+   6. REVIEWS SECTION
+   ========================================================================== */
 .review-list {
     position: relative;
     display: inline-block;
@@ -705,9 +620,9 @@ select:focus {
 }
 
 .star {
-    color: #ffbe00;
-    font-size: 16px;
-    margin-bottom: 8px;
+  color: #FFC107;
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 
 .user-name {
@@ -743,164 +658,213 @@ select:focus {
 }
 
 .review-img img {
-    width: 100%;
-    border-radius: 12px;
-    display: block;
-}
-.review-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-}
-.subscribe-bar{
-    left: 50%;
-    width: 100%;
-    max-width: 1024px;
-    padding: 0 1.5rem;
-}
-.subscribe-card{
-    background-color: #ffffff;
-    color: #111827;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
+.arrow {
+  display: none; /* Áp dụng slider tùy thuộc vào logic JS của bạn */
+}
+
+/* ==========================================================================
+   7. FOOTER & NEWSLETTER (OVERLAPPING LAYOUT)
+   ========================================================================== */
 .footer-wrapper {
-    width: 100%;
-    background-color: #ffffff;
-    position: relative;
+  background-color: #8DD3BB;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 60px;
 }
+
 .newsletter-card {
-    background-color: #ccebe1; 
-    border-radius: 20px;
-    max-width: 1200px;
-    margin: 0 auto -100px auto; 
-    padding: 48px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-}
-.newsletter-content {
-    max-width: 550px;
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1230px;
+  background: #CDEAE1;
+  border-radius: 20px;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .newsletter-content h2 {
-    font-size: 40px;
-    font-weight: 800;
-    color: #111111;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    letter-spacing: -0.5px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #112211;
 }
 
 .newsletter-content h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #222222;
-    margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 12px;
+  opacity: 0.8;
 }
 
 .newsletter-content p {
-    font-size: 14px;
-    color: #444444;
-    margin-bottom: 24px;
-    line-height: 1.5;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 24px;
+  opacity: 0.7;
 }
+
 .subscribe-form {
-    display: flex;
-    gap: 16px;
-    max-width: 480px;
+  display: flex;
+  gap: 16px;
 }
 
 .subscribe-form input {
-    flex: 1;
-    padding: 16px 20px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    color: #111111;
+  padding: 16px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width: 300px;
+  font-size: 14px;
 }
 
 .subscribe-form button {
-    background-color: #111e19;
-    color: #ffffff;
-    border: none;
-    padding: 16px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  background: #112211;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 .newsletter-image img {
-    max-width: 400px;
-    height: auto;
-    display: block;
+  max-width: 360px;
+  height: auto;
 }
+
+/* Footer Content */
 .footer-main {
-    background-color: #8dd3bb;
-    padding-top: 160px;
-    padding-bottom: 60px;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .footer-brand .logo img {
-    height: 36px;
-    width: auto;
-    display: block;
+  height: 36px;
+  filter: brightness(0);
 }
 
 .social-icons {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 12px;
 }
 
 .social-icons img {
-    color: #111111;
-    font-size: 18px;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
+  width: 20px;
+  height: 20px;
 }
+
 .footer-links {
-    display: flex;
-    gap: 48px; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 850px;
 }
+
 .link-column h4 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #111111;
-    margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #112211;
 }
+
 .link-column ul {
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.link-column ul li {
-    margin-bottom: 12px;
+
+.link-column li {
+  font-size: 14px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
-.link-column ul li a {
-    color: #2d4339;
-    text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 500;
+
+.link-column li:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .git {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .booking-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-action {
+    grid-column: span 2;
+  }
+
+  .review-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+    text-align: center;
+    top: -200px;
+  }
+
+  .newsletter-image {
+    display: none;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .git {
+    grid-template-columns: 1fr;
+  }
+
+  .traval-option {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-action {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+  }
 }
