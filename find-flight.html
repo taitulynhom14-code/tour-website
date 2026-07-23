@@ -6,6 +6,7 @@
     <title>Find-flight</title>
     <!-- FontAwesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/find-flight.css" />
@@ -13,13 +14,14 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header header--no-margin">
       <div class="header__container">
-        <nav class="navbar-left-find-flight">
-          <ul id="navbar__list">
-            <li class="navbar__item navbar__item--active">
-              <img src="assets/image/airplane_light.png" alt="Flight" class="header__icon" />
-              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+        <!-- Left Menu -->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
+              <a href="find-flight.html" class="navbar__link navbar__item--active">Find Flight</a>
             </li>
             <li class="navbar__item">
               <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
@@ -27,12 +29,15 @@
             </li>
           </ul>
         </nav>
+
+        <!-- Logo Center -->
         <div class="logo">
           <a href="index.html" class="logo-link">
             <img src="assets/image/logo-small.png" alt="Golobe" />
           </a>
         </div>
-        <div class="navbar-right-find-flight">
+
+        <div class="user-action">
           <div class="navbar_list">
             <a href="" class="btn-login">Login</a>
             <a href="" class="btn-sign">Sign Up</a>
@@ -40,6 +45,7 @@
         </div>
       </div>
     </header>
+
     <section class="banner">
       <div class="banner-continer">
         <h1 class="banner-heading">Make your travel whishlist, we’ll do the rest</h1>
