@@ -238,6 +238,32 @@
 .btn-outline:hover {
   background-color: #cccecd;
 }
+.plan{
+   max-width: 1200px;
+    margin: 10rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.plan-section{
+  display:flex;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+.plan-subtitle{
+  font-size:14px;
+  margin-top:12px;
+}
+.plan h2{
+  font-size: 24px;
+}
+.btn-subtitle{
+  color: black;
+background-color: #f2f4f3;
+padding: 1rem 2rem;
+border-radius: 0.5rem;
+font-weight: 600;
+margin-bottom: 2rem;
+border: 1px solid #8DD3BB;
+}
 /* Container chính */
 .banner-2 {
   background: #8dd3bb url("../image/Frame\ 2608705.png") no-repeat center center;
@@ -305,6 +331,9 @@
   color: #e0e0e0;
   font-weight: 400;
 }
+.price{
+  font-size:24px;
+}
 .btn-book {
   display: block;
   width: 100%;
@@ -321,4 +350,92 @@
 
 .btn-book:hover {
   background-color: #72c4a8;
+}
+.backpacking{
+  padding:54px;
+}
+.travel-destinations {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.travel-destinations__layout {
+  display: grid;
+  grid-template-columns: 5fr 3fr 3fr;
+  grid-template-rows: repeat(2, 200px);
+  gap: 24px;
+}
+
+.travel-destinations__layout-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row: span 2;
+  background-color: var(--mint-green-color);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.travel-destinations__introduce {
+  position: relative;
+}
+
+.travel-destinations__name {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0px 0px 24px 0px;
+}
+
+.travel-destinations__desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--blackish-green-color);
+  margin: 0;
+}
+
+.price-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white-color);
+  padding: 8px;
+  border-radius: 8px;
+  gap: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.price-badge__label {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.price-badge__amount {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.travel-destinations__action-btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2;
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+
+.travel-destinations__picture {
+  border: 2px solid var(--mint-green-color);
+  border-radius: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
