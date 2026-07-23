@@ -1,4 +1,4 @@
-.header {
+/* .header {
   background-color: #ffffff;
   padding: 20px 40px;
   width: 100%;
@@ -49,13 +49,13 @@
   color: #111111;
   font-size: 14px;
   font-weight: 600;
-}
+} */
 
 /* Logo ở giữa */
-.logo-link img {
+/* .logo-link img {
   height: 36px;
   display: block;
-}
+} */
 
 /* Menu bên phải */
 .navbar_list {
