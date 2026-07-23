@@ -1,14 +1,4 @@
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-family: inherit;
-}
 
 /* --- 1. HERO SECTION & NAVBAR --- */
 .hero-section {
@@ -101,16 +91,6 @@ button {
 
 /* --- 2. BOOKING BAR --- */
 /* --- Global Styles & Reset --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    background-color: #f3f4f6;
-}
 
 /* --- Hero Section --- */
 .hero-section {
@@ -351,20 +331,21 @@ body {
 
 .section-subtitle {
     color: #6b7280;
-    margin-top: 0.25rem;
+    margin-top: 12px;
 }
 
 .btn-outline {
     color:black;
-    background-color:#8DD3BB ;
-    padding: 0.5rem 1rem;
+    background-color:#ebf1ef ;
+    padding: 1rem 2rem;
     border-radius: 0.5rem;
+    border:2px solid #8dd3bb;
     font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin: 1.25rem 0 2rem;
 }
 
-.btn-outline:hover { background-color:#cccecd; }
+.btn-outline:hover { background-color:#8dd3bb; }
 
 /* --- 3. PLAN YOUR PERFECT TRIP --- */
 .destinations-grid {
@@ -581,6 +562,10 @@ select:focus {
     padding: 0 20px;
     justify-content: space-between;
 }
+.section-places h2{
+    font-size: 24px;
+
+}
 /*Danh sách địa điểm du lịch*/
 .git{
     display: grid;
@@ -764,142 +749,4 @@ select:focus {
     padding: 1.5rem;
     border-radius: 0.75rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.footer-wrapper {
-    width: 100%;
-    background-color: #ffffff;
-    position: relative;
-}
-.newsletter-card {
-    background-color: #ccebe1; 
-    border-radius: 20px;
-    max-width: 1200px;
-    margin: 0 auto -100px auto; 
-    padding: 48px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-}
-.newsletter-content {
-    max-width: 550px;
-}
-
-.newsletter-content h2 {
-    font-size: 40px;
-    font-weight: 800;
-    color: #111111;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    letter-spacing: -0.5px;
-}
-
-.newsletter-content h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #222222;
-    margin-bottom: 8px;
-}
-
-.newsletter-content p {
-    font-size: 14px;
-    color: #444444;
-    margin-bottom: 24px;
-    line-height: 1.5;
-}
-.subscribe-form {
-    display: flex;
-    gap: 16px;
-    max-width: 480px;
-}
-
-.subscribe-form input {
-    flex: 1;
-    padding: 16px 20px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    color: #111111;
-}
-
-.subscribe-form button {
-    background-color: #111e19;
-    color: #ffffff;
-    border: none;
-    padding: 16px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.newsletter-image img {
-    max-width: 400px;
-    height: auto;
-    display: block;
-}
-.footer-main {
-    background-color: #8dd3bb;
-    padding-top: 160px;
-    padding-bottom: 60px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 20px;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-brand .logo img {
-    height: 36px;
-    width: auto;
-    display: block;
-}
-
-.social-icons {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.social-icons img {
-    color: #111111;
-    font-size: 18px;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-.footer-links {
-    display: flex;
-    gap: 48px; 
-}
-.link-column h4 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #111111;
-    margin-bottom: 16px;
-}
-.link-column ul {
-    list-style: none;
-}
-.link-column ul li {
-    margin-bottom: 12px;
-}
-.link-column ul li a {
-    color: #2d4339;
-    text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 500;
 }

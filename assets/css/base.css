@@ -33,7 +33,27 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+}
 /* Animatrion */
 @keyframes fadeIn {
   from {
