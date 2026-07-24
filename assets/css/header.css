@@ -1,4 +1,6 @@
-/* HEADER BLOCK */
+/* ==========================================================================
+   HEADER BLOCK
+   ========================================================================== */
 .header {
   display: flex;
   padding: 20px 104px;
@@ -74,11 +76,11 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap; /* Giữ tất cả chữ trên cùng 1 hàng */
 }
 
 .navbar__link,
 .user-action__link {
-  /* height: 16px; */
   color: var(--blackish-green-color);
   text-decoration: none;
 }
@@ -114,9 +116,10 @@
 .user-menu {
   position: absolute;
   padding: 32px;
-  right: 5%;
+  right: 0;
   top: calc(100% + 20px);
-  width: 330px;
+  width: 100%;
+  max-width: 330px; /* Linh hoạt thay vì fix cứng */
   border-radius: 12px;
   gap: 24px;
   z-index: 999;
@@ -168,7 +171,6 @@
   flex-direction: column;
   width: 100%;
   gap: 4px;
-  /* margin: 12px 0px; */
 }
 
 .user-menu__info-name {
@@ -186,8 +188,34 @@
 
 .user-menu__separator {
   height: 0.5px;
-  width: 266px;
+  width: 100%; /* Đổi từ 266px sang 100% để không bị tràn */
   background-color: var(--blackish-green-color);
   opacity: 0.25;
   margin: 22px 0;
+}
+
+/* HAMBURGER & AUTH LINKS */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--blackish-green-color, #112211);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar__item--auth {
+  display: none;
 }

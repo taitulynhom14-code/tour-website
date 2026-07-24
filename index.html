@@ -2,10 +2,11 @@
 <html lang="VI">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Home - Tour Du lịch</title>
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -374,22 +375,6 @@
         </div>
       </div>
     </footer>
-<script>
-function toggleReview(buttonElement) {
-    // 1. Tìm thẻ cha .review-card chứa nút bấm này
-    const card = buttonElement.closest('.review-card');
-
-    // 2. Tìm thẻ .review-text nằm bên trong card đó
-    const reviewText = card.querySelector('.review-text');
-
-    // 3. Bật/tắt class collapsed và đổi chữ
-    reviewText.classList.toggle('collapsed');
-
-    if (reviewText.classList.contains('collapsed')) {
-        buttonElement.innerText = 'View more';
-    } else {
-        buttonElement.innerText = 'Show less';
-    }
-}</script>
+<script src="assets/js/header.js"></script>
 </body>
 </html>

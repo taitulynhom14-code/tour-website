@@ -182,3 +182,60 @@
   text-decoration: none;
   color: var(--blackish-green-color);
 }
+/*meta */
+/* ==========================================
+   RESPONSIVE: TABLET & MOBILE
+   ========================================== */
+
+/* --- TABLET (Dưới 1024px) --- */
+@media (max-width: 1024px) {
+  .newsletter-card,
+  .footer-container {
+    width: 90%; /* Chuyển chiều rộng cố định 1232px thành % linh hoạt */
+  }
+
+  .newsletter-content h2 {
+    font-size: 3.2rem;
+    line-height: 42px;
+  }
+
+  .footer-links {
+    gap: 16px;
+  }
+}
+
+/* --- MOBILE (Dưới 768px) --- */
+@media (max-width: 768px) {
+  .newsletter-card {
+    flex-direction: column; /* Xếp chồng hình ảnh và nội dung */
+    text-align: center;
+    padding: 24px;
+  }
+
+  .newsletter-image {
+    display: none; /* Ẩn ảnh trên mobile nếu quá chật */
+  }
+
+  .subscribe-form {
+    flex-direction: column; /* Form đăng ký xếp theo chiều dọc */
+  }
+
+  .footer-main {
+    padding: 160px 0 32px;
+    margin-top: 180px;
+  }
+
+  .footer-container {
+    flex-direction: column; /* Footer quay về 1 cột */
+    gap: 32px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap; /* Các cột link tự xuống dòng */
+    gap: 24px 16px;
+  }
+
+  .link-column {
+    width: 45%; /* Chia làm 2 cột link trên mobile */
+  }
+}
