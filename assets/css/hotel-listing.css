@@ -11,3 +11,186 @@
 .search-form__group {
   flex: 1;
 }
+
+.hotel-listing {
+  max-width: 1232px;
+  display: grid;
+  grid-template-columns: 2.8fr 0.4fr 6.8fr;
+  margin: 32px auto;
+}
+
+.hotel-listing__filters {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.filters__title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.filters-group__name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.filters-group__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.price-slider {
+  position: relative;
+  width: 100%;
+  height: 50px; /* Dành khoảng trống cho chữ số bên dưới */
+}
+
+/* Thanh xám nền */
+.slider-track {
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 95%;
+  height: 2px;
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+/* Thanh màu xanh nối 2 cục tròn */
+.slider-fill {
+  position: absolute;
+  top: 13px;
+  height: 2px;
+  background-color: var(--blackish-green-color); /* Thay bằng màu xanh của bạn */
+  border-radius: 4px;
+  /* Thuộc tính left và width sẽ do Javascript điều khiển */
+}
+
+/* Chỉnh 2 thẻ input */
+.slider-input {
+  position: absolute;
+  top: 1px;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none; /* Cho phép click xuyên qua */
+  margin: 0;
+}
+
+/* Tạo hình cục tròn */
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--mint-green-color);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 35px;
+  width: 100%;
+}
+
+/* Chữ số chạy theo cục tròn */
+.slider-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hotel-listing__separator {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--blackish-green-color);
+  opacity: 25%;
+}
+
+.rating-box__input {
+  display: none;
+}
+
+.rating-box__label {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid var(--mint-green-color);
+  border-radius: 4px;
+  color: var(--blackish-green-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  margin-right: 16px;
+}
+
+.rating-box__label:hover {
+  background-color: rgba(141, 211, 187, 0.2);
+}
+
+.rating-box__input:checked + .rating-box__label {
+  background-color: var(--mint-green-color);
+  color: white;
+}
+
+.filters-group__freebies,
+.filters-group__amenities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.freebies-box,
+.amenities-box {
+  display: flex;
+  align-items: center;
+}
+
+.freebies-box__input,
+.amenities-box__input {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--blackish-green-color);
+  border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: all ease 0.1s;
+}
+
+.freebies-box__input:checked,
+.amenities-box__input:checked {
+  border-color: var(--mint-green-color);
+  background-image: url(../image/check_success.svg);
+  background-size: 20px 20px;
+  background-position: center;
+  background-color: var(--mint-green-color);
+  transition: all ease 0.1s;
+}
+
+.freebies-box__label,
+.amenities-box__label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--blackish-green-color);
+  margin: 1px 0px 0px 8px;
+}
+
+.amenities-filters__expand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--slamon-color);
+  cursor: pointer;
+}
