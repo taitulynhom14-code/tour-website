@@ -157,7 +157,130 @@
       </form>
     </section>
 
-    <div class="hotel-listing"></div>
+    <div class="hotel-listing">
+      <aside class="hotel-listing__filters filters">
+        <h2 class="filters__title">Filters</h2>
+
+        <!-- Price -->
+        <div class="filters-group">
+          <div class="filters-group__header">
+            <h3 class="filters-group__name">Price</h3>
+            <img class="filters-group__icon" src="assets/image/chevron_up.svg" alt="toggle" />
+          </div>
+
+          <div class="filters-group__slider price-slider">
+            <!-- Thanh nền xám và thanh màu xanh nối giữa 2 cục tròn -->
+            <div class="slider-track"></div>
+            <div class="slider-fill" id="slider-fill"></div>
+
+            <!-- 2 thẻ input -->
+            <input type="range" class="slider-input" id="slider-min" min="50" max="1200" value="50" step="10" />
+            <input type="range" class="slider-input" id="slider-max" min="50" max="1200" value="1200" step="10" />
+
+            <!-- Chữ số chạy theo -->
+            <div class="slider-labels">
+              <span class="slider-label" id="label-min">$50</span>
+              <span class="slider-label" id="label-max">$1200</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-listing__separator"></div>
+
+        <!-- Rating -->
+        <div class="filters-group">
+          <div class="filters-group__header">
+            <h3 class="filters-group__name">Rating</h3>
+            <img class="filters-group__icon" src="assets/image/chevron_up.svg" alt="toggle" />
+          </div>
+
+          <div class="filters-group__rating rating-filters">
+            <label class="rating-box">
+              <input type="checkbox" name="rating" value="0" class="rating-box__input" />
+              <span class="rating-box__label">0+</span>
+            </label>
+            <label class="rating-box">
+              <input type="checkbox" name="rating" value="1" class="rating-box__input" />
+              <span class="rating-box__label">1+</span>
+            </label>
+            <label class="rating-box">
+              <input type="checkbox" name="rating" value="2" class="rating-box__input" />
+              <span class="rating-box__label">2+</span>
+            </label>
+            <label class="rating-box">
+              <input type="checkbox" name="rating" value="3" class="rating-box__input" />
+              <span class="rating-box__label">3+</span>
+            </label>
+            <label class="rating-box">
+              <input type="checkbox" name="rating" value="4" class="rating-box__input" />
+              <span class="rating-box__label">4+</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="hotel-listing__separator"></div>
+
+        <div class="filters-group">
+          <div class="filters-group__header">
+            <h3 class="filters-group__name">Freebies</h3>
+            <img class="filters-group__icon" src="assets/image/chevron_up.svg" alt="toggle" />
+          </div>
+          <div class="filters-group__freebies freebies-filters">
+            <label class="freebies-box">
+              <input type="checkbox" name="freebies" class="freebies-box__input" />
+              <span class="freebies-box__label">Free breakfast</span>
+            </label>
+            <label class="freebies-box">
+              <input type="checkbox" name="freebies" class="freebies-box__input" />
+              <span class="freebies-box__label">Free parking</span>
+            </label>
+            <label class="freebies-box">
+              <input type="checkbox" name="freebies" class="freebies-box__input" />
+              <span class="freebies-box__label">Free internet</span>
+            </label>
+            <label class="freebies-box">
+              <input type="checkbox" name="freebies" class="freebies-box__input" />
+              <span class="freebies-box__label">Free airport shuttle</span>
+            </label>
+            <label class="freebies-box">
+              <input type="checkbox" name="freebies" class="freebies-box__input" />
+              <span class="freebies-box__label">Free Cancellation</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="hotel-listing__separator"></div>
+
+        <div class="filters-group">
+          <div class="filters-group__header">
+            <h3 class="filters-group__name">Amenities</h3>
+            <img class="filters-group__icon" src="assets/image/chevron_up.svg" alt="toggle" />
+          </div>
+
+          <div class="filters-group__amenities amenities-filters">
+            <label class="amenities-box">
+              <input type="checkbox" name="amenities" class="amenities-box__input" />
+              <span class="amenities-box__label">24hr front desk</span>
+            </label>
+            <label class="amenities-box">
+              <input type="checkbox" name="amenities" class="amenities-box__input" />
+              <span class="amenities-box__label">Air-conditioned</span>
+            </label>
+            <label class="amenities-box">
+              <input type="checkbox" name="amenities" class="amenities-box__input" />
+              <span class="amenities-box__label">Fitness</span>
+            </label>
+            <label class="amenities-box">
+              <input type="checkbox" name="amenities" class="amenities-box__input" />
+              <span class="amenities-box__label">Pool</span>
+            </label>
+            <span class="amenities-filters__expand">+24 more</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="hotel-listing__content"></main>
+    </div>
 
     <footer class="footer-wrapper">
       <div class="footer-main">
@@ -239,5 +362,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- JS link -->
+    <script src="assets/js/hotel-listing.js"></script>
   </body>
 </html>
