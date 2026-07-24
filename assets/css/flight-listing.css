@@ -460,3 +460,14 @@
 .btn-primary:hover {
   background-color: #71b897;
 }
+.showmore{
+  color:white;
+  display: flex;
+  background: #112211;
+  border-radius: 10px;
+  padding: 24px;
+  gap: 24px;
+  margin-bottom: 16px;
+  font-size:17px;
+  justify-content: center;
+}
