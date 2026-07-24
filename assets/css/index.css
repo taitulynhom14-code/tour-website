@@ -632,6 +632,9 @@ select:focus {
     font-size:24px;
     font-family: Vertical;
 }
+.option-des{
+    margin-top: 12px;
+}
 /* Danh sách review*/
 
 .review-list {
