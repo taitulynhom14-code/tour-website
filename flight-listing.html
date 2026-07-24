@@ -145,85 +145,218 @@
     </form>
   </div>
 </div>
-  <div class="main-layout">
-    <div class="filter">
-      <div class="filter-header">Filter</div>
-      <div class="filter-group">
-        <p>Price</p>
-        <div class="arow">^</div>
-         <div class="slider">
-        <div class="slider-line"></div>
+<div class="main-layout">
+  <!-- CỘT BÊN TRÁI: FILTER -->
+  <aside class="filter-sidebar">
+    <h2 class="filter-title">Filters</h2>
 
-        <div class="slider-button left"></div>
-        <div class="slider-button right"></div>
-    </div>
-
-    <div class="price-value">
-        <span>$50</span>
-        <span>$1200</span>
-    </div>
-
+    <!-- Price Filter -->
+    <div class="filter-group">
+      <div class="filter-header">
+        <label>Price</label>
+        <i class="fa-solid fa-chevron-up arrow-icon"></i>
       </div>
-      <div class="filter-group">
-         <div class="filter-header">Departure Time</div>
-        <div class="filter-group">
-        <p>Price</p>
-        <div class="arow">^</div>
-         <div class="slider">
-        <div class="slider-line"></div>
-
-        <div class="slider-button left"></div>
-        <div class="slider-button right"></div>
-    </div>
-
-    <div class="price-value">
-        <span>$50</span>
-        <span>$1200</span>
-    </div>
-
-      </div>
-      </div>
-      <div class="filter-group">
-
+      <div class="slider-wrapper">
+        <div class="slider-line">
+          <div class="slider-active-line" style="left: 0%; right: 0%;"></div>
+          <div class="slider-button left" style="left: 0%;"></div>
+          <div class="slider-button right" style="right: 0%;"></div>
+        </div>
+        <div class="price-value">
+          <span>$50</span>
+          <span>$1200</span>
+        </div>
       </div>
     </div>
-    <div class="ticket-option">
-      <spam>Showing 4 of 257</spam>
-    <div class="seach-ticket ">
-      <ul id="seach-dropdown" class="dropdown-content">
-        <li>Cheapest</li>
-        <li>Best</li>
-        <li>Quickest</li>
-        <li>other sort</li>
-      </ul>
+
+    <!-- Departure Time Filter -->
+    <div class="filter-group">
+      <div class="filter-header">
+        <label>Departure Time</label>
+        <i class="fa-solid fa-chevron-up arrow-icon"></i>
+      </div>
+      <div class="slider-wrapper">
+        <div class="slider-line">
+          <div class="slider-active-line" style="left: 0%; right: 0%;"></div>
+          <div class="slider-button left" style="left: 0%;"></div>
+          <div class="slider-button right" style="right: 0%;"></div>
+        </div>
+        <div class="price-value">
+          <span>12:01am</span>
+          <span>11:56Pm</span>
+        </div>
+      </div>
     </div>
+
+    <!-- Rating Filter -->
+    <div class="filter-group">
+      <div class="filter-header">
+        <label>Rating</label>
+        <i class="fa-solid fa-chevron-up arrow-icon"></i>
+      </div>
+      <div class="rating-options">
+        <button class="btn-rating">0+</button>
+        <button class="btn-rating">1+</button>
+        <button class="btn-rating">2+</button>
+        <button class="btn-rating">3+</button>
+        <button class="btn-rating">4+</button>
+      </div>
     </div>
-    
-    <div id="cheapest-option" class="option-container">
-      <section class="cheapest-list">
-        <div class="ticket-list">
-          <div class="ticket-card">
-            <div class="ticket-header">
-                <div class="ticket-logo"><img src="assets/image/image 45.png"></div>
-                <div class="ticket-info">
-                <div class="ticket-review">4.2</div>
-                <p><strong>Very good</strong> 54 review</p>
-                <div class="check-ticket">
-                <intput type="check"></intput>
-                <lablel><strong>12:00 - 01:28 pm</strong> non stop 2h 28m</lablel>
-                <p>Emirates</p>
-                <p>EWR-BNA</p>
-              </div>
-              </div>
-              <div class="love">
-                <img src="">
-              </div>
-              <div class="btn-outline">View Deals</div>
+
+    <!-- Airlines Filter -->
+    <div class="filter-group">
+      <div class="filter-header">
+        <label>Airlines</label>
+        <i class="fa-solid fa-chevron-up arrow-icon"></i>
+      </div>
+      <div class="checkbox-list">
+        <label class="custom-checkbox"><input type="checkbox"> Emirates</label>
+        <label class="custom-checkbox"><input type="checkbox"> Fly Dubai</label>
+        <label class="custom-checkbox"><input type="checkbox"> Qatar</label>
+        <label class="custom-checkbox"><input type="checkbox"> Etihad</label>
+      </div>
+    </div>
+
+     <div class="filter-group">
+      <div class="filter-header">
+        <label>Trips</label>
+        <i class="fa-solid fa-chevron-up arrow-icon"></i>
+      </div>
+      <div class="checkbox-list">
+        <label class="custom-checkbox"><input type="checkbox"> Round trip</label>
+        <label class="custom-checkbox"><input type="checkbox"> On Way</label>
+        <label class="custom-checkbox"><input type="checkbox"> Multi - City</label>
+        <label class="custom-checkbox"><input type="checkbox"> My Dates Are Flexible</label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CỘT BÊN PHẢI: KẾT QUẢ TÌM KIẾM -->
+  <main class="content-area"> 
+    <!-- Thanh Tabs Lọc (Cheapest / Best / Quickest) -->
+    <div class="sort-tabs">
+      <div class="tab-item">
+        <strong>Cheapest</strong>
+        <span>$99 . 2h 18m</span>
+      </div>
+      <div class="tab-item active">
+        <strong>Best</strong>
+        <span>$99 . 2h 18m</span>
+      </div>
+      <div class="tab-item">
+        <strong>Quickest</strong>
+        <span>$99 . 2h 18m</span>
+      </div>
+      <div class="tab-item other-sort">
+        <i class="fa-solid fa-bars-staggered"></i> Other sort
+      </div>
+    </div>
+    <div class="ticket-status-bar">
+      <span class="showing-text">Showing 4 of <strong class="highlight-count">257 places</strong></span>
+      <div class="sort-dropdown">
+        Sort by <strong>Recommended</strong> <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+    <div id="cheapest">
+    <div class="ticket-list">
+      <div class="ticket-card">
+        <div class="ticket-logo">
+          <img src="assets/image/image 45.png" alt="Emirates">
+        </div>
+        <div class="ticket-info">
+          <div class="ticket-rating-price">
+            <div class="rating-box">
+              <span class="ticket-review">4.2</span>
+              <p><strong>Very Good</strong> 54 reviews</p>
+            </div>
+            <div class="ticket-price">
+              <span class="price-label">starting from</span>
+              <span class="price"><strong>$107</strong></span>
             </div>
           </div>
+          <div class="flight-row">
+            <input type="checkbox" class="flight-check">
+            <div class="flight-time">
+              <strong>12:00 pm - 01:28 pm</strong>
+              <span>Emirates</span>
+            </div>
+            <div class="flight-type">non stop</div>
+            <div class="flight-duration">
+              <strong>2h 28m</strong>
+              <span>EWR-BNA</span>
+            </div>
+          </div>
+          <div class="flight-row">
+            <input type="checkbox" class="flight-check">
+            <div class="flight-time">
+              <strong>12:00 pm - 01:28 pm</strong>
+              <span>Emirates</span>
+            </div>
+            <div class="flight-type">non stop</div>
+            <div class="flight-duration">
+              <strong>2h 28m</strong>
+              <span>EWR-BNA</span>
+            </div>
+          </div>
+          <div class="ticket-actions">
+            <button class="btn-favorite"><img src="assets/image/heart.png"></input></button>
+            <button class="btn-primary">View Deals</button>
+          </div>
         </div>
-      </section>
+      </div>
+      <!--Ticket 2-->
+      <div class="ticket-card">
+        <div class="ticket-logo">
+          <img src="assets/image/image 43.png" alt="Emirates">
+        </div>
+        <div class="ticket-info">
+          <div class="ticket-rating-price">
+            <div class="rating-box">
+              <span class="ticket-review">4.2</span>
+              <p><strong>Very Good</strong> 54 reviews</p>
+            </div>
+            <div class="ticket-price">
+              <span class="price-label">starting from</span>
+              <span class="price"><strong>$107</strong><p style="font-size: 12px;">/night</span>
+            </div>
+          </div>
+          <div class="flight-row">
+            <input type="checkbox" class="flight-check">
+            <div class="flight-time">
+              <strong>12:00 pm - 01:28 pm</strong>
+              <span>Emirates</span>
+            </div>
+            <div class="flight-type">non stop</div>
+            <div class="flight-duration">
+              <strong>2h 28m</strong>
+              <span>EWR-BNA</span>
+            </div>
+          </div>
+          <div class="flight-row">
+            <input type="checkbox" class="flight-check">
+            <div class="flight-time">
+              <strong>12:00 pm - 01:28 pm</strong>
+              <span>Emirates</span>
+            </div>
+            <div class="flight-type">non stop</div>
+            <div class="flight-duration">
+              <strong>2h 28m</strong>
+              <span>EWR-BNA</span>
+            </div>
+          </div>
+          <div class="ticket-actions">
+            <button class="btn-favorite"><img src="assets/image/heart.png"></input></button>
+            <button class="btn-primary">View Deals</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>  
+    </main>
+    </div>
+
+
+
 
      <footer class="footer-wrapper">
       <div class="footer-main">
