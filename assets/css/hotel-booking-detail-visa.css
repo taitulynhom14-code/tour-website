@@ -1,0 +1,20 @@
+.payment-card .payment-option__content {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-option__img {
+  margin-right: calc(32px - 8px);
+}
+
+.add-new-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  height: 190px;
+  border: 2px dashed var(--mint-green-color);
+  border-radius: 15px;
+}
