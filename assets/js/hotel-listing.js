@@ -50,6 +50,7 @@ if (sliderMin && sliderMax) {
 document.addEventListener("DOMContentLoaded", function () {
   const dropdown = document.getElementById("sort-dropdown");
 
+  // Chỉ chạy khối lệnh này nếu dropdown tồn tại trên trang
   if (dropdown) {
     const trigger = dropdown.querySelector(".sort-dropdown__trigger");
     const options = dropdown.querySelectorAll(".sort-dropdown__option");
