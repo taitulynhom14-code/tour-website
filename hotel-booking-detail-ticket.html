@@ -114,174 +114,149 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-y-8 gap-x-10 items-start">
+    <main class="flex flex-col w-full max-w-308 mx-auto px-4 lg:px-8">
       <!-- BREADCRUMB -->
-      <nav class="lg:col-span-3 w-full flex items-center text-sm font-medium text-blackish-green ml-6">
+      <nav class="flex items-center mb-8">
         <ol class="flex items-center gap-2 m-0 p-0 list-none">
-          <li><a href="#" class="opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline">Turkey</a></li>
-          <li class="flex items-center justify-center"><img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" /></li>
-          <li><a href="#" class="opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline">Istanbul</a></li>
-          <li class="flex items-center justify-center"><img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" /></li>
-          <li class="font-medium opacity-75">CVK Park Bosphorus Hotel Istanbul</li>
+          <li><a href="#" class="text-sm font-medium text-blackish-green no-underline hover:opacity-75 transition-opacity">Turkey</a></li>
+          <li class="flex items-center justify-center">
+            <img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" />
+          </li>
+          <li><a href="#" class="text-sm font-medium text-blackish-green no-underline hover:opacity-75 transition-opacity">Istanbul</a></li>
+          <li class="flex items-center justify-center">
+            <img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" />
+          </li>
+          <!-- Áp dụng opacity-40 theo chuẩn file CSS -->
+          <li class="text-sm font-medium text-blackish-green opacity-40">CVK Park Bosphorus Hotel Istanbul</li>
         </ol>
       </nav>
 
-      <!-- LEFT COLUMN (Chiếm 3/5 không gian) -->
-      <div class="lg:col-span-3 flex flex-col gap-10">
-        <!-- 1. RESERVATION INFO -->
-        <div class="flex flex-col">
-          <!-- Cố định padding py-8 px-6 để text vừa khít lề Breadcrumb -->
-          <div class="bg-white py-8 px-6 rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full">
-            <header class="flex justify-between items-start mb-4">
-              <h1 class="font-trade-gothic text-2xl font-bold text-blackish-green leading-none max-w-[490px] m-0">Superior room - 1 double bed or 2 twin beds</h1>
-              <div class="flex items-baseline text-slamon shrink-0">
-                <span class="text-3xl font-bold leading-none">$240</span>
-                <span class="text-sm font-bold leading-none">/night</span>
-              </div>
-            </header>
+      <!-- BOOKING CARD WRAP (Khách sạn) -->
+      <div class="flex flex-col gap-10 lg:mb-16">
+        <!-- Header Info -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div class="flex flex-col gap-4">
+            <h2 class="font-trade-gothic text-2xl font-bold leading-none text-blackish-green m-0">CVK Park Bosphorus Hotel Istanbul</h2>
+            <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75">
+              <img src="assets/image/location_light.svg" alt="Location" class="w-4 h-4 shrink-0" />
+              <span>Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+            </span>
+          </div>
 
-            <div class="grid grid-cols-[max-content_1fr] grid-rows-2 items-center gap-x-6 py-4 px-8 my-10 border border-mint-green rounded-lg">
-              <img src="assets/image/hotel-card-logo.png" alt="" class="w-16 h-16 object-cover rounded-xl row-span-2" />
-              <h2 class="font-trade-gothic text-2xl font-semibold text-blackish-green leading-none m-0">CVK Park Bosphorus Hotel Istanbul</h2>
-              <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75 mt-1">
-                <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
-                Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
-              </span>
+          <!-- Actions & Price -->
+          <div class="grid grid-cols-[auto_auto] gap-4 items-center w-full md:w-auto">
+            <span class="col-span-2 text-right text-[32px] font-bold leading-none text-slamon">$265</span>
+            <button class="w-12 h-12 flex items-center justify-center border border-solid border-mint-green rounded hover:bg-mint-green/20 transition-colors bg-transparent cursor-pointer shrink-0">
+              <img src="assets/image/share_light.svg" alt="Share" class="w-5 h-5" />
+            </button>
+            <a href="#" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-8 h-12 transition-colors no-underline">Download</a>
+          </div>
+        </header>
+
+        <!-- Ticket Section -->
+        <div class="flex flex-col lg:flex-row lg:max-h-80 w-full">
+          <!-- Left Ticket Box -->
+          <div class="flex flex-col md:flex-row flex-1 rounded-2xl overflow-hidden border border-[#eaeaea]">
+            <!-- Sidebar / Timeline -->
+            <div class="flex flex-col justify-between p-6 bg-mint-cream gap-4 shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="text-[32px] font-semibold leading-none text-blackish-green">Thur, Dec 8</span>
+                <span class="text-xs font-medium leading-none text-blackish-green opacity-60">Check-In</span>
+              </div>
+
+              <div class="flex justify-center items-center py-2">
+                <img src="assets/image/building-combine.svg" alt="Combine" class="h-auto" />
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <span class="text-[32px] font-semibold leading-none text-blackish-green">Fri, Dec 9</span>
+                <span class="text-xs font-medium leading-none text-blackish-green opacity-60">Check-Out</span>
+              </div>
             </div>
 
-            <div class="flex justify-between items-center">
-              <div class="flex flex-col">
-                <p class="text-xl font-semibold text-blackish-green leading-none m-0 mb-2">Thursday, Dec 8</p>
-                <p class="text-sm font-medium text-blackish-green/75 leading-none m-0">Check-In</p>
+            <!-- Main Ticket Body -->
+            <div class="relative bg-white flex-1 flex flex-col">
+              <!-- Guest Banner -->
+              <div class="flex justify-between items-center bg-mint-green p-6 h-22 shrink-0">
+                <div class="flex items-center gap-4">
+                  <img src="assets/image/user-avt.png" alt="Avatar" class="border border-white rounded-full w-12 h-12 object-cover" />
+                  <span class="font-trade-gothic text-xl font-bold leading-none text-blackish-green">James Doe</span>
+                </div>
+                <div class="font-trade-gothic text-sm font-bold leading-tight text-right text-blackish-green">Superior room - 1 double bed<br />or 2 twin beds</div>
               </div>
 
-              <!-- Giữ nguyên icon schedule theo yêu cầu -->
-              <img src="assets/image/schedule-icon.svg" alt="Schedule" />
+              <!-- Ticket Details -->
+              <div class="flex flex-wrap gap-8 p-6">
+                <div class="flex gap-2 items-center">
+                  <img src="assets/image/timer_primary.svg" alt="Timer" class="w-8 h-8" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Check-in time</span>
+                    <span class="text-base font-medium leading-none text-blackish-green">12:00pm</span>
+                  </div>
+                </div>
 
-              <div class="flex flex-col text-right">
-                <p class="text-xl font-semibold text-blackish-green leading-none m-0 mb-2">Friday, Dec 9</p>
-                <p class="text-sm font-medium text-blackish-green/75 leading-none m-0">Check-Out</p>
+                <div class="flex gap-2 items-center">
+                  <img src="assets/image/timer_primary.svg" alt="Timer" class="w-8 h-8" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Check-out time</span>
+                    <span class="text-base font-medium leading-none text-blackish-green">11:30pm</span>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 items-center">
+                  <img src="assets/image/door_primary.svg" alt="Door" class="w-8 h-8" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Room no.</span>
+                    <span class="text-base font-medium leading-none text-blackish-green">On arrival</span>
+                  </div>
+                </div>
               </div>
+
+              <!-- Ticket Reference -->
+              <div class="absolute bottom-[10%] left-[4%] flex flex-col gap-1">
+                <span class="text-[32px] font-semibold leading-none text-blackish-green">EK</span>
+                <span class="text-xs font-medium leading-none text-blackish-green opacity-60">ABC12345</span>
+              </div>
+
+              <!-- Barcode -->
+              <img class="absolute right-0 bottom-0 max-w-30 lg:max-w-none object-contain" src="assets/image/barcode.png" alt="Barcode" />
             </div>
           </div>
-        </div>
 
-        <!-- 2. PAYMENT OPTIONS -->
-        <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
-          <!-- Option 1: Pay in full -->
-          <label class="relative flex flex-col justify-between w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300 group has-[:checked]:bg-mint-green">
-            <input type="radio" name="payment_method" class="hidden" checked />
-            <div class="flex justify-between items-center p-4">
-              <div class="flex flex-col gap-2">
-                <p class="text-base font-bold text-blackish-green m-0">Pay in full</p>
-                <p class="text-sm font-normal text-blackish-green m-0">Pay the total and you are all set</p>
-              </div>
-              <!-- Logic icon Radio xịn sò, không dính LSP Warning -->
-              <div class="relative w-6 h-6 shrink-0">
-                <div class="absolute inset-0 bg-[url('../image/none-checked.svg')] bg-contain bg-no-repeat group-has-[:checked]:hidden"></div>
-                <div class="absolute inset-0 bg-[url('../image/checked.svg')] bg-contain bg-no-repeat hidden group-has-[:checked]:block"></div>
-              </div>
-            </div>
-          </label>
-
-          <!-- Option 2: Pay part now -->
-          <label class="relative flex flex-col w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300 group has-[:checked]:bg-mint-green">
-            <input type="radio" name="payment_method" class="hidden" />
-            <div class="flex justify-between items-center p-4">
-              <div class="flex flex-col gap-2">
-                <p class="text-base font-bold text-blackish-green m-0">Pay part now, part later</p>
-                <p class="text-sm font-normal text-blackish-green m-0 leading-relaxed pr-4">Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</p>
-              </div>
-              <div class="relative w-6 h-6 shrink-0">
-                <div class="absolute inset-0 bg-[url('../image/none-checked.svg')] bg-contain bg-no-repeat group-has-[:checked]:hidden"></div>
-                <div class="absolute inset-0 bg-[url('../image/checked.svg')] bg-contain bg-no-repeat hidden group-has-[:checked]:block"></div>
-              </div>
-            </div>
-            <a href="#" class="text-xs font-medium underline text-blackish-green ml-4 mb-4">More info</a>
-          </label>
-        </div>
-
-        <!-- 3. LOGIN CARD -->
-        <div class="flex flex-col p-6 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-6">
-          <form class="flex flex-col gap-4">
-            <h2 class="font-trade-gothic text-xl font-bold text-blackish-green leading-snug m-0">Login or Sign up to book</h2>
-            <input type="tel" class="text-base font-normal text-blackish-green p-4 border border-blackish-green rounded outline-none focus:border-mint-green transition-colors" placeholder="Phone Number" />
-            <p class="text-sm font-normal text-blackish-green mb-2 mt-0">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="font-semibold text-blackish-green no-underline hover:underline">Privacy Policy</a></p>
-            <button type="button" class="text-base font-medium text-blackish-green bg-mint-green py-3.5 px-4 rounded hover:bg-mint-green/80 transition-colors w-full cursor-pointer border-none">Continue</button>
-          </form>
-
-          <div class="flex items-center text-base font-medium text-blackish-green text-center before:content-[''] before:flex-1 before:h-px before:bg-blackish-green/25 before:mr-6 after:content-[''] after:flex-1 after:h-px after:bg-blackish-green/25 after:ml-6">Or</div>
-
-          <div class="grid grid-cols-3 gap-4">
-            <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer">
-              <img src="assets/image/facebook_icon.svg" alt="Facebook" class="w-6 h-6" />
-            </button>
-            <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer">
-              <img src="assets/image/google_icon.svg" alt="Google" class="w-6 h-6" />
-            </button>
-            <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer">
-              <img src="assets/image/apple_icon.svg" alt="Apple" class="w-6 h-6" />
-            </button>
-
-            <button type="button" class="col-span-3 flex justify-center items-center gap-4 py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors text-base font-medium text-blackish-green cursor-pointer">
-              <img src="assets/image/mail_light.svg" alt="Email" class="w-6 h-6" />
-              Continue with email
-            </button>
-          </div>
+          <!-- Aside / Map (Ảnh Logo) -->
+          <aside class="py-2 px-8 lg:px-28 bg-white border border-[#eaeaea] rounded-2xl flex items-center justify-center shrink-0">
+            <img class="max-w-40 h-auto" src="assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus Hotel" />
+          </aside>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN (Chiếm 2/5 không gian) -->
-      <aside class="lg:col-span-2 flex flex-col p-6 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] gap-4 w-full h-fit">
-        <div class="flex flex-col xl:flex-row gap-6">
-          <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="" class="w-[120px] h-[120px] rounded-xl object-cover shrink-0" />
-          <div class="flex flex-col justify-between min-w-0">
-            <div class="flex flex-col gap-1">
-              <p class="text-base font-medium text-blackish-green/75 m-0 leading-tight">CVK Park Bosphorus ...</p>
-              <h3 class="font-trade-gothic text-xl font-semibold text-blackish-green leading-tight m-0">Superior room - 1 double bed or 2 twin beds</h3>
-            </div>
-            <div class="flex items-center mt-2">
-              <span class="px-3 py-1.5 mr-2 bg-white rounded border border-mint-green text-xs font-bold text-blackish-green">4.2</span>
-              <span class="text-xs font-medium text-blackish-green"><strong class="font-bold">Very Good</strong> 54 reviews</span>
-            </div>
-          </div>
+      <!-- TERMS AND CONDITIONS -->
+      <div class="flex flex-col gap-8 text-blackish-green">
+        <h2 class="font-trade-gothic text-2xl font-semibold leading-none m-0">Terms and Conditions</h2>
+
+        <div class="flex flex-col">
+          <h3 class="text-xl font-medium leading-none m-0 mb-4">Payments</h3>
+          <ul class="flex flex-col list-none p-0 m-0 gap-4">
+            <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</li>
+            <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+            <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
+          </ul>
         </div>
 
-        <div class="h-px w-full bg-blackish-green/25"></div>
-
-        <p class="text-base font-medium text-blackish-green m-0">Your booking is protected by <strong class="font-bold">golobe</strong></p>
-
-        <div class="h-px w-full bg-blackish-green/25"></div>
-
-        <div class="flex flex-col text-base text-blackish-green gap-4">
-          <h4 class="text-base font-bold text-blackish-green m-0">Price Details</h4>
-
-          <div class="flex justify-between">
-            <span class="font-medium">Base Fare</span>
-            <span class="font-semibold">$240</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="font-medium">Discount</span>
-            <span class="font-semibold">$0</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="font-medium">Taxes</span>
-            <span class="font-semibold">$20</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="font-medium">Service Fee</span>
-            <span class="font-semibold">$5</span>
-          </div>
-
-          <div class="h-px w-full bg-blackish-green/25 my-1"></div>
-
-          <div class="flex justify-between items-center">
-            <span class="font-medium">Total</span>
-            <!-- Đồng bộ text-2xl cho giá tiền -->
-            <span class="font-semibold text-2xl">$265</span>
+        <div class="flex flex-col">
+          <h3 class="text-xl font-medium leading-none m-0 mb-4">Contact Us</h3>
+          <div class="text-sm font-normal leading-5 flex flex-col gap-4">
+            <p class="m-0">If you have any questions about our Website or our Terms of Use, please contact:</p>
+            <address class="not-italic m-0">
+              Golobe Group Q.C.S.C<br />
+              Golobe Tower<br />
+              P.O. Box: 22550<br />
+              Doha, State of Qatar
+            </address>
+            <p class="m-0">Further contact details can be found at <a href="#" class="text-blackish-green underline">golobe.com/help</a></p>
           </div>
         </div>
-      </aside>
+      </div>
     </main>
     <footer class="w-full bg-white">
       <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">

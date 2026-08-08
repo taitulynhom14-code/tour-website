@@ -4,105 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golobe - Tour Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/hotel-listing.css" />
-    <link rel="stylesheet" href="assets/css/find-stays.css" />
-    <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
+    <link rel="stylesheet" href="assets/css/input.css" />
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__container">
+    <!-- HEADER -->
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+      <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li class="navbar__item">
-              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+        <nav class="flex flex-1">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/airplane_light.svg" alt="Flight" />
+              <a href="find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="navbar__item navbar__item--active">
-              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
-              <a href="find-stays.html" class="navbar__link">Find Stays</a>
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
+              <img src="assets/image/bed_light.svg" alt="Stays" />
+              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
 
         <!-- Logo Center -->
-        <div class="logo">
-          <a href="index.html" class="logo-link">
+        <div>
+          <a href="index.html" class="flex items-center">
             <img src="assets/image/logo-small.png" alt="Golobe" />
           </a>
         </div>
 
         <!-- Right Menu -->
-        <div class="user-action">
-          <ul class="user-action__list">
-            <li class="user-action__item">
-              <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
-              <a href="#" class="user-action__link">Favourites</a>
+        <div class="flex flex-1 justify-end">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/heart_light.svg" alt="Heart" />
+              <a href="#" class="text-blackish-green no-underline">Favourites</a>
             </li>
-            <li class="user-action__item user-action__separator">|</li>
-            <li class="user-action__item">
-              <a href="#" class="user-action__link user-action__profile">
-                <div class="header__avatar-wrap">
-                  <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
-                  <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
-                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+
+            <!-- Dropdown Container -->
+            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
+                <div class="relative inline-flex">
+                  <img src="assets/image/user-avt.png" alt="John D." />
+                  <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0" />
                 </div>
                 John D.
               </a>
+
               <!-- User Menu -->
-              <div class="user-menu">
-                <div class="user-menu__header">
-                  <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
-                  <div class="user-menu__info">
-                    <span class="user-menu__info-name">John Doe.</span>
-                    <span class="user-menu__info-status">Online</span>
+              <div class="hidden group-hover:flex flex-col absolute p-8 right-0 top-full mt-5 w-72 max-w-xs rounded-xl gap-6 z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] before:content-[''] before:w-full before:h-6 before:block before:absolute before:-top-5 before:left-0">
+                <div class="flex items-center gap-4">
+                  <img src="assets/image/user-avt.svg" alt="John Doe." />
+                  <div class="flex flex-col w-full gap-1">
+                    <span class="text-base font-semibold text-blackish-green">John Doe.</span>
+                    <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
                   </div>
                 </div>
 
-                <div class="user-menu__separator"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
 
-                <ul class="user-menu__list account-menu">
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/user_light.svg" alt="#" class="user__icon" />
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/user_light.svg" alt="#" />
                       My account
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/card_light.png" alt="#" class="user__icon" />
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/card_light.png" alt="#" />
                       Payments
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/setting_light.png" alt="#" />
                       Setting
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                 </ul>
 
-                <div class="user-menu__separator"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
 
-                <ul class="user-menu__list system-menu">
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/support_light.png" alt="#" class="user__icon" />
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/support_light.png" alt="#" />
                       Support
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/logout_light.png" alt="#" />
                       Logout
                     </a>
                   </li>
@@ -114,406 +113,505 @@
       </div>
     </header>
 
-    <main class="hotel-detail">
-      <div class="hotel-detail__intro">
-        <nav class="breadcrumb">
-          <ol class="breadcrumb__list">
-            <li class="breadcrumb__item">
-              <a href="#" class="breadcrumb__link">Turkey</a>
+    <!-- MAIN DETAIL CONTENT -->
+    <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 mt-8">
+      <!-- 1. INTRO SECTION -->
+      <div class="flex flex-col">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center text-sm font-medium text-blackish-green mb-8">
+          <ol class="flex items-center gap-2 m-0 p-0 list-none">
+            <li><a href="#" class="opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline">Turkey</a></li>
+            <li>
+              <img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" />
             </li>
-            <li class="breadcrumb__item">
-              <a href="#" class="breadcrumb__link">Istanbul</a>
+            <li><a href="#" class="opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline">Istanbul</a></li>
+            <li>
+              <img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" />
             </li>
-            <li class="breadcrumb__item breadcrumb__item--active">CVK Park Bosphorus Hotel Istanbul</li>
+            <li class="opacity-75">CVK Park Bosphorus Hotel Istanbul</li>
           </ol>
         </nav>
-        <section class="detail-header">
-          <div class="detail-header__info">
-            <div class="detail-header__title-group">
-              <h1 class="hotel-card__name">CVK Park Bosphorus Hotel Istanbul</h1>
-              <span class="hotel-card__stars">
-                <img src="assets/image/5-stars.svg" alt="5 star" />
-                <span class="hotel-card__stars-text">5 Star Hotel</span>
+
+        <!-- Detail Header -->
+        <section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-2">
+              <h1 class="font-trade-gothic text-3xl lg:text-4xl font-bold text-blackish-green leading-tight mb-0">CVK Park Bosphorus Hotel Istanbul</h1>
+              <span class="inline-flex items-center gap-2 shrink-0">
+                <img src="assets/image/5-stars.svg" alt="5 star" class="w-24" />
+                <span class="text-sm font-medium text-blackish-green leading-none">5 Star Hotel</span>
               </span>
             </div>
 
-            <span class="hotel-card__location">
-              <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
-              <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+            <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75">
+              <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4" />
+              Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
             </span>
 
-            <div class="rating-display">
-              <span class="hotel-card__rating-box rating-box__label">4.2</span>
-              <span class="hotel-card__rating-text"><strong>Very Good</strong> 371 reviews</span>
+            <div class="flex items-center gap-2">
+              <span class="border border-mint-green rounded px-3 py-1.5 text-xs font-medium text-blackish-green">4.2</span>
+              <span class="text-sm font-medium text-blackish-green"><strong>Very Good</strong> 371 reviews</span>
             </div>
           </div>
-          <div class="detail-header__actions">
-            <div class="price-display">
-              <div class="price-value">
-                <span class="price-amount">$240</span>
-                <span class="price-unit">/night</span>
-              </div>
+
+          <div class="flex flex-col items-start md:items-end gap-4 shrink-0">
+            <div class="flex items-baseline text-slamon">
+              <span class="text-3xl lg:text-4xl font-bold leading-none">$240</span>
+              <span class="text-sm font-bold leading-none">/night</span>
             </div>
 
-            <div class="detail-buttons">
-              <label class="hotel-card__actions-favorite">
-                <input type="checkbox" class="favorite-checkbox" />
-                <span class="favorite-icon"></span>
+            <div class="flex gap-4 w-full md:w-auto">
+              <!-- Favorite -->
+              <label class="relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0 group">
+                <input type="checkbox" class="peer hidden" />
+                <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:[background-image:url('../image/heart_light.svg')] transition-all"></div>
+                <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
               </label>
-
-              <button class="hotel-card__actions-favorite">
-                <img src="assets/image/share_light.svg" alt="Share" />
+              <!-- Share -->
+              <button class="w-12 h-12 flex items-center justify-center border border-solid border-mint-green rounded hover:bg-mint-green/20 transition-colors shrink-0 cursor-pointer bg-transparent">
+                <img src="assets/image/share_light.svg" alt="Share" class="w-5 h-5" />
               </button>
-
-              <a href="hotel-booking-detail.html" class="hotel-card__actions-btn">Book now</a>
+              <!-- Book Now -->
+              <a href="hotel-booking-detail.html" class="flex-1 md:flex-none flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-8 transition-colors no-underline"> Book now </a>
             </div>
           </div>
         </section>
-        <section class="detail-gallery">
-          <img src="assets/image/cvk-park-bosphorus-hotel-istanbul_612x550.png" alt="" class="detail-gallery__main" />
-          <img src="assets/image/bed(1).png" alt="" class="detail-gallery__picture" />
-          <img src="assets/image/eresin-hotel-sultanahmet(3)_302x271.png" alt="" class="detail-gallery__picture" />
-          <img src="assets/image/bed(2).png" alt="" class="detail-gallery__picture" />
-          <img src="assets/image/bed(3).png" alt="" class="detail-gallery__picture" />
+
+        <!-- Gallery (Grid phức hợp 1 to, 4 nhỏ) -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-2 rounded-xl overflow-hidden">
+          <!-- Ảnh chính -->
+          <img src="assets/image/cvk-park-bosphorus-hotel-istanbul_612x550.png" alt="" class="w-full h-full object-cover min-h-[300px]" />
+
+          <!-- 4 ảnh phụ lưới 2x2 -->
+          <div class="grid grid-cols-2 gap-2">
+            <img src="assets/image/bed(1).png" alt="" class="w-full h-full object-cover" />
+            <img src="assets/image/eresin-hotel-sultanahmet(3)_302x271.png" alt="" class="w-full h-full object-cover" />
+            <img src="assets/image/bed(2).png" alt="" class="w-full h-full object-cover" />
+            <img src="assets/image/bed(3).png" alt="" class="w-full h-full object-cover" />
+          </div>
         </section>
       </div>
 
-      <div class="hotel-detail__separator"></div>
+      <div class="h-px w-full bg-blackish-green/25 my-16"></div>
 
-      <div class="hotel-detail__overal">
-        <div class="overview">
-          <h2 class="overview__heading">Overview</h2>
-          <p class="overview__desc">Located in Taksim Gmsuyu, the heart of Istanbul, the CVK Park Bosphorus Hotel Istanbul has risen from the ashes of the historic Park Hotel, which also served as Foreign Affairs Palace 120 years ago and is hosting its guests by assuming this hospitality mission. With its 452 luxurious rooms and suites, 8500 m2 SPA and fitness area, 18 meeting rooms including 4 dividable ones and 3 terraces with Bosphorus view, Istanbuls largest terrace with Bosphorus view (4500 m2) and latest technology infrastructure, CVK Park Bosphorus Hotel Istanbul is destined to be the popular attraction point of the city. Room and suite categories at various sizes with city and Bosphorus view, as well as 68 separate luxury suites, are offered to its special guests as a wide variety of selection.</p>
-          <div class="overview__feature-list">
-            <div class="overview__rating overview__card">
-              <h2 class="overview__rating-heading">4.2</h2>
-              <div class="overview__rating-text">
-                <p class="overview__rating-response">Very good</p>
-                <span class="overview__desc">371 reviews</span>
-              </div>
+      <!-- 2. OVERVIEW SECTION -->
+      <div class="flex flex-col gap-4">
+        <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Overview</h2>
+        <p class="text-base font-medium text-blackish-green/75 leading-none m-0 text-justify">Located in Taksim Gmsuyu, the heart of Istanbul, the CVK Park Bosphorus Hotel Istanbul has risen from the ashes of the historic Park Hotel, which also served as Foreign Affairs Palace 120 years ago and is hosting its guests by assuming this hospitality mission. With its 452 luxurious rooms and suites, 8500 m2 SPA and fitness area, 18 meeting rooms including 4 dividable ones and 3 terraces with Bosphorus view, Istanbuls largest terrace with Bosphorus view (4500 m2) and latest technology infrastructure, CVK Park Bosphorus Hotel Istanbul is destined to be the popular attraction point of the city. Room and suite categories at various sizes with city and Bosphorus view, as well as 68 separate luxury suites, are offered to its special guests as a wide variety of selection.</p>
+
+        <div class="flex flex-wrap gap-4 mt-4">
+          <!-- Card 1: Rating (Nền xanh đặc, chữ bố trí trên/dưới) -->
+          <div class="flex flex-col justify-between p-4 border border-mint-green rounded-xl bg-mint-green w-40 h-36 shrink-0">
+            <span class="text-4xl font-bold text-blackish-green leading-none">4.2</span>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold text-blackish-green leading-none">Very good</span>
+              <span class="text-xs font-normal text-blackish-green leading-none">371 reviews</span>
             </div>
-            <div class="overview__chip overview__card">
-              <img src="assets/image/multi-stars_light.svg" alt="" class="overview__chip-icon" />
-              <p class="overview__desc">Near park</p>
-            </div>
-            <div class="overview__chip overview__card">
-              <img src="assets/image/multi-stars_light.svg" alt="" class="overview__chip-icon" />
-              <p class="overview__desc">Near nightlife</p>
-            </div>
-            <div class="overview__chip overview__card">
-              <img src="assets/image/multi-stars_light.svg" alt="" class="overview__chip-icon" />
-              <p class="overview__desc">Near theater</p>
-            </div>
-            <div class="overview__chip overview__card">
-              <img src="assets/image/multi-stars_light.svg" alt="" class="overview__chip-icon" />
-              <p class="overview__desc">Clean Hotel</p>
-            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col justify-between p-4 border border-mint-green rounded-xl w-40 h-36 shrink-0">
+            <img src="assets/image/multi-stars_light.svg" alt="stars" class="w-8 h-8" />
+            <span class="text-sm font-medium text-blackish-green leading-none">Near park</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col justify-between p-4 border border-mint-green rounded-xl w-40 h-36 shrink-0">
+            <img src="assets/image/multi-stars_light.svg" alt="stars" class="w-8 h-8" />
+            <span class="text-sm font-medium text-blackish-green leading-none">Near nightlife</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col justify-between p-4 border border-mint-green rounded-xl w-40 h-36 shrink-0">
+            <img src="assets/image/multi-stars_light.svg" alt="stars" class="w-8 h-8" />
+            <span class="text-sm font-medium text-blackish-green leading-none">Near theater</span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="flex flex-col justify-between p-4 border border-mint-green rounded-xl w-40 h-36 shrink-0">
+            <img src="assets/image/multi-stars_light.svg" alt="stars" class="w-8 h-8" />
+            <span class="text-sm font-medium text-blackish-green leading-none">Clean Hotel</span>
           </div>
         </div>
       </div>
 
-      <div class="hotel-detail__separator"></div>
+      <div class="h-px w-full bg-blackish-green/25 my-16"></div>
 
-      <div class="hotel-detail__rooms">
-        <h2 class="hotel-detail__rooms-heading">Available Rooms</h2>
-        <ul class="hotel-detail__rooms-list">
-          <li class="hotel-detail__room">
-            <div class="hotel-detail__room-left">
-              <img src="assets/image/bed(2)_48x48.png" alt="" class="hotel-detail__room-img" />
-              <span class="hotel-detail__room-type">Superior room - 1 double bed or 2 twin beds</span>
+      <!-- 3. AVAILABLE ROOMS -->
+      <div class="flex flex-col gap-8">
+        <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Available Rooms</h2>
+        <ul class="flex flex-col m-0 p-0 list-none">
+          <!-- Room 1 -->
+          <li class="flex flex-col md:flex-row justify-between items-start md:items-center py-4 gap-4 border-b border-blackish-green/25">
+            <div class="flex items-center gap-4">
+              <img src="assets/image/bed(2)_48x48.png" alt="" class="w-12 h-12 rounded object-cover" />
+              <span class="text-base font-medium text-blackish-green">Superior room - 1 double bed or 2 twin beds</span>
             </div>
-            <div class="hotel-detail__room-right">
-              <div class="hotel-detai__room-price">
-                <span class="hotel-detail__price-amount">$240</span>
-                <span class="hotel-detail__price-unit">/night</span>
+            <div class="flex items-center justify-between w-full md:w-auto gap-8">
+              <div class="flex items-baseline text-blackish-green">
+                <span class="text-2xl font-bold leading-none">$240</span>
+                <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="hotel-card__actions-btn">Book now</a>
+              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
             </div>
           </li>
-          <div class="hotel-detail__separator"></div>
-          <li class="hotel-detail__room">
-            <div class="hotel-detail__room-left">
-              <img src="assets/image/bed(3)_48x48.png" alt="" class="hotel-detail__room-img" />
-              <span class="hotel-detail__room-type">Superior room - City view - 1 double bed or 2 twin beds</span>
+
+          <!-- Room 2 -->
+          <li class="flex flex-col md:flex-row justify-between items-start md:items-center py-4 gap-4 border-b border-blackish-green/25">
+            <div class="flex items-center gap-4">
+              <img src="assets/image/bed(3)_48x48.png" alt="" class="w-12 h-12 rounded object-cover" />
+              <span class="text-base font-medium text-blackish-green">Superior room - City view - 1 double bed or 2 twin beds</span>
             </div>
-            <div class="hotel-detail__room-right">
-              <div class="hotel-detai__room-price">
-                <span class="hotel-detail__price-amount">$280</span>
-                <span class="hotel-detail__price-unit">/night</span>
+            <div class="flex items-center justify-between w-full md:w-auto gap-8">
+              <div class="flex items-baseline text-blackish-green">
+                <span class="text-2xl font-bold leading-none">$280</span>
+                <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="hotel-card__actions-btn">Book now</a>
+              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
             </div>
           </li>
-          <div class="hotel-detail__separator"></div>
-          <li class="hotel-detail__room">
-            <div class="hotel-detail__room-left">
-              <img src="assets/image/erensin-hotel-sultanahment(3)_48x48.png" alt="" class="hotel-detail__room-img" />
-              <span class="hotel-detail__room-type">Superior room - City view - 1 double bed or 2 twin beds</span>
+
+          <!-- Room 3 -->
+          <li class="flex flex-col md:flex-row justify-between items-start md:items-center py-4 gap-4 border-b border-blackish-green/25">
+            <div class="flex items-center gap-4">
+              <img src="assets/image/erensin-hotel-sultanahment(3)_48x48.png" alt="" class="w-12 h-12 rounded object-cover" />
+              <span class="text-base font-medium text-blackish-green">Superior room - City view - 1 double bed or 2 twin beds</span>
             </div>
-            <div class="hotel-detail__room-right">
-              <div class="hotel-detai__room-price">
-                <span class="hotel-detail__price-amount">$320</span>
-                <span class="hotel-detail__price-unit">/night</span>
+            <div class="flex items-center justify-between w-full md:w-auto gap-8">
+              <div class="flex items-baseline text-blackish-green">
+                <span class="text-2xl font-bold leading-none">$320</span>
+                <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="hotel-card__actions-btn">Book now</a>
+              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
             </div>
           </li>
-          <div class="hotel-detail__separator"></div>
-          <li class="hotel-detail__room">
-            <div class="hotel-detail__room-left">
-              <img src="assets/image/erensin-hotel-sultanahment(3)_48x48.png" alt="" class="hotel-detail__room-img" />
-              <span class="hotel-detail__room-type">Superior room - City view - 1 double bed or 2 twin beds</span>
+
+          <!-- Room 4 -->
+          <li class="flex flex-col md:flex-row justify-between items-start md:items-center py-4 gap-4">
+            <div class="flex items-center gap-4">
+              <img src="assets/image/erensin-hotel-sultanahment(3)_48x48.png" alt="" class="w-12 h-12 rounded object-cover" />
+              <span class="text-base font-medium text-blackish-green">Superior room - City view - 1 double bed or 2 twin beds</span>
             </div>
-            <div class="hotel-detail__room-right">
-              <div class="hotel-detai__room-price">
-                <span class="hotel-detail__price-amount">$350</span>
-                <span class="hotel-detail__price-unit">/night</span>
+            <div class="flex items-center justify-between w-full md:w-auto gap-8">
+              <div class="flex items-baseline text-blackish-green">
+                <span class="text-2xl font-bold leading-none">$350</span>
+                <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="hotel-card__actions-btn">Book now</a>
+              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
             </div>
           </li>
         </ul>
       </div>
 
-      <div class="hotel-detail__separator"></div>
+      <div class="h-px w-full bg-blackish-green/25 my-16"></div>
 
-      <div class="hotel-detail__location">
-        <header class="hotel-detail__location-header">
-          <h2 class="hotel-detail__location-heading">Location/Map</h2>
-          <button class="hotel-card__actions-btn">View on google maps</button>
+      <!-- 4. LOCATION/MAP -->
+      <div class="flex flex-col gap-8">
+        <header class="flex justify-between items-center">
+          <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Location/Map</h2>
+          <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors cursor-pointer border-none">View on google maps</button>
         </header>
-        <img src="assets/image/location-picture.png" alt="" class="hotel-detail__location-img" />
-        <span class="hotel-card__location">
-          <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
-          <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
-        </span>
+        <!-- Cụm bản đồ & địa chỉ gắn kết -->
+        <div class="flex flex-col gap-2">
+          <img src="assets/image/location-picture.png" alt="Map Location" class="w-full rounded-xl object-cover" />
+
+          <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75">
+            <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4" />
+            Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
+          </span>
+        </div>
       </div>
 
-      <div class="hotel-detail__separator"></div>
+      <div class="h-px w-full bg-blackish-green/25 my-16"></div>
 
-      <div class="hotel-detail__amenities">
-        <h2 class="hotel-detail__amenities-heading">Amenities</h2>
-        <ul class="hotel-detail__amenities-list">
-          <li class="hotel-detail__item">
-            <img src="assets/image/pool_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Outdoor pool</span>
+      <!-- 5. AMENITIES -->
+      <div class="flex flex-col gap-8">
+        <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Amenities</h2>
+
+        <!-- Cập nhật Grid: Mobile 1 cột, Desktop chia 2 cột dọc (5 hàng) -->
+        <ul class="grid grid-cols-1 md:grid-rows-5 md:grid-flow-col gap-y-4 md:gap-x-32 m-0 p-0 list-none md:w-fit">
+          <li class="flex items-center gap-4">
+            <img src="assets/image/pool_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Outdoor pool</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/pool_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Indoor pool</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/pool_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Indoor pool</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/spa_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Spa and wellness center</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/spa_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Spa and wellness center</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/restaurant_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Restaurant</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/restaurant_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Restaurant</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/bell_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Room service</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/bell_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Room service</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/fitness_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Fitness center</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/fitness_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Fitness center</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/wine_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Bar/Lounge</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/wine_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Bar/Lounge</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/wifi_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Free Wi-Fi</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/wifi_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Free Wi-Fi</span>
           </li>
-          <li class="hotel-detail__item">
-            <img src="assets/image/cafe_24x24_light.svg" alt="" class="hotel-detail__item-icon" />
-            <span class="hotel-detail__item-text">Tea/coffee machine</span>
+
+          <li class="flex items-center gap-4">
+            <img src="assets/image/cafe_24x24_light.svg" alt="" class="w-6 h-6" />
+            <span class="text-sm font-medium text-blackish-green">Tea/coffee machine</span>
           </li>
-          <li class="hotel-detail__item">
-            <span class="amenities-filters__expand">+24 more</span>
+
+          <li class="flex items-center gap-4">
+            <!-- Nút +24 more đẩy một khoảng bằng chiều ngang của icon (24px) để canh thẳng hàng chữ -->
+            <span class="text-sm font-semibold text-slamon cursor-pointer ml-10">+24 more</span>
           </li>
         </ul>
       </div>
+      <div class="h-px w-full bg-blackish-green/25 my-16"></div>
 
-      <div class="hotel-detail__separator"></div>
-
-      <div class="hotel-detail__feedback">
-        <header class="hotel-detail__feedback-header">
-          <h2 class="hotel-detail__feedback-heading">Reviews</h2>
-          <button class="hotel-card__actions-btn">Give your review</button>
+      <!-- 6. FEEDBACK/REVIEWS -->
+      <div class="flex flex-col gap-8">
+        <header class="flex justify-between items-center">
+          <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Reviews</h2>
+          <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors cursor-pointer border-none">Give your review</button>
         </header>
-        <div class="hotel-detail__overview">
-          <div class="hotel-detail__overview-score">4.2</div>
-          <label for="" class="hotel-detail__overview-label">Very good</label>
-          <div class="hotel-detail__overview-count">371 verified reviews</div>
+
+        <div class="flex items-center gap-4">
+          <span class="text-5xl font-bold text-blackish-green leading-none">4.2</span>
+          <div class="flex flex-col">
+            <span class="text-base font-bold text-blackish-green">Very good</span>
+            <span class="text-sm font-normal text-blackish-green/75">371 verified reviews</span>
+          </div>
         </div>
 
-        <div class="hotel-detail__separator"></div>
+        <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <ul class="hotel-detail__feedback-list">
-          <li class="hotel-detail__feedback-item">
-            <img src="assets/image/user-avt.png" alt="" class="hotel-detail__feedback-avt" />
-            <header class="hotel-detail__feedback-item-header">
-              <span class="hotel-detail__feedback-rating">5.0 Amazing</span>
-              <span class="user-action__item user-action__separator">|</span>
-              <span class="hotel-detail__feedback-author">Omar Siphron</span>
-            </header>
-            <p class="hotel-detail__feedback-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="hotel-detail__feedback-action">
-              <img src="assets/image/flag_light.svg" alt="" class="hotel-detail__feedback-icon" />
-            </button>
+        <ul class="flex flex-col gap-6 m-0 p-0 list-none">
+          <!-- Review 1 -->
+          <li class="flex gap-4">
+            <img src="assets/image/user-avt.png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
+            <div class="flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-blackish-green">5.0 Amazing</span>
+                  <span class="text-blackish-green/25">|</span>
+                  <span class="text-sm font-medium text-blackish-green/75">Omar Siphron</span>
+                </div>
+                <button class="bg-transparent border-none cursor-pointer hover:opacity-75">
+                  <img src="assets/image/flag_light.svg" alt="Report" class="w-4 h-4" />
+                </button>
+              </div>
+              <p class="text-sm font-medium text-blackish-green/75 m-0 leading-relaxed text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </li>
 
-          <div class="hotel-detail__separator"></div>
+          <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <li class="hotel-detail__feedback-item">
-            <img src="assets/image/user-avt_45x45.png" alt="" class="hotel-detail__feedback-avt" />
-            <header class="hotel-detail__feedback-item-header">
-              <span class="hotel-detail__feedback-rating">5.0 Amazing</span>
-              <span class="user-action__item user-action__separator">|</span>
-              <span class="hotel-detail__feedback-author">Cristofer Ekstrom Bothman</span>
-            </header>
-            <p class="hotel-detail__feedback-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="hotel-detail__feedback-action">
-              <img src="assets/image/flag_light.svg" alt="" class="hotel-detail__feedback-icon" />
-            </button>
+          <!-- Review 2 -->
+          <li class="flex gap-4">
+            <img src="assets/image/user-avt_45x45.png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
+            <div class="flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-blackish-green">5.0 Amazing</span>
+                  <span class="text-blackish-green/25">|</span>
+                  <span class="text-sm font-medium text-blackish-green/75">Cristofer Ekstrom Bothman</span>
+                </div>
+                <button class="bg-transparent border-none cursor-pointer hover:opacity-75">
+                  <img src="assets/image/flag_light.svg" alt="Report" class="w-4 h-4" />
+                </button>
+              </div>
+              <p class="text-sm font-medium text-blackish-green/75 m-0 leading-relaxed text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </li>
 
-          <div class="hotel-detail__separator"></div>
+          <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <li class="hotel-detail__feedback-item">
-            <img src="assets/image/user-avt_45x45(1).png" alt="" class="hotel-detail__feedback-avt" />
-            <header class="hotel-detail__feedback-item-header">
-              <span class="hotel-detail__feedback-rating">5.0 Amazing</span>
-              <span class="user-action__item user-action__separator">|</span>
-              <span class="hotel-detail__feedback-author">Kaiya Lubin</span>
-            </header>
-            <p class="hotel-detail__feedback-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="hotel-detail__feedback-action">
-              <img src="assets/image/flag_light.svg" alt="" class="hotel-detail__feedback-icon" />
-            </button>
+          <!-- Review 3 (Mới thêm) -->
+          <li class="flex gap-4">
+            <img src="assets/image/user-avt_45x45(1).png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
+            <div class="flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-blackish-green">5.0 Amazing</span>
+                  <span class="text-blackish-green/25">|</span>
+                  <span class="text-sm font-medium text-blackish-green/75">Kaiya Lubin</span>
+                </div>
+                <button class="bg-transparent border-none cursor-pointer hover:opacity-75">
+                  <img src="assets/image/flag_light.svg" alt="Report" class="w-4 h-4" />
+                </button>
+              </div>
+              <p class="text-sm font-medium text-blackish-green/75 m-0 leading-relaxed text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </li>
 
-          <div class="hotel-detail__separator"></div>
+          <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <li class="hotel-detail__feedback-item">
-            <img src="assets/image/user-avt_45x45(2).png" alt="" class="hotel-detail__feedback-avt" />
-            <header class="hotel-detail__feedback-item-header">
-              <span class="hotel-detail__feedback-rating">5.0 Amazing</span>
-              <span class="user-action__item user-action__separator">|</span>
-              <span class="hotel-detail__feedback-author">Erin Septimus</span>
-            </header>
-            <p class="hotel-detail__feedback-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="hotel-detail__feedback-action">
-              <img src="assets/image/flag_light.svg" alt="" class="hotel-detail__feedback-icon" />
-            </button>
+          <!-- Review 4 (Mới thêm) -->
+          <li class="flex gap-4">
+            <img src="assets/image/user-avt_45x45(2).png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
+            <div class="flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-blackish-green">5.0 Amazing</span>
+                  <span class="text-blackish-green/25">|</span>
+                  <span class="text-sm font-medium text-blackish-green/75">Erin Septimus</span>
+                </div>
+                <button class="bg-transparent border-none cursor-pointer hover:opacity-75">
+                  <img src="assets/image/flag_light.svg" alt="Report" class="w-4 h-4" />
+                </button>
+              </div>
+              <p class="text-sm font-medium text-blackish-green/75 m-0 leading-relaxed text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </li>
 
-          <div class="hotel-detail__separator"></div>
+          <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <li class="hotel-detail__feedback-item">
-            <img src="assets/image/user-avt_45x45(3).png" alt="" class="hotel-detail__feedback-avt" />
-            <header class="hotel-detail__feedback-item-header">
-              <span class="hotel-detail__feedback-rating">5.0 Amazing</span>
-              <span class="user-action__item user-action__separator">|</span>
-              <span class="hotel-detail__feedback-author">Terry George</span>
-            </header>
-            <p class="hotel-detail__feedback-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="hotel-detail__feedback-action">
-              <img src="assets/image/flag_light.svg" alt="" class="hotel-detail__feedback-icon" />
-            </button>
+          <!-- Review 5 (Mới thêm) -->
+          <li class="flex gap-4">
+            <img src="assets/image/user-avt_45x45(3).png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
+            <div class="flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start">
+                <div class="flex items-center gap-2">
+                  <span class="text-base font-bold text-blackish-green">5.0 Amazing</span>
+                  <span class="text-blackish-green/25">|</span>
+                  <span class="text-sm font-medium text-blackish-green/75">Terry George</span>
+                </div>
+                <button class="bg-transparent border-none cursor-pointer hover:opacity-75">
+                  <img src="assets/image/flag_light.svg" alt="Report" class="w-4 h-4" />
+                </button>
+              </div>
+              <p class="text-sm font-medium text-blackish-green/75 m-0 leading-relaxed text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </li>
 
-          <div class="hotel-detail__separator"></div>
+          <!-- Đường gạch dưới cuối cùng để ngăn cách với phân trang -->
+          <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <li class="hotel-detail__feedback-pages">
-            <button class="hotel-detail__feedback-btn">
-              <img src="assets/image/chevron-back_light.svg" alt="" class="" />
+          <!-- Nút phân trang (Pagination) - Đã xóa border -->
+          <li class="flex justify-center items-center gap-4 mt-4">
+            <button class="w-10 h-10 flex justify-center items-center rounded bg-transparent border-none cursor-pointer hover:bg-gray-50 transition-colors">
+              <img src="assets/image/chevron-back_light.svg" alt="Previous" class="w-5 h-5" />
             </button>
-            <span class="hotel-detail__feedback-num">1 of 40</span>
-            <button class="hotel-detail__feedback-btn">
-              <img src="assets/image/chevron-forward_light.svg" alt="" />
+
+            <span class="text-sm font-medium text-blackish-green">1 of 40</span>
+
+            <button class="w-10 h-10 flex justify-center items-center rounded bg-transparent border-none cursor-pointer hover:bg-gray-50 transition-colors">
+              <img src="assets/image/chevron-forward_light.svg" alt="Next" class="w-5 h-5" />
             </button>
           </li>
         </ul>
       </div>
     </main>
 
-    <footer class="footer-wrapper">
-      <div class="footer-main">
-        <div class="newsletter-card">
-          <div class="newsletter-content">
-            <h2>Subscribe<br />Newsletter</h2>
-            <div class="newsletter-content__desc">
-              <h4>The Travel</h4>
-              <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+    <footer class="w-full bg-white">
+      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
+        <!-- Newsletter Card -->
+        <!-- w-11/12 = ~91%, max-w-7xl = 1280px -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-7xl bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+          <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
+            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
+            <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
+
+            <div class="flex flex-col gap-2 mb-3">
+              <h4 class="font-trade-gothic text-xl font-bold text-blackish-green opacity-80">The Travel</h4>
+              <p class="font-montserrat text-base font-medium text-blackish-green leading-none opacity-70">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
             </div>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Your email address" required />
-              <button type="submit">Subscribe</button>
+
+            <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
+              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
+              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
+              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
             </form>
           </div>
-          <div class="newsletter-image">
-            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
+
+          <div class="hidden md:block self-end">
+            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
           </div>
         </div>
-        <div class="footer-container">
-          <div class="footer-brand">
+
+        <!-- Footer Container (Chứa Brand và Links) -->
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+          <!-- Footer Brand -->
+          <div class="flex flex-col gap-6">
             <div class="logo">
-              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
+              <!-- h-9 = 36px -->
+              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
-            <div class="social-icons">
-              <img src="./assets/image/facebook_light.svg" />
-              <img src="./assets/image/twitter_light.svg" />
-              <img src="./assets/image/youtube_light.svg" />
-              <img src="./assets/image/instagram_lilght.svg" />
+            <div class="flex justify-between md:gap-4">
+              <img src="./assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
             </div>
           </div>
-          <div class="footer-links">
-            <div class="link-column">
-              <h4>Our Destinations</h4>
-              <ul>
-                <li>Canada</li>
-                <li>Alaska</li>
-                <li>France</li>
-                <li>Iceland</li>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
+            <!-- Link Column 1 -->
+            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Our Activities</h4>
-              <ul>
-                <li>Northern Lights</li>
-                <li>Cruising & sailing</li>
-                <li>Multi-activities</li>
-                <li>Kayaing</li>
+            <!-- Link Column 2 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Travel Blogs</h4>
-              <ul>
-                <li>Bali Travel Guide</li>
-                <li>Sri Lanks Travel Guide</li>
-                <li>Peru Travel Guide</li>
-                <li>Bali Travel Guide</li>
+            <!-- Link Column 3 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>About Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
+            <!-- Link Column 4 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
+            <!-- Link Column 5 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
               </ul>
             </div>
           </div>

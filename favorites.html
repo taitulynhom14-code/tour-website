@@ -1,0 +1,433 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe - Tour Website</title>
+    <link rel="stylesheet" href="assets/css/input.css" />
+  </head>
+
+  <body>
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
+      <div class="flex justify-between items-center h-9 w-full">
+        <!-- Left Menu -->
+        <nav class="flex flex-1">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/airplane_light.svg" alt="Flight" />
+              <a href="find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
+            </li>
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
+              <img src="assets/image/bed_light.svg" alt="Stays" />
+              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Logo Center -->
+        <div>
+          <a href="index.html" class="flex items-center">
+            <img src="assets/image/logo-small.png" alt="Golobe" />
+          </a>
+        </div>
+
+        <!-- Right Menu -->
+        <div class="flex flex-1 justify-end">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/heart_light.svg" alt="Heart" />
+              <a href="#" class="text-blackish-green no-underline">Favourites</a>
+            </li>
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+
+            <!-- Dropdown Container -->
+            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
+                <div class="relative inline-flex">
+                  <img src="assets/image/user-avt.png" alt="John D." />
+                  <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0" />
+                </div>
+                John D.
+              </a>
+
+              <!-- User Menu -->
+              <div class="hidden group-hover:flex flex-col absolute p-8 right-0 top-full mt-5 w-72 max-w-xs rounded-xl gap-6 z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] before:content-[''] before:w-full before:h-6 before:block before:absolute before:-top-5 before:left-0">
+                <div class="flex items-center gap-4">
+                  <img src="assets/image/user-avt.svg" alt="John Doe." />
+                  <div class="flex flex-col w-full gap-1">
+                    <span class="text-base font-semibold text-blackish-green">John Doe.</span>
+                    <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
+                  </div>
+                </div>
+
+                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
+
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/user_light.svg" alt="#" />
+                      My account
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/card_light.png" alt="#" />
+                      Payments
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/setting_light.png" alt="#" />
+                      Setting
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
+
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/support_light.png" alt="#" />
+                      Support
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/logout_light.png" alt="#" />
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- FAVORITES CONTENT -->
+    <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
+      <!-- TITLE -->
+      <h1 class="text-3xl font-bold text-blackish-green leading-none m-0">Favorites</h1>
+
+      <!-- TABS HEADER -->
+      <header class="relative grid grid-cols-2 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4">
+        <!-- Tab 1: Flights -->
+        <button class="hotel-listing__tab relative flex flex-col items-start px-8 gap-2 border-none bg-transparent cursor-pointer group" data-target="flights-list">
+          <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Flights</h3>
+          <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">2 marked</p>
+        </button>
+
+        <!-- Tab 2: Places (Inactive) -->
+        <button class="hotel-listing__tab hotel-listing__tab--active relative flex flex-col items-start px-8 gap-2 border-l-2 border-solid border-[#D7E2EE] bg-transparent cursor-pointer group" data-target="places-list">
+          <!-- Text mờ đi khi inactive, hover sẽ sáng lên -->
+          <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Places</h3>
+          <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">3 marked</p>
+        </button>
+
+        <!-- Thanh Slide Indicator cho JS điều khiển -->
+        <!-- Đặt absolute bottom-0 left-0 để JS dịch chuyển translateX chuẩn xác -->
+        <div class="slide-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-out origin-left pointer-events-none"></div>
+      </header>
+
+      <!-- FAVORITES LISTING -->
+      <ul class="flex flex-col gap-6 m-0 p-0 list-none">
+        <!-- THẺ KHÁCH SẠN 1 -->
+        <li>
+          <!-- Ép Grid 3 cột, bọc overflow-hidden để bo góc -->
+          <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
+            <!-- Cột Ảnh: Dùng absolute inset-0 để ảnh TỰ ĐỘNG vừa khít với chiều cao của cột văn bản, loại bỏ hoàn toàn khoảng trống -->
+            <div class="relative w-full h-64 md:h-full min-h-60">
+              <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="CVK Park" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">9 images</span>
+            </div>
+
+            <!-- Cột Nội dung (Chiếm 2/3) -->
+            <div class="md:col-span-2 flex flex-col p-6">
+              <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+                <!-- Info -->
+                <div class="flex flex-col gap-3">
+                  <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">CVK Park Bosphorus Hotel Istanbul</h2>
+
+                  <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
+                    <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
+                  </span>
+
+                  <div class="flex items-center gap-6 mt-1">
+                    <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
+                      <img src="assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      5 Star Hotel
+                    </span>
+                    <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
+                      <img src="assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
+                      <strong>20+</strong> Amenities
+                    </span>
+                  </div>
+
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="border border-mint-green rounded px-2 py-1 text-sm font-medium text-blackish-green">4.2</span>
+                    <span class="text-sm font-medium text-blackish-green"><strong>Very Good</strong> 371 reviews</span>
+                  </div>
+                </div>
+
+                <!-- Price -->
+                <div class="flex flex-col items-start md:items-end gap-1 shrink-0">
+                  <span class="text-xs font-medium text-blackish-green/75">starting from</span>
+                  <div class="flex items-baseline text-slamon">
+                    <span class="text-3xl font-bold leading-none">$240</span>
+                    <span class="text-sm font-bold leading-none">/night</span>
+                  </div>
+                  <span class="text-xs font-medium text-blackish-green/75">excl. tax</span>
+                </div>
+              </div>
+
+              <!-- Cụm Action nằm ở đáy thẻ -->
+              <div class="mt-auto">
+                <div class="w-full h-px bg-blackish-green/25 mb-6"></div>
+                <div class="flex gap-4">
+                  <!-- Trái tim đỏ (Mặc định checked cho trang Favorites) -->
+                  <label class="relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0 group">
+                    <input type="checkbox" class="peer hidden" checked />
+                    <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
+                    <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+                  </label>
+                  <a href="hotel-detail-page.html" class="flex-1 flex justify-center items-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-4 transition-colors no-underline"> View Place </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- THẺ KHÁCH SẠN 2 -->
+        <li>
+          <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
+            <div class="relative w-full h-64 md:h-full min-h-60">
+              <!-- Ảnh 1: Eresin Hotels -->
+              <img src="assets/image/eresin-hotels-sultanahmet(1).png" alt="Eresin Hotels Sultanahmet" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">9 images</span>
+            </div>
+
+            <div class="md:col-span-2 flex flex-col p-6">
+              <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+                <div class="flex flex-col gap-3">
+                  <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">Eresin Hotels Sultanahmet - Boutique Class</h2>
+
+                  <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
+                    <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
+                  </span>
+
+                  <div class="flex items-center gap-6 mt-1">
+                    <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
+                      <img src="assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      5 Star Hotel
+                    </span>
+                    <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
+                      <img src="assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
+                      <strong>20+</strong> Amenities
+                    </span>
+                  </div>
+
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="border border-mint-green rounded px-2 py-1 text-sm font-medium text-blackish-green">4.2</span>
+                    <span class="text-sm font-medium text-blackish-green"><strong>Very Good</strong> 54 reviews</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-start md:items-end gap-1 shrink-0">
+                  <span class="text-xs font-medium text-blackish-green/75">starting from</span>
+                  <div class="flex items-baseline text-slamon">
+                    <span class="text-3xl font-bold leading-none">$104</span>
+                    <span class="text-sm font-bold leading-none">/night</span>
+                  </div>
+                  <span class="text-xs font-medium text-blackish-green/75">excl. tax</span>
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <div class="w-full h-px bg-blackish-green/25 mb-6"></div>
+                <div class="flex gap-4">
+                  <label class="relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0 group">
+                    <input type="checkbox" class="peer hidden" checked />
+                    <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
+                    <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+                  </label>
+                  <a href="hotel-detail-page.html" class="flex-1 flex justify-center items-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-4 transition-colors no-underline"> View Place </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- THẺ KHÁCH SẠN 3 -->
+        <li>
+          <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
+            <div class="relative w-full h-64 md:h-full min-h-60">
+              <!-- Ảnh 2: Eresin Hotels -->
+              <img src="assets/image/eresin-hotels-sultanahmet(2).png" alt="Eresin Hotels Sultanahmet" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">9 images</span>
+            </div>
+
+            <div class="md:col-span-2 flex flex-col p-6">
+              <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+                <div class="flex flex-col gap-3">
+                  <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">Eresin Hotels Sultanahmet - Boutique Class</h2>
+
+                  <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
+                    <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
+                  </span>
+
+                  <div class="flex items-center gap-6 mt-1">
+                    <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
+                      <img src="assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      5 Star Hotel
+                    </span>
+                    <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
+                      <img src="assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
+                      <strong>20+</strong> Amenities
+                    </span>
+                  </div>
+
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="border border-mint-green rounded px-2 py-1 text-sm font-medium text-blackish-green">4.2</span>
+                    <span class="text-sm font-medium text-blackish-green"><strong>Very Good</strong> 54 reviews</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-start md:items-end gap-1 shrink-0">
+                  <span class="text-xs font-medium text-blackish-green/75">starting from</span>
+                  <div class="flex items-baseline text-slamon">
+                    <span class="text-3xl font-bold leading-none">$104</span>
+                    <span class="text-sm font-bold leading-none">/night</span>
+                  </div>
+                  <span class="text-xs font-medium text-blackish-green/75">excl. tax</span>
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <div class="w-full h-px bg-blackish-green/25 mb-6"></div>
+                <div class="flex gap-4">
+                  <label class="relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0 group">
+                    <input type="checkbox" class="peer hidden" checked />
+                    <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
+                    <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+                  </label>
+                  <a href="hotel-detail-page.html" class="flex-1 flex justify-center items-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-4 transition-colors no-underline"> View Place </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <footer class="w-full bg-white">
+      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
+        <!-- Newsletter Card -->
+        <!-- w-11/12 = ~91%, max-w-7xl = 1280px -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-7xl bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+          <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
+            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
+            <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
+
+            <div class="flex flex-col gap-2 mb-3">
+              <h4 class="font-trade-gothic text-xl font-bold text-blackish-green opacity-80">The Travel</h4>
+              <p class="font-montserrat text-base font-medium text-blackish-green leading-none opacity-70">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+            </div>
+
+            <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
+              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
+              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
+              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
+            </form>
+          </div>
+
+          <div class="hidden md:block self-end">
+            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
+          </div>
+        </div>
+
+        <!-- Footer Container (Chứa Brand và Links) -->
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+          <!-- Footer Brand -->
+          <div class="flex flex-col gap-6">
+            <div class="logo">
+              <!-- h-9 = 36px -->
+              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
+            </div>
+            <div class="flex justify-between md:gap-4">
+              <img src="./assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
+            </div>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
+            <!-- Link Column 1 -->
+            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
+              </ul>
+            </div>
+
+            <!-- Link Column 2 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
+              </ul>
+            </div>
+
+            <!-- Link Column 3 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+              </ul>
+            </div>
+
+            <!-- Link Column 4 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
+              </ul>
+            </div>
+
+            <!-- Link Column 5 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/hotel-listing.js"></script>
+  </body>
+</html>
