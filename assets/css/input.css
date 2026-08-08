@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blackish-green: #112211;
+  --color-mint-green: #8dd3bb;
+  --color-mint-green-light: #cdeae1;
+  --color-mint-cream: #ebf6f2;
+  --color-slamon: #ff8682;
+  --color-bg-light: #fafbfc;
+  --color-navy-blue: #00234d;
+
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-trade-gothic: "TradeGothic", sans-serif;
+}
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-bg-light text-blackish-green font-montserrat leading-normal;
+  }
+
+  button {
+    @apply cursor-pointer border-none bg-transparent;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
