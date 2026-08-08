@@ -4,103 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golobe - Tour Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/find-stays.css" />
+    <link rel="stylesheet" href="assets/css/input.css" />
   </head>
 
   <body>
-    <header class="header header--no-margin">
-      <div class="header__container">
+    <!-- HEADER -->
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-0 bg-white">
+      <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li class="navbar__item">
-              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+        <nav class="flex flex-1">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/airplane_light.svg" alt="Flight" />
+              <a href="find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="navbar__item navbar__item--active">
-              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
-              <a href="find-stays.html" class="navbar__link">Find Stays</a>
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
+              <img src="assets/image/bed_light.svg" alt="Stays" />
+              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
 
         <!-- Logo Center -->
-        <div class="logo">
-          <a href="index.html" class="logo-link">
+        <div>
+          <a href="index.html" class="flex items-center">
             <img src="assets/image/logo-small.png" alt="Golobe" />
           </a>
         </div>
 
         <!-- Right Menu -->
-        <div class="user-action">
-          <ul class="user-action__list">
-            <li class="user-action__item">
-              <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
-              <a href="#" class="user-action__link">Favourites</a>
+        <div class="flex flex-1 justify-end">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/heart_light.svg" alt="Heart" />
+              <a href="#" class="text-blackish-green no-underline">Favourites</a>
             </li>
-            <li class="user-action__item user-action__separator">|</li>
-            <li class="user-action__item">
-              <a href="#" class="user-action__link user-action__profile">
-                <div class="header__avatar-wrap">
-                  <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
-                  <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
-                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+
+            <!-- Dropdown Container -->
+            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
+                <div class="relative inline-flex">
+                  <img src="assets/image/user-avt.png" alt="John D." />
+                  <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0" />
                 </div>
                 John D.
               </a>
+
               <!-- User Menu -->
-              <div class="user-menu">
-                <div class="user-menu__header">
-                  <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
-                  <div class="user-menu__info">
-                    <span class="user-menu__info-name">John Doe.</span>
-                    <span class="user-menu__info-status">Online</span>
+              <div class="hidden group-hover:flex flex-col absolute p-8 right-0 top-full mt-5 w-72 max-w-xs rounded-xl gap-6 z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] before:content-[''] before:w-full before:h-6 before:block before:absolute before:-top-5 before:left-0">
+                <div class="flex items-center gap-4">
+                  <img src="assets/image/user-avt.svg" alt="John Doe." />
+                  <div class="flex flex-col w-full gap-1">
+                    <span class="text-base font-semibold text-blackish-green">John Doe.</span>
+                    <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
                   </div>
                 </div>
 
-                <div class="user-menu__separator"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
 
-                <ul class="user-menu__list account-menu">
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/user_light.svg" alt="#" class="user__icon" />
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/user_light.svg" alt="#" />
                       My account
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/card_light.png" alt="#" class="user__icon" />
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/card_light.png" alt="#" />
                       Payments
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/setting_light.png" alt="#" />
                       Setting
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                 </ul>
 
-                <div class="user-menu__separator"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
 
-                <ul class="user-menu__list system-menu">
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/support_light.png" alt="#" class="user__icon" />
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/support_light.png" alt="#" />
                       Support
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/logout_light.png" alt="#" />
                       Logout
                     </a>
                   </li>
@@ -112,271 +113,325 @@
       </div>
     </header>
 
-    <section class="hotel-search">
-      <section class="banner">
-        <div class="banner__container">
-          <h1 class="banner__heading">Make your travel whishlist, we'll do the rest</h1>
-          <p class="banner__desc">Special offers to suit your plan</p>
+    <!-- HOTEL SEARCH & BANNER -->
+    <!-- Dùng mb-32 để chừa không gian phía dưới cho Form đang bị đẩy xuống (translate-y) -->
+    <section class="relative mb-32">
+      <!-- BANNER -->
+      <section class="relative w-full h-134 bg-[url('../image/banner.png')] bg-cover bg-center bg-no-repeat pt-20 pr-44 pb-32 pl-32 overflow-hidden">
+        <!-- Lớp phủ Gradient đồng bộ màu blackish-green từ input.css -->
+        <div class="absolute inset-0 bg-linear-to-r from-navy-blue/63 to-navy-blue/0"></div>
+
+        <div class="relative z-10 flex flex-col max-w-md h-auto gap-2">
+          <h1 class="font-trade-gothic text-white leading-none text-5xl font-bold m-0 select-none">Make your travel whishlist, we'll do the rest</h1>
+          <p class="font-montserrat text-white leading-none font-medium text-xl m-0 select-none">Special offers to suit your plan</p>
         </div>
       </section>
 
-      <form class="search-form" action="hotel-listing.html" method="get">
-        <h2 class="search-form__title">Where are you flying?</h2>
-        <div class="search-form__fields">
+      <!-- SEARCH FORM -->
+      <!-- Dùng bottom-0 translate-y-1/2 để canh form nằm ngay vạch giao nhau của mép banner -->
+      <form class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 flex flex-col max-w-7xl w-11/12 xl:w-full bg-white py-8 px-6 gap-8 rounded-2xl shadow-xl z-20" action="hotel-listing.html" method="get">
+        <h2 class="m-0 text-xl leading-none font-semibold select-none font-trade-gothic text-blackish-green">Where are you flying?</h2>
+
+        <div class="flex flex-col md:flex-row gap-4">
           <!-- Destination -->
-          <div class="search-form__group">
-            <label class="search-form__label" for="destination">Enter Destination</label>
-            <div class="search-form__input-wrapper">
+          <div class="relative flex-1">
+            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="destination">Enter Destination</label>
+            <!-- Đồng bộ viền dùng blackish-green có opacity 40% -->
+            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
               <img src="assets/image/bed_light.svg" alt="bed" />
-              <input class="search-form__input" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
+              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
             </div>
           </div>
+
           <!-- Check In -->
-          <div class="search-form__group">
-            <label class="search-form__label" for="checkin">Check In</label>
-            <div class="search-form__input-wrapper">
-              <input class="search-form__input" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
+          <div class="relative flex-1 md:flex-none">
+            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="checkin">Check In</label>
+            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
+              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
               <img src="assets/image/calendar_light.svg" alt="calendar" />
             </div>
           </div>
+
           <!-- Check Out -->
-          <div class="search-form__group">
-            <label class="search-form__label" for="checkout">Check Out</label>
-            <div class="search-form__input-wrapper">
-              <input class="search-form__input" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
+          <div class="relative flex-1 md:flex-none">
+            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="checkout">Check Out</label>
+            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
+              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
               <img src="assets/image/calendar_light.svg" alt="calendar" />
             </div>
           </div>
+
           <!-- Rooms & Guests -->
-          <div class="search-form__group">
-            <label class="search-form__label" for="guests">Rooms & Guests</label>
-            <div class="search-form__input-wrapper">
+          <div class="relative flex-1 md:flex-none">
+            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="guests">Rooms & Guests</label>
+            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
               <img src="assets/image/user_light.svg" alt="user" />
-              <input class="search-form__input" id="guests" type="text" name="guests" value="1 room, 2 guests" />
+              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="guests" type="text" name="guests" value="1 room, 2 guests" />
               <img src="assets/image/chevron_down.svg" alt="" />
             </div>
           </div>
         </div>
-        <!-- Button -->
-        <div class="search-form__actions">
-          <button class="search-form__promo">
+
+        <!-- Actions / Buttons -->
+        <div class="flex justify-end h-11 gap-6 mt-2">
+          <!-- Đã thêm bg-mint-cream khi hover nút Promo theo chuẩn input.css -->
+          <button type="button" class="flex items-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
             <img src="assets/image/plus.svg" alt="plus" />
             Add Promo Code
           </button>
-          <button class="search-form__submit" type="submit">
+
+          <!-- Dùng biến bg-mint-green thay cho mã css riêng -->
+          <button type="submit" class="flex items-center gap-2.5 py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green">
             <img src="assets/image/building(16x16)_light.svg" alt="building" />
-            <a class="link-hotel-listing" href="hotel-listing.html">Show Places</a>
+            Show Places
           </button>
         </div>
       </form>
     </section>
 
-    <main class="main-content">
-      <section class="recent-searches">
-        <h2 class="section-title">Your recent searches</h2>
-        <div class="recent-searches__list">
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Istanbul, Turkey.png" alt="Instanbul, Turkey" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Istanbul, Turkey</h3>
-              <p class="recent-searches__desc">325 places</p>
+    <!-- MAIN CONTENT -->
+    <main class="flex flex-col max-w-7xl w-full mx-auto mt-64 gap-20">
+      <!-- 1. RECENT SEARCHES -->
+      <section class="flex flex-col gap-8">
+        <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Your recent searches</h2>
+
+        <div class="flex justify-between flex-wrap gap-4">
+          <!-- Item 1 -->
+          <div class="flex gap-4 items-center flex-1 min-w-60">
+            <img class="w-24 h-24 rounded-lg object-cover" src="assets/image/Istanbul, Turkey.png" alt="Istanbul, Turkey" />
+            <div class="flex flex-col justify-center gap-2">
+              <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Istanbul, Turkey</h3>
+              <p class="text-xs font-normal leading-none text-blackish-green/75 m-0 font-montserrat">325 places</p>
             </div>
           </div>
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Sydney, Australia.png" alt="Sydney, Australia" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Sydney, Australia</h3>
-              <p class="recent-searches__desc">325 places</p>
+
+          <!-- Item 2 -->
+          <div class="flex gap-4 items-center flex-1 min-w-60">
+            <img class="w-24 h-24 rounded-lg object-cover" src="assets/image/Sydney, Australia.png" alt="Sydney, Australia" />
+            <div class="flex flex-col justify-center gap-2">
+              <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Sydney, Australia</h3>
+              <p class="text-xs font-normal leading-none text-blackish-green/75 m-0 font-montserrat">325 places</p>
             </div>
           </div>
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Baku, Azerbajian.png" alt="Baku, Azerbajian" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Bakku, Azerbajian</h3>
-              <p class="recent-searches__desc">325 places</p>
+
+          <!-- Item 3 -->
+          <div class="flex gap-4 items-center flex-1 min-w-60">
+            <img class="w-24 h-24 rounded-lg object-cover" src="assets/image/Baku, Azerbajian.png" alt="Baku, Azerbaijan" />
+            <div class="flex flex-col justify-center gap-2">
+              <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Bakku, Azerbajian</h3>
+              <p class="text-xs font-normal leading-none text-blackish-green/75 m-0 font-montserrat">325 places</p>
             </div>
           </div>
-          <div class="recent-searches__item">
-            <img class="recent-searches__img" src="assets/image/Malé, Maldives.png" alt="Malé, Maldives" />
-            <div class="recent-searches__item-info">
-              <h3 class="recent-searches__heading">Malé, Maldivé</h3>
-              <p class="recent-searches__desc">325 places</p>
+
+          <!-- Item 4 -->
+          <div class="flex gap-4 items-center flex-1 min-w-60">
+            <img class="w-24 h-24 rounded-lg object-cover" src="assets/image/Malé, Maldives.png" alt="Malé, Maldives" />
+            <div class="flex flex-col justify-center gap-2">
+              <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Malé, Maldivé</h3>
+              <p class="text-xs font-normal leading-none text-blackish-green/75 m-0 font-montserrat">325 places</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="travel-cards">
-        <div class="section-header">
-          <div class="section-header__text">
-            <h2 class="section-title">Fall into travel</h2>
-            <p class="section-desc">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
+      <!-- 2. TRAVEL CARDS (Fall into travel) -->
+      <section class="flex flex-col gap-8">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col w-full gap-4">
+            <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Fall into travel</h2>
+            <p class="text-base font-normal text-blackish-green/80 m-0 font-montserrat">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
           </div>
-          <button class="section-header__btn">
-            <a class="link-hotel-listing" href="hotel-listing.html">See All</a>
-          </button>
+          <a class="flex items-center justify-center h-10 w-20 rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="hotel-listing.html"> See All </a>
         </div>
 
-        <div class="travel-cards__list">
-          <div id="Melbourne" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">Melbourne</h3>
-                <p class="travel-cards__desc">An a amazing journey</p>
+        <div class="flex flex-wrap justify-between gap-4">
+          <!-- Melbourne -->
+          <div id="Melbourne" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Melbourne.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+            <div class="relative z-10 flex justify-between items-end">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">Melbourne</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">An amazing journey</p>
               </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$700</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$700</h3>
             </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
+            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
           </div>
-          <div id="Paris" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">Paris</h3>
-                <p class="travel-cards__desc">A Paris Adventure</p>
+
+          <!-- Paris -->
+          <div id="Paris" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Paris.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+            <div class="relative z-10 flex justify-between items-end">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">Paris</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">A Paris Adventure</p>
               </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$600</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$600</h3>
             </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
+            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
           </div>
-          <div id="London" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">London</h3>
-                <p class="travel-cards__desc">London eye adventure</p>
+
+          <!-- London -->
+          <div id="London" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/London.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+            <div class="relative z-10 flex justify-between items-end">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">London</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">London eye adventure</p>
               </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$350</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$350</h3>
             </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
+            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
           </div>
-          <div id="Columbia" class="travel-cards__item">
-            <div class="travel-cards__item-info">
-              <div class="travel-cards__item-name">
-                <h3 class="travel-cards__heading">Columbia</h3>
-                <p class="travel-cards__desc">Amazing streets</p>
+
+          <!-- Columbia -->
+          <div id="Columbia" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Columbia.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+            <div class="relative z-10 flex justify-between items-end">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">Columbia</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">Amazing streets</p>
               </div>
-              <h3 class="travel-cards__cost travel-cards__heading">$700</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$700</h3>
             </div>
-            <button class="travel-cards__btn">
-              <a class="link-hotel-listing" href="hotel-listing.html">Book a Hotel</a>
-            </button>
+            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
           </div>
         </div>
       </section>
 
-      <section class="travel-destinations">
-        <div class="section-header">
-          <div class="section-header__text">
-            <h2 class="section-title">Fall into travel</h2>
-            <p class="section-desc">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
+      <!-- 3. TRAVEL DESTINATIONS (Sri Lanka Grid) -->
+      <section class="flex flex-col gap-6">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col w-full gap-4">
+            <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Fall into travel</h2>
+            <p class="text-base font-normal text-blackish-green/80 m-0 font-montserrat">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
           </div>
-          <button class="section-header__btn">
-            <a class="link-hotel-listing" href="hotel-listing.html">See All</a>
-          </button>
+          <a class="flex items-center justify-center h-10 w-20 rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="hotel-listing.html"> See All </a>
         </div>
 
-        <div class="travel-destinations__layout">
-          <div class="travel-destinations__layout-main">
-            <div class="travel-destinations__introduce">
-              <h3 class="travel-destinations__name">Backpacking<br />Sri Lanka</h3>
-              <p class="travel-destinations__desc">Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life. It helps us to forget about our problems, frustrations, and fears at home. During our journey, we experience life in different ways. We explore new places, cultures, cuisines, traditions, and ways of living.</p>
-              <div class="price-badge">
-                <span class="price-badge__label">From</span>
-                <span class="price-badge__amount">$700</span>
+        <!-- Chuyển sang grid 11 cột chuẩn Tailwind -->
+        <div class="grid grid-cols-11 grid-rows-2 gap-6">
+          <!-- Main Card (Chiếm 5 cột, 2 hàng) -->
+          <div class="col-span-5 row-span-2 flex flex-col justify-between bg-mint-green rounded-2xl p-6 relative">
+            <div class="relative">
+              <h3 class="text-4xl font-bold leading-none m-0 mb-6 font-trade-gothic text-blackish-green">Backpacking<br />Sri Lanka</h3>
+              <p class="text-sm font-normal leading-normal text-blackish-green/80 m-0 font-montserrat">Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life. It helps us to forget about our problems, frustrations, and fears at home. During our journey, we experience life in different ways. We explore new places, cultures, cuisines, traditions, and ways of living.</p>
+
+              <div class="flex flex-col items-center bg-white p-2 rounded-lg gap-1 absolute top-0 right-0 shadow-sm">
+                <span class="text-sm font-normal leading-none text-blackish-green/75 font-montserrat">From</span>
+                <span class="text-xl font-semibold leading-none text-blackish-green font-trade-gothic">$700</span>
               </div>
             </div>
-            <div class="travel-destinations__action">
-              <button class="travel-destinations__action-btn">Book Flight</button>
+
+            <div>
+              <button class="text-sm font-medium leading-none bg-white border-none rounded w-full py-3 cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green shadow-sm">Book Flight</button>
             </div>
           </div>
-          <div class="travel-destinations__picture" style="background-image: url(&quot;./assets/image/Sri-Lanka(1).png&quot;)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(&quot;./assets/image/Sri-Lanka(2).png&quot;)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(&quot;./assets/image/Sri-Lanka(3).png&quot;)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(&quot;./assets/image/Sri-Lanka(4).png&quot;)"></div>
+
+          <!-- Grid Pictures (Mỗi ảnh chiếm 3 cột, bám sát chiều cao min-h-48 tương đương 192px) -->
+          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(1).png')]"></div>
+          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(2).png')]"></div>
+          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(3).png')]"></div>
+          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(4).png')]"></div>
         </div>
       </section>
     </main>
+    <!-- FOOTER -->
 
-    <!-- Footer -->
-    <footer class="footer-wrapper">
-      <div class="footer-main">
-        <div class="newsletter-card">
-          <div class="newsletter-content">
-            <h2>Subscribe<br />Newsletter</h2>
-            <div class="newsletter-content__desc">
-              <h4>The Travel</h4>
-              <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+    <footer class="w-full bg-white">
+      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
+        <!-- Newsletter Card -->
+        <!-- w-11/12 = ~91%, max-w-7xl = 1280px -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-7xl bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+          <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
+            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
+            <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
+
+            <div class="flex flex-col gap-2 mb-3">
+              <h4 class="font-trade-gothic text-xl font-bold text-blackish-green opacity-80">The Travel</h4>
+              <p class="font-montserrat text-base font-medium text-blackish-green leading-none opacity-70">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
             </div>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Your email address" required />
-              <button type="submit">Subscribe</button>
+
+            <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
+              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
+              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
+              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
             </form>
           </div>
-          <div class="newsletter-image">
-            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
+
+          <div class="hidden md:block self-end">
+            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
           </div>
         </div>
-        <div class="footer-container">
-          <div class="footer-brand">
+
+        <!-- Footer Container (Chứa Brand và Links) -->
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+          <!-- Footer Brand -->
+          <div class="flex flex-col gap-6">
             <div class="logo">
-              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
+              <!-- h-9 = 36px -->
+              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
-            <div class="social-icons">
-              <img src="./assets/image/facebook_light.svg" />
-              <img src="./assets/image/twitter_light.svg" />
-              <img src="./assets/image/youtube_light.svg" />
-              <img src="./assets/image/instagram_lilght.svg" />
+            <div class="flex justify-between md:gap-4">
+              <img src="./assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
             </div>
           </div>
-          <div class="footer-links">
-            <div class="link-column">
-              <h4>Our Destinations</h4>
-              <ul>
-                <li>Canada</li>
-                <li>Alaska</li>
-                <li>France</li>
-                <li>Iceland</li>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
+            <!-- Link Column 1 -->
+            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Our Activities</h4>
-              <ul>
-                <li>Northern Lights</li>
-                <li>Cruising & sailing</li>
-                <li>Multi-activities</li>
-                <li>Kayaing</li>
+            <!-- Link Column 2 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Travel Blogs</h4>
-              <ul>
-                <li>Bali Travel Guide</li>
-                <li>Sri Lanks Travel Guide</li>
-                <li>Peru Travel Guide</li>
-                <li>Bali Travel Guide</li>
+            <!-- Link Column 3 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>About Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
+            <!-- Link Column 4 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
+            <!-- Link Column 5 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
               </ul>
             </div>
           </div>
