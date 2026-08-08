@@ -6,44 +6,114 @@
     <title>Find Flight</title>
     <!-- FontAwesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/find-stays.css" />
     <link rel="stylesheet" href="assets/css/find-flight.css" />
+    <link rel="stylesheet" href="assets/css/input.css" />
   </head>
 
   <body>
     <!-- HEADER -->
-    <header class="header header--no-margin">
-      <div class="header__container">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-0 bg-white">
+      <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li class="navbar__item navbar__item--active">
-              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+        <nav class="flex flex-1">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
+              <img src="assets/image/airplane_light.svg" alt="Flight" />
+              <a href="find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="navbar__item">
-              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
-              <a href="find-stays.html" class="navbar__link">Find Stays</a>
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/bed_light.svg" alt="Stays" />
+              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
 
         <!-- Logo Center -->
-        <div class="logo">
-          <a href="index.html" class="logo-link">
+        <div>
+          <a href="index.html" class="flex items-center">
             <img src="assets/image/logo-small.png" alt="Golobe" />
           </a>
         </div>
 
-        <!-- Right Menu (User Actions) -->
-        <div class="user-action">
-          <div class="navbar__group navbar__group--right">
-            <a href="login.html" class="btn btn--login">Login</a>
-            <a href="signup.html" class="btn btn--signup">Sign Up</a>
-          </div>
+        <!-- Right Menu -->
+        <div class="flex flex-1 justify-end">
+          <ul class="m-0 flex list-none p-0 gap-8">
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <img src="assets/image/heart_light.svg" alt="Heart" />
+              <a href="#" class="text-blackish-green no-underline">Favourites</a>
+            </li>
+            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+
+            <!-- Dropdown Container -->
+            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+              <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
+                <div class="relative inline-flex">
+                  <img src="assets/image/user-avt.png" alt="John D." />
+                  <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0" />
+                </div>
+                John D.
+              </a>
+
+              <!-- User Menu -->
+              <div class="hidden group-hover:flex flex-col absolute p-8 right-0 top-full mt-5 w-72 max-w-xs rounded-xl gap-6 z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] before:content-[''] before:w-full before:h-6 before:block before:absolute before:-top-5 before:left-0">
+                <div class="flex items-center gap-4">
+                  <img src="assets/image/user-avt.svg" alt="John Doe." />
+                  <div class="flex flex-col w-full gap-1">
+                    <span class="text-base font-semibold text-blackish-green">John Doe.</span>
+                    <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
+                  </div>
+                </div>
+
+                <div class="h-px w-full bg-blackish-green opacity-25"></div>
+
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/user_light.svg" alt="#" />
+                      My account
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/card_light.png" alt="#" />
+                      Payments
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/setting_light.png" alt="#" />
+                      Setting
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="h-px w-full bg-blackish-green opacity-25"></div>
+
+                <ul class="flex flex-col list-none p-0 gap-4">
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/support_light.png" alt="#" />
+                      Support
+                      <img src="assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                      <img src="assets/image/logout_light.png" alt="#" />
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
