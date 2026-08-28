@@ -5,7 +5,7 @@ import { initHome } from "./modules/index.js";
 import { initHotelListing } from "./modules/hotel-listing.js";
 import { initFavorites } from "./modules/favourites.js";
 import { initBookingDetail } from "./modules/booking-detail.js";
-import { initSignup } from "./modules/signup.js";
+import { initSignup, initSignupPayment } from "./modules/signup.js";
 import { initSearchValidation } from "./modules/search-validation.js";
 import { initFlightListing } from "./modules/flight-listing.js";
 import { initFlightSearchValidation } from "./modules/flight-search-validation.js";
@@ -21,8 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     initHome();
   }
 
-  if (path.includes("login.html") || path.includes("forgotpass") || path.includes("signup_payment-methods.html")) {
+  if (path.includes("login.html") || path.includes("forgotpass")) {
     initLogin();
+  }
+
+  if (path.includes("signup_payment-methods.html") || path.includes("add-payment.html")) {
+    initLogin();
+    initSignupPayment();
   }
 
   if (path.includes("signup.html")) {

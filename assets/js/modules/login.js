@@ -132,8 +132,8 @@ export function initLogin() {
           isLoggedIn: true,
           name: `${validUser.firstName} ${validUser.lastName}`,
           email: validUser.email,
-          phone: validUser.phone, // Lưu phone để auto-fill vào form Booking
-          avatar: "../assets/image/user-avt.png",
+          phone: validUser.phone,
+          avatar: "/assets/image/user-avt.png",
         };
 
         // Ghi nhận trạng thái đăng nhập vào Local Storage
