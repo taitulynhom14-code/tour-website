@@ -203,11 +203,10 @@ export async function initFavorites() {
   });
 
   // Khởi tạo vị trí thanh trượt khi vừa vào trang
-  window.addEventListener("load", () => {
+  setTimeout(() => {
     const activeTab = document.querySelector(".hotel-listing__tab--active");
     if (activeTab) moveIndicator(activeTab);
-  });
-
+  }, 0);
   // --- 5. LOGIC GỠ YÊU THÍCH ---
   function attachUnfavoriteEvent(storageKey, tabTarget) {
     const checkboxes = document.querySelectorAll("#favorites-list .btn-favorite input");
