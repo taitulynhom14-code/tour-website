@@ -1,492 +1,478 @@
 <!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Home - Tour Du lịch</title>
-  <meta name="description"
-    content="Nền tảng đặt vé máy bay và phòng khách sạn hàng đầu. Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng chúng tôi." />
-  <meta property="og:title" content="Home - Tour Du lịch | Đặt Vé & Phòng Nhanh Chóng" />
-  <meta property="og:description"
-    content="Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng những ưu đãi đặc biệt nhất." />
-  <meta property="og:image" content="./assets/image/banner.png" />
-  <meta property="og:url" content="https://ten-mien-website-cua-ban.com/" />
-  <meta property="og:type" content="website" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Home - Tour Du lịch</title>
+    <meta name="description" content="Nền tảng đặt vé máy bay và phòng khách sạn hàng đầu. Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng chúng tôi." />
+    <meta property="og:title" content="Home - Tour Du lịch | Đặt Vé & Phòng Nhanh Chóng" />
+    <meta property="og:description" content="Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng những ưu đãi đặc biệt nhất." />
+    <meta property="og:image" content="./assets/image/banner.png" />
+    <meta property="og:url" content="https://ten-mien-website-cua-ban.com/" />
+    <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" href="./assets/css/input.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+    <link rel="stylesheet" href="./assets/css/input.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
- <section class="relative flex flex-col items-center lg:block mb-12 lg:mb-36 w-full px-4 lg:px-7 pt-4 lg:pt-7">
-  <!-- 1. HERO BANNER -->
-  <header class="relative w-full h-[450px] lg:h-[500px] bg-cover bg-center bg-no-repeat pb-20 lg:pb-32 rounded-3xl overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(&quot;./assets/image/home-banner.png&quot;)">
-    
-    <!-- Navbar -->
-    <nav class="px-4 py-3 flex items-center justify-between relative z-50 bg-transparent w-full">
-      <div class="flex items-center justify-start flex-1 relative">
-        <button id="mobile-menu-button" type="button" class="lg:hidden text-white text-base focus:outline-none cursor-pointer p-2 -ml-2">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <section class="relative flex flex-col items-center lg:block mb-12 lg:mb-36 w-full px-4 lg:px-7 pt-4 lg:pt-7">
+      <!-- 1. HERO BANNER -->
+      <header class="relative w-full h-[450px] lg:h-[500px] bg-cover bg-center bg-no-repeat pb-20 lg:pb-32 rounded-3xl overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(&quot;./assets/image/home-banner.png&quot;)">
+        <!-- Navbar -->
+        <nav class="px-4 py-3 flex items-center justify-between relative z-50 bg-transparent w-full">
+          <!-- Left Menu -->
+          <div class="flex items-center justify-start flex-1 relative">
+            <button id="mobile-menu-button" type="button" class="lg:hidden text-white text-base focus:outline-none cursor-pointer p-2 -ml-2">
+              <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 mt-3 w-[240px] bg-white text-blackish-green px-5 py-5 flex flex-col gap-5 rounded-2xl shadow-xl border border-gray-100 lg:hidden z-50">
-          <a href="flight-flow/find-flight.html" class="flex items-center gap-4 font-bold text-base hover:text-mint-green transition">
-            <i class="fa-solid fa-plane text-blackish-green"></i> Find Flight
-          </a>
-          <a href="hotel-flow/find-stays.html" class="flex items-center gap-4 font-bold text-base hover:text-mint-green transition">
-            <i class="fa-solid fa-bed text-blackish-green"></i> Find Stays
-          </a>
-          <a href="#" class="flex items-center gap-4 font-bold text-base hover:text-mint-green transition">
-            <i class="fa-solid fa-heart text-blackish-green"></i> Favourites
-          </a>
-          <div class="pt-4 border-t border-gray-100 flex flex-col mt-1">
-            <a href="login-signup/login.html" class="w-full text-center font-semibold text-blackish-green py-2.5 rounded-xl border border-gray-300 hover:bg-gray-50 transition">Login</a>
-          </div>
-        </div>
-
-        <!-- Desktop Links -->
-        <div class="hidden lg:flex items-center gap-8 ml-4">
-          <a href="flight-flow/find-flight.html" class="flex items-center gap-2 text-sm text-white font-medium hover:text-teal-300 transition">
-            <img src="assets/image/Vector-plane.png" alt="Plane" class="w-5 h-5 object-contain" /> Find Flights
-          </a>
-          <a href="hotel-flow/find-stays.html" class="flex items-center gap-2 text-white font-medium hover:text-teal-300 transition">
-            <img src="assets/image/Vector-bed.png" alt="Bed" class="w-5 h-5 object-contain" /> Find Stays
-          </a>
-        </div>
-      </div>
-
-      <!-- Logo -->
-      <div class="flex items-center justify-center shrink-0 -translate-x-[3px]">
-        <img src="assets/image/Logo-web.png" alt="Logo" class="h-5 sm:h-6 lg:h-7 object-contain" />
-      </div>
-
-      <!-- Right Actions -->
-      <div class="flex items-center justify-end gap-3 flex-1">
-        <a href="login-signup/login.html" class="hidden lg:inline-block text-white font-medium px-4 py-2 hover:text-teal-300 transition">Login</a>
-        <a href="login-signup/signup.html" class="bg-white text-blackish-green font-medium px-2.5 py-1 sm:px-3.5 sm:py-1.5 lg:px-5 lg:py-2 rounded-lg shadow hover:opacity-90 transition text-xs sm:text-sm lg:text-base whitespace-nowrap">
-          Sign Up
-        </a>
-      </div>
-    </nav>
-
-    <!-- Hero Content -->
-    <div class="relative z-20 flex flex-col items-center justify-center text-center text-white mt-6 lg:mt-8 px-4 md:px-0">
-      <h3 class="text-[28px] md:text-[38px] font-normal leading-tight mb-1">
-        Helping Others
-      </h3>
-      <div class="text-[36px] md:text-[65px] font-normal uppercase leading-none font-['TradeGothic_LT_Extended',_sans-serif] tracking-widest my-1 flex flex-wrap justify-center gap-x-3 md:gap-x-5">
-        <span>LIVE</span>
-        <span>&</span>
-        <span>TRAVEL</span>
-      </div>
-      <p class="text-[14px] md:text-[18px] font-normal mt-2 max-w-[250px] md:max-w-none text-gray-200">
-        Special offers to suit your plan
-      </p>
-    </div>
-  </header>
-
-  <!-- 2. BOOKING CARD (Được neo bám gọn gàng lên khung nhìn màn hình đầu tiên) -->
-  <div class="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-0 lg:translate-y-1/2 w-11/12 xl:w-full max-w-308 flex flex-col bg-white py-6 px-4 lg:py-6 lg:px-8 gap-6 lg:gap-6 rounded-2xl shadow-xl z-20 -mt-16 lg:mt-0">
-    
-    <!-- Tabs: Flights & Stays -->
-    <div class="relative flex items-center gap-6 pb-2" id="booking-tabs-container">
-      <button id="tab-flight" type="button" class="booking-tab flex items-center gap-2 font-semibold text-blackish-green cursor-pointer">
-        <img src="./assets/image/airplane_light.svg" alt="plane" />
-        Flights
-      </button>
-
-      <div class="w-px h-6 bg-[#D7E2EE]"></div>
-
-      <button id="tab-stay" type="button" class="booking-tab flex items-center gap-2 font-semibold text-blackish-green transition cursor-pointer">
-        <img src="./assets/image/bed_light.svg" alt="bed" />
-        Stays
-      </button>
-
-      <div id="tab-indicator" class="absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-in-out"></div>
-    </div>
-
-    <!-- FORM: FLIGHTS -->
-    <form id="form-flight" action="./flight-flow/flight-listing.html" method="get" class="flex flex-col gap-6 lg:gap-6">
-      <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
-        <!-- From - To -->
-        <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="from-to">From - To</label>
-          <div class="flex items-center justify-between w-full gap-2">
-            <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none" id="from-to" name="from-to">
-              <option value="">Lahore - Karachi</option>
-              <option value="1">Ha Noi - Da Nang</option>
-            </select>
-            <img src="assets/image/swap-horizontal.svg" alt="swap" class="w-6 h-6 cursor-pointer hover:rotate-180 transition-transform duration-200 shrink-0" />
-          </div>
-        </div>
-
-        <!-- Trip -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green focus-within:ring-1 focus-within:ring-mint-green transition-all bg-white group">
-            <label class="floating-label" for="trip">Trip</label>
-            <div class="flex items-center justify-between w-full gap-3 relative">
-              <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none z-10" id="trip" name="trip">
-                <option value="" class="py-2 text-blackish-green">Return</option>
-                <option value="one-way" class="py-2 text-blackish-green">One Way</option>
-              </select>
-              <!-- Icon mũi tên với hiệu ứng group-focus để tạo chuyển động tinh tế -->
-              <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none transition-transform duration-200 group-focus-within:rotate-180" />
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-8 ml-4">
+              <a href="flight-flow/find-flight.html" class="flex items-center gap-2 text-sm text-white font-medium hover:text-teal-300 transition"> <img src="assets/image/Vector-plane.png" alt="Plane" class="w-5 h-5 object-contain filter brightness-0 invert" /> Find Flights </a>
+              <a href="hotel-flow/find-stays.html" class="flex items-center gap-2 text-white font-medium hover:text-teal-300 transition"> <img src="assets/image/Vector-bed.png" alt="Bed" class="w-5 h-5 object-contain filter brightness-0 invert" /> Find Stays </a>
             </div>
           </div>
 
-        <!-- Depart - Return -->
-        <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="depart-return">Depart - Return</label>
-          <div class="flex items-center justify-between w-full gap-3">
-            <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="depart-return" type="text" name="depart-return" value="07 Nov 22 - 13 Nov 22" />
+          <!-- Logo Center -->
+          <div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center shrink-0">
+            <a href="index.html" class="flex items-center">
+              <img src="assets/image/Logo-web.png" alt="Logo" class="h-5 sm:h-6 lg:h-7 object-contain" />
+            </a>
           </div>
-        </div>
 
-        <!-- Passenger - Class -->
-        <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="passenger-class">Passenger - Class</label>
-          <div class="flex items-center justify-between w-full gap-3">
-            <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="passenger-class" type="text" name="passenger-class" value="1 Passenger, Economy" />
-          </div>
-        </div>
-      </div>
+          <!-- Right Actions (Guest & Logged In) -->
+          <div class="flex items-center justify-end flex-1">
+            <!-- BLOCK GUEST -->
+            <div id="guest-menu" class="flex items-center gap-2">
+              <a href="login-signup/login.html" class="hidden sm:block text-sm font-semibold px-4 md:px-6 py-2 md:py-3 text-white no-underline hover:bg-white/10 rounded-lg transition-colors">Login</a>
+              <a href="login-signup/signup.html" class="text-xs md:text-sm font-semibold text-blackish-green bg-white px-4 md:px-6 py-2 md:py-3 rounded-lg no-underline hover:bg-gray-100 transition-colors">Sign up</a>
+            </div>
 
-      <!-- Actions / Buttons -->
-      <div class="flex flex-col sm:flex-row justify-end items-center gap-4 sm:gap-6 mt-1">
-        <button type="button" class="w-full sm:w-auto flex items-center justify-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
-          <img src="assets/image/plus.svg" alt="plus" />
-          Add Promo Code
-        </button>
-        
-        <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3 sm:py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded-lg sm:rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green shadow-sm">
-          <img src="assets/image/paper-plane_light.svg" alt="" />
-          Show Flights
-        </button>
-      </div>
-    </form>
+            <!-- BLOCK LOGGED IN -->
+            <ul id="logged-in-menu" class="m-0 list-none p-0 md:gap-8 items-center hidden relative">
+              <li class="nav-item hidden md:flex items-center">
+                <img src="assets/image/heart_light.svg" alt="Heart" class="filter brightness-0 invert" />
+                <a href="favorites.html" class="text-white no-underline block font-medium hover:text-teal-300 transition">Favourites</a>
+              </li>
+              <li class="nav-item text-white/50 hidden md:block bg-white/50 w-0.5 h-4"></li>
 
-    <!-- FORM: STAYS -->
-    <form id="form-stay" action="./hotel-flow/hotel-listing.html" method="get" class="hidden flex-col gap-6 lg:gap-6">
-      <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
-        <!-- Destination -->
-        <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-5 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="destination">Enter Destination</label>
-          <div class="flex items-center justify-between w-full gap-2.5">
-            <img src="assets/image/bed_light.svg" alt="bed" class="shrink-0" />
-            <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
-          </div>
-        </div>
+              <!-- Dropdown Container -->
+              <li class="group nav-item relative">
+                <button id="user-menu-button" aria-expanded="false" class="text-white no-underline flex items-center h-auto gap-2 bg-transparent border-none cursor-pointer p-0">
+                  <div class="relative inline-flex">
+                    <img id="display-user-avatar" src="assets/image/user-avt.png" alt="User Avatar" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover border border-white" />
+                    <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" />
+                    <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" />
+                  </div>
+                  <span id="display-user-name" class="hidden md:block font-medium">John D.</span>
+                </button>
 
-        <!-- Check In -->
-        <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="checkin">Check In</label>
-          <div class="flex items-center justify-between w-full gap-2.5">
-            <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkin" type="date" name="checkin" required />
-            <img src="assets/image/calendar_light.svg" id="checkin-icon" alt="calendar" class="shrink-0 cursor-pointer" />
-          </div>
-        </div>
+                <!-- User Menu Dropdown -->
+                <div id="user-dropdown" class="hidden flex-col absolute p-6 right-0 top-full mt-4 w-72 max-w-xs rounded-xl z-[999] bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] text-left">
+                  <div class="flex items-center gap-4 py-2">
+                    <img src="assets/image/user-avt.svg" alt="User" class="w-10 h-10" />
+                    <div class="flex flex-col w-full gap-1">
+                      <span id="display-user-name-dropdown" class="text-base font-semibold text-blackish-green">John Doe</span>
+                      <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
+                    </div>
+                  </div>
 
-        <!-- Check Out -->
-        <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="checkout">Check Out</label>
-          <div class="flex items-center justify-between w-full gap-2.5">
-            <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkout" type="date" name="checkout" required />
-            <img src="assets/image/calendar_light.svg" id="checkout-icon" alt="calendar" class="shrink-0 cursor-pointer" />
-          </div>
-        </div>
+                  <div class="h-px w-full my-4 bg-blackish-green opacity-25"></div>
 
-        <!-- Rooms & Guests -->
-        <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="guests">Rooms & Guests</label>
-          <div class="flex items-center justify-between w-full gap-2.5">
-            <img src="assets/image/user_light.svg" alt="user" class="shrink-0" />
-            <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="guests" type="text" name="guests" value="1 room, 2 guests" />
-            <img src="assets/image/chevron_down.svg" alt="" class="shrink-0" />
-          </div>
-        </div>
-      </div>
+                  <ul class="flex flex-col list-none p-0 gap-3 m-0">
+                    <li>
+                      <a href="login-signup/account.html" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"><img src="assets/image/user_light.svg" alt="" class="w-5" /> My account</a>
+                    </li>
+                    <li>
+                      <a href="login-signup/account_payment-methods.html" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"><img src="assets/image/card_light.png" alt="" class="w-5" /> Payments</a>
+                    </li>
+                    <li>
+                      <a href="#" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"><img src="assets/image/setting_light.png" alt="" class="w-5" /> Setting</a>
+                    </li>
+                  </ul>
 
-      <!-- Actions / Buttons -->
-      <div class="flex flex-col sm:flex-row justify-end items-center gap-4 sm:gap-6 mt-1">
-        <button type="button" class="w-full sm:w-auto flex items-center justify-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
-          <img src="assets/image/plus.svg" alt="plus" />
-          Add Promo Code
-        </button>
+                  <div class="h-px w-full my-4 bg-blackish-green opacity-25"></div>
 
-        <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3 sm:py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded-lg sm:rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green shadow-sm">
-          <img src="assets/image/building(16x16)_light.svg" alt="building" />
-          Show Places
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
-  <!-- MAIN CONTENT -->
-  <main class="max-w-308 mx-auto px-4">
-    <!-- Section: Popular Destinations -->
-    <div class="flex items-center justify-between mb-8">
-      <div class="flex flex-col gap-4">
-        <h2 class="text-3xl font-semibold text-blackish-green">Plan your perfect trip</h2>
-        <p class="text-blackish-green/75">Search Flights & Hotels to our most popular destinations</p>
-      </div>
-      <button
-        class="border border-solid border-mint-green text-blackish-green font-medium px-5 py-2.5 rounded-sm hover:bg-mint-cream transition">See
-        more Places</button>
-    </div>
-
-    <!-- Destinations Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Istanbul, Turkey.png" alt="Istanbul" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Istanbul, Turkey</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Sydney, Australia.png" alt="Sydney" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Sydney, Australia</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Baku, Azerbajian.png"
-          alt="Baku,Azerbaijan" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Baku,Azerbaijan</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4.svg" alt="Malé, Maldives" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Malé, Maldives</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUaK0z8UbB0LRObKoaVgGXH6A_4DLkrMFdmXGMu0MDQ&s=10"
-          alt="Paris" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Paris, France</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (1).png" alt="New York, US" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">New York, US</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3 (1).svg" alt="London, UK" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">London, UK</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3.svg" alt="Tokyo, Japan" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Tokyo, Japan</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-      <div
-        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (2).png" alt="Dubai" />
-        <div>
-          <h3 class="font-semibold text-blackish-green/70">Dubai, UAE</h3>
-          <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section: Travel Options -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div
-        class="rounded-3xl overflow-hidden bg-cover bg-center h-140 flex flex-col justify-end items-center text-center p-8 text-white shadow-lg"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(&quot;./assets/image/flight-banner.png&quot;)">
-        <h2 class="text-4xl font-bold mb-2 font-trade-gothic">Flight</h2>
-        <p class="text-gray-200 mb-6 max-w-sm">Search Flights & Places Hire to our most popular destinations</p>
-        <a href="flight-listing.html"
-          class="inline-flex items-center justify-center gap-2 bg-mint-green hover:bg-mint-cream text-blackish-green font-semibold py-3 px-6 rounded-sm w-fit transition shadow">
-          <img src="./assets/image/Paper Plane.png" />
-          Show Flight
-        </a>
-      </div>
-
-      <div
-        class="relative rounded-3xl overflow-hidden bg-cover bg-center h-140 flex flex-col justify-end items-center text-center p-8 text-white shadow-lg"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(&quot;./assets/image/home-slide.png&quot;)">
-        <h2 class="text-4xl font-bold mb-2 font-trade-gothic">Hotels</h2>
-        <p class="text-gray-200 mb-6 max-w-sm">Search Flights & Places Hire to our most popular destinations</p>
-        <a href="hotel-listing.html"
-          class="inline-flex items-center justify-center gap-2 bg-mint-green hover:bg-mint-cream text-blackish-green font-semibold py-3 px-6 rounded-sm w-fit transition shadow">
-          <img src="./assets/image/Paper Plane.png" />
-          Show Stays
-        </a>
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-10">
-      <!-- Section: Reviews Header -->
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between">
-        <div>
-          <h2 class="text-3xl font-bold text-blackish-green mb-2">Reviews</h2>
-          <p class="text-blackish-green">What people says about Golobe facilities</p>
-        </div>
-        <button
-          class="mt-4 sm:mt-0 border border-solid border-mint-green text-blackish-green font-medium px-6 py-2.5 rounded hover:bg-mint-cream transition">See
-          All</button>
-      </div>
-
-      <!-- Reviews Container -->
-      <div class="relative w-full overflow-hidden">
-        <div class="flex gap-8 overflow-x-auto pb-12 pt-4 snap-x snap-mandatory hide-scroll-bar" id="menuReview">
-          <!-- Review Card 1 -->
-          <div class="relative w-[380px] sm:w-[415px] shrink-0 snap-center">
-            <!-- Background Offset Shadow -->
-            <div class="absolute top-5 left-5 w-full h-full bg-mint-green/40 rounded-3xl"></div>
-
-            <!-- Main Card Content -->
-            <div
-              class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
-              <div>
-                <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“A real sense of community,
-                  nurtured”</h3>
-                <p
-                  class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">
-                  Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for
-                  helping me always, even when I was out of the country. And always available when needed.</p>
-
-                <div class="text-right mb-4">
-                  <button
-                    class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View
-                    more</button>
+                  <ul class="flex flex-col list-none p-0 gap-3 m-0">
+                    <li>
+                      <a href="#" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"><img src="assets/image/support_light.png" alt="" class="w-5" /> Support</a>
+                    </li>
+                    <li>
+                      <button type="button" id="btn-logout" class="flex items-center gap-3 text-blackish-green font-medium hover:text-red-500 transition cursor-pointer bg-transparent border-none p-0 w-full text-left"><img src="assets/image/logout_light.png" alt="" class="w-5" /> Logout</button>
+                    </li>
+                  </ul>
                 </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Hero Content -->
+        <div class="relative z-20 flex flex-col items-center justify-center text-center text-white mt-6 lg:mt-8 px-4 md:px-0">
+          <h3 class="text-[28px] md:text-[38px] font-normal leading-tight mb-1">Helping Others</h3>
+          <div class="text-[36px] md:text-[65px] font-normal uppercase leading-none font-['TradeGothic_LT_Extended',_sans-serif] tracking-widest my-1 flex flex-wrap justify-center gap-x-3 md:gap-x-5">
+            <span>LIVE</span>
+            <span>&</span>
+            <span>TRAVEL</span>
+          </div>
+          <p class="text-[14px] md:text-[18px] font-normal mt-2 max-w-[250px] md:max-w-none text-gray-200">Special offers to suit your plan</p>
+        </div>
+      </header>
 
-                <ul class="flex gap-3 mb-5">
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                </ul>
-                <p class="font-bold text-blackish-greeen">Olga</p>
-                <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
-                <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
-                  <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
-                  Google
-                </div>
+      <!-- 2. BOOKING CARD (Được neo bám gọn gàng lên khung nhìn màn hình đầu tiên) -->
+      <div class="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-0 lg:translate-y-1/2 w-11/12 xl:w-full max-w-308 flex flex-col bg-white py-6 px-4 lg:py-6 lg:px-8 gap-6 lg:gap-6 rounded-2xl shadow-xl z-20 -mt-16 lg:mt-0">
+        <!-- Tabs: Flights & Stays -->
+        <div class="relative flex items-center gap-6 pb-2" id="booking-tabs-container">
+          <button id="tab-flight" type="button" class="booking-tab flex items-center gap-2 font-semibold text-blackish-green cursor-pointer">
+            <img src="./assets/image/airplane_light.svg" alt="plane" />
+            Flights
+          </button>
+
+          <div class="w-px h-6 bg-[#D7E2EE]"></div>
+
+          <button id="tab-stay" type="button" class="booking-tab flex items-center gap-2 font-semibold text-blackish-green transition cursor-pointer">
+            <img src="./assets/image/bed_light.svg" alt="bed" />
+            Stays
+          </button>
+
+          <div id="tab-indicator" class="absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-in-out"></div>
+        </div>
+
+        <!-- FORM: FLIGHTS -->
+        <form id="form-flight" action="./flight-flow/flight-listing.html" method="get" class="flex flex-col gap-6 lg:gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
+            <!-- From - To -->
+            <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="from-to">From - To</label>
+              <div class="flex items-center justify-between w-full gap-2">
+                <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none" id="from-to" name="from-to">
+                  <option value="">Lahore - Karachi</option>
+                  <option value="1">Ha Noi - Da Nang</option>
+                </select>
+                <img src="assets/image/swap-horizontal.svg" alt="swap" class="w-6 h-6 cursor-pointer hover:rotate-180 transition-transform duration-200 shrink-0" />
               </div>
-              <img src="./assets/image/review1.png" alt="Review1" class="rounded-xl h-52 w-full object-cover mt-2" />
+            </div>
+
+            <!-- Trip -->
+            <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green focus-within:ring-1 focus-within:ring-mint-green transition-all bg-white group">
+              <label class="floating-label" for="trip">Trip</label>
+              <div class="flex items-center justify-between w-full gap-3 relative">
+                <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none z-10" id="trip" name="trip">
+                  <option value="" class="py-2 text-blackish-green">Return</option>
+                  <option value="one-way" class="py-2 text-blackish-green">One Way</option>
+                </select>
+                <!-- Icon mũi tên với hiệu ứng group-focus để tạo chuyển động tinh tế -->
+                <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none transition-transform duration-200 group-focus-within:rotate-180" />
+              </div>
+            </div>
+
+            <!-- Depart - Return -->
+            <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="depart-return">Depart - Return</label>
+              <div class="flex items-center justify-between w-full gap-3">
+                <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="depart-return" type="text" name="depart-return" value="07 Nov 22 - 13 Nov 22" />
+              </div>
+            </div>
+
+            <!-- Passenger - Class -->
+            <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="passenger-class">Passenger - Class</label>
+              <div class="flex items-center justify-between w-full gap-3">
+                <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="passenger-class" type="text" name="passenger-class" value="1 Passenger, Economy" />
+              </div>
             </div>
           </div>
 
-          <!-- Review Card 2 -->
-          <div class="relative w-[380px] sm:w-[415px] shrink-0 snap-center">
-            <!-- Background Offset Shadow -->
-            <div class="absolute top-5 left-5 w-full h-full bg-mint-green/40 rounded-3xl"></div>
+          <!-- Actions / Buttons -->
+          <div class="flex flex-col sm:flex-row justify-end items-center gap-4 sm:gap-6 mt-1">
+            <button type="button" class="w-full sm:w-auto flex items-center justify-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
+              <img src="assets/image/plus.svg" alt="plus" />
+              Add Promo Code
+            </button>
 
-            <!-- Main Card Content -->
-            <div
-              class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
-              <div>
-                <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“The facilities are superb.
-                  Clean, slick, bright.”</h3>
-                <p
-                  class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">
-                  “A real sense of community, nurtured” Really appreciate the help and support from the staff during
-                  these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And
-                  always available when needed.</p>
+            <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3 sm:py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded-lg sm:rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green shadow-sm">
+              <img src="assets/image/paper-plane_light.svg" alt="" />
+              Show Flights
+            </button>
+          </div>
+        </form>
 
-                <div class="text-right mb-4">
-                  <button
-                    class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View
-                    more</button>
-                </div>
-
-                <ul class="flex gap-3 mb-5">
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                </ul>
-                <p class="font-bold text-blackish-greeen">Thomas</p>
-                <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Olympic</small>
-                <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
-                  <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
-                  Google
-                </div>
+        <!-- FORM: STAYS -->
+        <form id="form-stay" action="./hotel-flow/hotel-listing.html" method="get" class="hidden flex-col gap-6 lg:gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
+            <!-- Destination -->
+            <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-5 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="destination">Enter Destination</label>
+              <div class="flex items-center justify-between w-full gap-2.5">
+                <img src="assets/image/bed_light.svg" alt="bed" class="shrink-0" />
+                <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
               </div>
-              <img src="./assets/image/Rectangle 36.png" alt="Review 2"
-                class="rounded-xl h-52 w-full object-cover mt-2" />
+            </div>
+
+            <!-- Check In -->
+            <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="checkin">Check In</label>
+              <div class="flex items-center justify-between w-full gap-2.5">
+                <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkin" type="date" name="checkin" required />
+                <img src="assets/image/calendar_light.svg" id="checkin-icon" alt="calendar" class="shrink-0 cursor-pointer" />
+              </div>
+            </div>
+
+            <!-- Check Out -->
+            <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="checkout">Check Out</label>
+              <div class="flex items-center justify-between w-full gap-2.5">
+                <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkout" type="date" name="checkout" required />
+                <img src="assets/image/calendar_light.svg" id="checkout-icon" alt="calendar" class="shrink-0 cursor-pointer" />
+              </div>
+            </div>
+
+            <!-- Rooms & Guests -->
+            <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
+              <label class="floating-label" for="guests">Rooms & Guests</label>
+              <div class="flex items-center justify-between w-full gap-2.5">
+                <img src="assets/image/user_light.svg" alt="user" class="shrink-0" />
+                <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="guests" type="text" name="guests" value="1 room, 2 guests" />
+                <img src="assets/image/chevron_down.svg" alt="" class="shrink-0" />
+              </div>
             </div>
           </div>
 
-          <!-- Review Card 3 -->
-          <div class="relative w-[380px] sm:w-[415px] shrink-0 snap-center">
-            <!-- Background Offset Shadow -->
-            <div class="absolute top-5 left-5 w-full h-full bg-mint-green/40 rounded-3xl"></div>
+          <!-- Actions / Buttons -->
+          <div class="flex flex-col sm:flex-row justify-end items-center gap-4 sm:gap-6 mt-1">
+            <button type="button" class="w-full sm:w-auto flex items-center justify-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
+              <img src="assets/image/plus.svg" alt="plus" />
+              Add Promo Code
+            </button>
 
-            <!-- Main Card Content -->
-            <div
-              class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
-              <div>
-                <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“A real sense of community,
-                  nurtured”</h3>
-                <p
-                  class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">
-                  Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for
-                  helping me always, even when I was out of the country. And always available when needed.</p>
+            <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3 sm:py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded-lg sm:rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green shadow-sm">
+              <img src="assets/image/building(16x16)_light.svg" alt="building" />
+              Show Places
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-308 mx-auto px-4">
+      <!-- Section: Popular Destinations -->
+      <div class="flex items-center justify-between mb-8">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-3xl font-semibold text-blackish-green">Plan your perfect trip</h2>
+          <p class="text-blackish-green/75">Search Flights & Hotels to our most popular destinations</p>
+        </div>
+        <button class="border border-solid border-mint-green text-blackish-green font-medium px-5 py-2.5 rounded-sm hover:bg-mint-cream transition">See more Places</button>
+      </div>
 
-                <div class="text-right mb-4">
-                  <button
-                    class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View
-                    more</button>
+      <!-- Destinations Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Istanbul, Turkey.png" alt="Istanbul" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Istanbul, Turkey</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Sydney, Australia.png" alt="Sydney" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Sydney, Australia</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Baku, Azerbajian.png" alt="Baku,Azerbaijan" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Baku,Azerbaijan</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4.svg" alt="Malé, Maldives" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Malé, Maldives</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/paris,france.png" alt="Paris" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Paris, France</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (1).png" alt="New York, US" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">New York, US</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3 (1).svg" alt="London, UK" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">London, UK</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3.svg" alt="Tokyo, Japan" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Tokyo, Japan</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (2).png" alt="Dubai" />
+          <div>
+            <h3 class="font-semibold text-blackish-green/70">Dubai, UAE</h3>
+            <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Travel Options -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="rounded-3xl overflow-hidden bg-cover bg-center h-140 flex flex-col justify-end items-center text-center p-8 text-white shadow-lg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(&quot;./assets/image/flight-banner.png&quot;)">
+          <h2 class="text-4xl font-bold mb-2 font-trade-gothic">Flight</h2>
+          <p class="text-gray-200 mb-6 max-w-sm">Search Flights & Places Hire to our most popular destinations</p>
+          <a href="flight-listing.html" class="inline-flex items-center justify-center gap-2 bg-mint-green hover:bg-mint-cream text-blackish-green font-semibold py-3 px-6 rounded-sm w-fit transition shadow">
+            <img src="./assets/image/Paper Plane.png" />
+            Show Flight
+          </a>
+        </div>
+
+        <div class="relative rounded-3xl overflow-hidden bg-cover bg-center h-140 flex flex-col justify-end items-center text-center p-8 text-white shadow-lg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(&quot;./assets/image/home-slide.png&quot;)">
+          <h2 class="text-4xl font-bold mb-2 font-trade-gothic">Hotels</h2>
+          <p class="text-gray-200 mb-6 max-w-sm">Search Flights & Places Hire to our most popular destinations</p>
+          <a href="hotel-listing.html" class="inline-flex items-center justify-center gap-2 bg-mint-green hover:bg-mint-cream text-blackish-green font-semibold py-3 px-6 rounded-sm w-fit transition shadow">
+            <img src="./assets/image/Paper Plane.png" />
+            Show Stays
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-10">
+        <!-- Section: Reviews Header -->
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between">
+          <div>
+            <h2 class="text-3xl font-bold text-blackish-green mb-2">Reviews</h2>
+            <p class="text-blackish-green">What people says about Golobe facilities</p>
+          </div>
+          <button class="mt-4 sm:mt-0 border border-solid border-mint-green text-blackish-green font-medium px-6 py-2.5 rounded hover:bg-mint-cream transition">See All</button>
+        </div>
+
+        <!-- Reviews Container -->
+        <div class="relative w-full overflow-hidden">
+          <div class="flex gap-8 overflow-x-auto pb-12 pt-4 snap-x snap-mandatory hide-scroll-bar" id="menuReview">
+            <!-- Review Card 1 -->
+            <div class="relative w-[380px] sm:w-[415px] shrink-0 snap-center">
+              <!-- Background Offset Shadow -->
+              <div class="absolute top-5 left-5 w-full h-full bg-mint-green/40 rounded-3xl"></div>
+
+              <!-- Main Card Content -->
+              <div class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
+                <div>
+                  <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“A real sense of community, nurtured”</h3>
+                  <p class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+
+                  <div class="text-right mb-4">
+                    <button class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View more</button>
+                  </div>
+
+                  <ul class="flex gap-3 mb-5">
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                  </ul>
+                  <p class="font-bold text-blackish-greeen">Olga</p>
+                  <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
+                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
+                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
+                    Google
+                  </div>
                 </div>
-
-                <ul class="flex gap-3 mb-5">
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                  <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                </ul>
-
-                <p class="font-bold text-blackish-greeen">Eliot</p>
-                <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
-                <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
-                  <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
-                  Google
-                </div>
+                <img src="./assets/image/review1.png" alt="Review1" class="rounded-xl h-52 w-full object-cover mt-2" />
               </div>
-              <img src="./assets/image/Rectangle 36 (1).png" alt="Review 3"
-                class="rounded-xl h-52 w-full object-cover mt-2" />
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="relative w-[380px] sm:w-[415px] shrink-0 snap-center">
+              <!-- Background Offset Shadow -->
+              <div class="absolute top-5 left-5 w-full h-full bg-mint-green/40 rounded-3xl"></div>
+
+              <!-- Main Card Content -->
+              <div class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
+                <div>
+                  <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“The facilities are superb. Clean, slick, bright.”</h3>
+                  <p class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">“A real sense of community, nurtured” Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+
+                  <div class="text-right mb-4">
+                    <button class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View more</button>
+                  </div>
+
+                  <ul class="flex gap-3 mb-5">
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                  </ul>
+                  <p class="font-bold text-blackish-greeen">Thomas</p>
+                  <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Olympic</small>
+                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
+                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
+                    Google
+                  </div>
+                </div>
+                <img src="./assets/image/Rectangle 36.png" alt="Review 2" class="rounded-xl h-52 w-full object-cover mt-2" />
+              </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="relative w-[380px] sm:w-[415px] shrink-0 snap-center">
+              <!-- Background Offset Shadow -->
+              <div class="absolute top-5 left-5 w-full h-full bg-mint-green/40 rounded-3xl"></div>
+
+              <!-- Main Card Content -->
+              <div class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
+                <div>
+                  <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“A real sense of community, nurtured”</h3>
+                  <p class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+
+                  <div class="text-right mb-4">
+                    <button class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View more</button>
+                  </div>
+
+                  <ul class="flex gap-3 mb-5">
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                  </ul>
+
+                  <p class="font-bold text-blackish-greeen">Eliot</p>
+                  <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
+                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
+                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
+                    Google
+                  </div>
+                </div>
+                <img src="./assets/image/Rectangle 36 (1).png" alt="Review 3" class="rounded-xl h-52 w-full object-cover mt-2" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- FOOTER -->
-  {{> footer }}
+    <!-- FOOTER -->
+    {{> footer }}
 
-  <script type="module" src="./assets/js/main.js"></script>
-</body>
-
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
 </html>
+

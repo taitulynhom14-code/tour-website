@@ -1,31 +1,31 @@
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("nav-mobile");
 
 if (mobileMenuButton && mobileMenu) {
-  mobileMenuButton.addEventListener('click', (e) => {
+  mobileMenuButton.addEventListener("click", (e) => {
     // Ngăn chặn sự kiện click lan ra ngoài
-    e.stopPropagation(); 
-    mobileMenu.classList.toggle('hidden');
-    
+    e.stopPropagation();
+    mobileMenu.classList.toggle("hidden");
+
     // Đổi icon giữa 3 gạch và dấu X ngay trên nút
-    const icon = mobileMenuButton.querySelector('i');
-    if (mobileMenu.classList.contains('hidden')) {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
+    const icon = mobileMenuButton.querySelector("i");
+    if (mobileMenu.classList.contains("hidden")) {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
     } else {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-xmark');
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
     }
   });
 }
 
 // Bấm ra ngoài vùng menu thì tự động đóng lại (rất tiện cho người dùng)
-window.addEventListener('click', (e) => {
-  if (mobileMenu && !mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-    mobileMenu.classList.add('hidden');
-    const icon = mobileMenuButton.querySelector('i');
-    icon.classList.remove('fa-xmark');
-    icon.classList.add('fa-bars');
+window.addEventListener("click", (e) => {
+  if (mobileMenu && !mobileMenu.classList.contains("hidden") && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+    mobileMenu.classList.add("hidden");
+    const icon = mobileMenuButton.querySelector("i");
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
   }
 });
 export function initHome() {
