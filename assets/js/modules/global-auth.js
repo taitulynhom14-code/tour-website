@@ -22,7 +22,22 @@ export function initGlobalAuth() {
     }
 
     if (displayUserAvatar && currentUser.avatar) {
-      displayUserAvatar.src = currentUser.avatar;
+      // Tự động phân giải đường dẫn ảnh bằng import.meta.url
+      if (currentUser.avatar.startsWith("http")) {
+        displayUserAvatar.src = currentUser.avatar;
+      } else {
+        const fileName = currentUser.avatar.split('/').pop();
+        
+        // Tạo đường dẫn tuyệt đối dựa trên vị trí của file JS này (assets/js/modules/)
+        // Đi ngược lên 2 cấp (../../) để vào thư mục image
+        const absoluteAvatarUrl = new URL(`../../image/${fileName}`, import.meta.url).href;
+        displayUserAvatar.src = absoluteAvatarUrl;
+        
+        // Hình ảnh dự phòng nếu lỗi tải
+        displayUserAvatar.onerror = function () {
+          this.src = new URL(`../../image/default-avatar.png`, import.meta.url).href;
+        };
+      }
     }
   }
 
