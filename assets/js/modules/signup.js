@@ -146,31 +146,3 @@ export function initSignup() {
     });
   }
 }
-
-export function initSignupPayment() {
-  const btnComplete = document.getElementById("btn-complete-signup");
-
-  if (btnComplete) {
-    btnComplete.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const pendingUserStr = sessionStorage.getItem("golobe_pending_user");
-      if (!pendingUserStr) {
-        alert("Lỗi: Không tìm thấy thông tin đăng ký. Vui lòng quay lại bước 1!");
-        window.location.href = "signup.html";
-        return;
-      }
-
-      const pendingUser = JSON.parse(pendingUserStr);
-      let users = JSON.parse(localStorage.getItem("golobe_db_users")) || [];
-
-      // Lưu user vào Database chính và dọn dẹp bộ nhớ tạm
-      users.push(pendingUser);
-      localStorage.setItem("golobe_db_users", JSON.stringify(users));
-      sessionStorage.removeItem("golobe_pending_user");
-
-      alert("Hoàn tất đăng ký và thêm thẻ! Vui lòng đăng nhập.");
-      window.location.href = "login.html";
-    });
-  }
-}
