@@ -23,21 +23,21 @@
           <!-- Left Menu -->
           <div class="flex items-center justify-start flex-1 relative">
             <button aria-controls="nav-mobile" aria-expanded="false" aria-label="Open menu" type="button" class="lg:hidden text-white text-base focus:outline-none cursor-pointer p-2 -ml-2">
-              <img src="assets/image/hamburger-menu_white.svg" alt="menu" />
+              <img src="assets/image/hamburger-menu_white.svg" alt="menu" width="24" height="24" />
             </button>
 
             <div id="nav-mobile" class="hidden absolute top-full left-0 w-56 bg-white px-4 py-4 flex-col gap-7 rounded-xl shadow-2xl border border-gray-100 lg:hidden z-50 font-montserrat">
               <a href="flight-flow/find-flight.html" class="flex items-center gap-3 font-bold text-sm text-blackish-green hover:text-mint-green transition no-underline">
-                <img src="assets/image/airplane_light.svg" alt="airplane" />
+                <img src="assets/image/airplane_light.svg" alt="airplane" width="24" height="24" />
                 Find Flights
               </a>
               <a href="hotel-flow/find-stays.html" class="flex items-center gap-3 font-bold text-sm text-blackish-green hover:text-mint-green transition no-underline">
-                <img src="assets/image/bed_light.svg" alt="bed" />
+                <img src="assets/image/bed_light.svg" alt="bed" width="24" height="24" />
                 Find Stays
               </a>
               <div class="h-px bg-gray-100 w-full my-0.5"></div>
               <a href="favorites.html" class="flex items-center gap-3 font-bold text-sm text-blackish-green hover:text-mint-green transition no-underline">
-                <img src="assets/image/heart_light.svg" alt="heart" />
+                <img src="assets/image/heart_light.svg" alt="heart" width="24" height="24" />
                 Favourites
               </a>
             </div>
@@ -45,11 +45,11 @@
             <!-- Desktop Links -->
             <div class="hidden lg:flex items-center gap-8 ml-4">
               <a href="flight-flow/find-flight.html" class="flex items-center gap-3 font-bold text-sm text-white hover:text-mint-green transition no-underline">
-                <img src="assets/image/airplane_dark.svg" alt="airplane" class="" />
+                <img src="assets/image/airplane_dark.svg" alt="airplane" class="" width="24" height="24" />
                 Find Flights
               </a>
               <a href="hotel-flow/find-stays.html" class="flex items-center gap-3 font-bold text-sm text-white hover:text-mint-green transition no-underline">
-                <img src="assets/image/bed_dark.svg" alt="bed" />
+                <img src="assets/image/bed_dark.svg" alt="bed" width="24" height="24" />
                 Find Stays
               </a>
             </div>
@@ -58,7 +58,7 @@
           <!-- Logo Center -->
           <div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center shrink-0">
             <a href="index.html" class="flex items-center">
-              <img src="assets/image/Logo-web.png" alt="Logo" class="h-5 sm:h-6 lg:h-7 object-contain" />
+              <img src="assets/image/Logo-web.png" alt="Logo" class="h-5 sm:h-6 lg:h-7 object-contain" width="120" height="28" />
             </a>
           </div>
 
@@ -74,7 +74,7 @@
             <ul id="logged-in-menu" class="m-0 list-none p-0 md:gap-8 items-center hidden relative">
               <li class="nav-item hidden md:flex items-center">
                 <a href="favorites.html" class="flex items-center gap-3 font-bold text-sm text-white hover:text-mint-green transition no-underline">
-                  <img src="assets/image/heart_dark.svg" alt="Heart" />
+                  <img src="assets/image/heart_dark.svg" alt="Heart" width="24" height="24" />
                   Favourites
                 </a>
               </li>
@@ -84,9 +84,9 @@
               <li class="group nav-item relative">
                 <button id="user-menu-button" aria-expanded="false" class="text-white no-underline flex items-center h-auto gap-2 bg-transparent border-none cursor-pointer p-0 focus:outline-none">
                   <div class="relative inline-flex">
-                    <img id="display-user-avatar" src="assets/image/user-avt.png" alt="User Avatar" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover border border-white" />
-                    <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" />
-                    <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" />
+                    <img id="display-user-avatar" src="assets/image/user-avt.png" alt="User Avatar" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover border border-white" width="40" height="40" />
+                    <img src="assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" width="10" height="10" />
+                    <img src="assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" width="12" height="12" />
                   </div>
                   <span id="display-user-name" class="hidden md:block font-medium">John D.</span>
                 </button>
@@ -94,9 +94,10 @@
                 <!-- User Menu Dropdown -->
                 <div id="user-dropdown" class="hidden flex-col absolute p-6 right-0 top-full mt-4 w-72 max-w-xs rounded-xl z-[999] bg-white shadow-[0_2px_15px_0_rgba(0,0,0,0.1)] text-left border border-gray-100">
                   <div class="flex items-center gap-4 py-2">
-                    <img src="assets/image/user-avt.svg" alt="User" class="w-10 h-10 rounded-full" />
+                    <img src="assets/image/user-avt.png" alt="User" class="w-10 h-10 rounded-full" width="40" height="40" />
                     <div class="flex flex-col w-full gap-1">
-                      <span id="display-user-name-dropdown" class="text-base font-semibold text-blackish-green">John Doe</span>
+                      <!-- Đã thêm id="dropdown-user-name" để JS cập nhật được tên -->
+                      <span id="dropdown-user-name" class="text-base font-semibold text-blackish-green">John Doe.</span>
                       <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
                     </div>
                   </div>
@@ -105,13 +106,14 @@
 
                   <ul class="flex flex-col list-none p-0 gap-4 m-0">
                     <li>
-                      <a href="login-signup/account.html" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/user_light.svg" alt="" class="w-5" /> My account </a>
+                      <a href="login-signup/account.html" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/user_light.svg" alt="" class="w-5" width="20" height="20" /> My account </a>
                     </li>
                     <li>
-                      <a href="login-signup/account_payment-methods.html" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/card_light.png" alt="" class="w-5" /> Payments </a>
+                      <!-- Đường dẫn Payment đã được sửa thêm .html -->
+                      <a href="login-signup/account.html#payment-section" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/card_light.png" alt="" class="w-5" width="20" height="20" /> Payments </a>
                     </li>
                     <li>
-                      <a href="#" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/setting_light.png" alt="" class="w-5" /> Setting </a>
+                      <a href="#" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/setting_light.png" alt="" class="w-5" width="20" height="20" /> Setting </a>
                     </li>
                   </ul>
 
@@ -119,10 +121,10 @@
 
                   <ul class="flex flex-col list-none p-0 gap-4 m-0">
                     <li>
-                      <a href="#" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/support_light.png" alt="" class="w-5" /> Support </a>
+                      <a href="#" class="flex items-center gap-3 text-blackish-green font-medium hover:text-mint-green transition no-underline"> <img src="assets/image/support_light.png" alt="" class="w-5" width="20" height="20" /> Support </a>
                     </li>
                     <li>
-                      <button type="button" id="btn-logout" class="flex items-center gap-3 text-blackish-green font-medium hover:text-red-500 transition cursor-pointer bg-transparent border-none p-0 w-full text-left focus:outline-none"><img src="assets/image/logout_light.png" alt="" class="w-5" /> Logout</button>
+                      <button type="button" id="btn-logout" class="flex items-center gap-3 text-blackish-green font-medium hover:text-red-500 transition cursor-pointer bg-transparent border-none p-0 w-full text-left focus:outline-none"><img src="assets/image/logout_light.png" alt="" class="w-5" width="20" height="20" /> Logout</button>
                     </li>
                   </ul>
                 </div>
@@ -142,19 +144,19 @@
         </div>
       </header>
 
-      <!-- 2. BOOKING CARD (Được neo bám gọn gàng lên khung nhìn màn hình đầu tiên) -->
+      <!-- 2. BOOKING CARD -->
       <div class="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-0 lg:translate-y-1/2 w-11/12 xl:w-full max-w-308 flex flex-col bg-white py-6 px-4 lg:py-6 lg:px-8 gap-6 lg:gap-6 rounded-2xl shadow-xl z-20 -mt-16 lg:mt-0">
         <!-- Tabs: Flights & Stays -->
         <div class="relative flex items-center gap-6 pb-2" id="booking-tabs-container">
           <button id="tab-flight" type="button" class="booking-tab flex items-center gap-2 font-semibold text-blackish-green cursor-pointer">
-            <img src="./assets/image/airplane_light.svg" alt="plane" />
+            <img src="./assets/image/airplane_light.svg" alt="plane" width="24" height="24" />
             Flights
           </button>
 
           <div class="w-px h-6 bg-[#D7E2EE]"></div>
 
           <button id="tab-stay" type="button" class="booking-tab flex items-center gap-2 font-semibold text-blackish-green transition cursor-pointer">
-            <img src="./assets/image/bed_light.svg" alt="bed" />
+            <img src="./assets/image/bed_light.svg" alt="bed" width="24" height="24" />
             Stays
           </button>
 
@@ -172,7 +174,7 @@
                   <option value="">Lahore - Karachi</option>
                   <option value="1">Ha Noi - Da Nang</option>
                 </select>
-                <img src="assets/image/swap-horizontal.svg" alt="swap" class="w-6 h-6 cursor-pointer hover:rotate-180 transition-transform duration-200 shrink-0" />
+                <img src="assets/image/swap-horizontal.svg" alt="swap" class="w-6 h-6 cursor-pointer hover:rotate-180 transition-transform duration-200 shrink-0" width="24" height="24" />
               </div>
             </div>
 
@@ -184,8 +186,8 @@
                   <option value="" class="py-2 text-blackish-green">Return</option>
                   <option value="one-way" class="py-2 text-blackish-green">One Way</option>
                 </select>
-                <!-- Icon mũi tên với hiệu ứng group-focus để tạo chuyển động tinh tế -->
-                <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none transition-transform duration-200 group-focus-within:rotate-180" />
+                <!-- Icon mũi tên -->
+                <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none transition-transform duration-200 group-focus-within:rotate-180" width="24" height="24" />
               </div>
             </div>
 
@@ -209,12 +211,12 @@
           <!-- Actions / Buttons -->
           <div class="flex flex-col sm:flex-row justify-end items-center gap-4 sm:gap-6">
             <button type="button" class="w-full sm:w-auto flex items-center justify-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
-              <img src="assets/image/plus.svg" alt="plus" />
+              <img src="assets/image/plus.svg" alt="plus" width="24" height="24" />
               Add Promo Code
             </button>
 
             <button type="submit" class="flex items-center h-10 gap-2.5 py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green">
-              <img src="assets/image/paper-plane_light.svg" alt="" />
+              <img src="assets/image/paper-plane_light.svg" alt="Show Flights" width="16" height="16" />
               Show Flights
             </button>
           </div>
@@ -227,7 +229,7 @@
             <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-5 focus-within:border-mint-green transition-colors bg-white">
               <label class="floating-label" for="destination">Enter Destination</label>
               <div class="flex items-center justify-between w-full gap-2.5">
-                <img src="assets/image/bed_light.svg" alt="bed" class="shrink-0" />
+                <img src="assets/image/bed_light.svg" alt="bed" class="shrink-0" width="24" height="24" />
                 <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
               </div>
             </div>
@@ -237,7 +239,7 @@
               <label class="floating-label" for="checkin">Check In</label>
               <div class="flex items-center justify-between w-full gap-2.5">
                 <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkin" type="date" name="checkin" required />
-                <img src="assets/image/calendar_light.svg" id="checkin-icon" alt="calendar" class="shrink-0 cursor-pointer" />
+                <img src="assets/image/calendar_light.svg" id="checkin-icon" alt="calendar" class="shrink-0 cursor-pointer" width="24" height="24" />
               </div>
             </div>
 
@@ -246,7 +248,7 @@
               <label class="floating-label" for="checkout">Check Out</label>
               <div class="flex items-center justify-between w-full gap-2.5">
                 <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkout" type="date" name="checkout" required />
-                <img src="assets/image/calendar_light.svg" id="checkout-icon" alt="calendar" class="shrink-0 cursor-pointer" />
+                <img src="assets/image/calendar_light.svg" id="checkout-icon" alt="calendar" class="shrink-0 cursor-pointer" width="24" height="24" />
               </div>
             </div>
 
@@ -254,9 +256,9 @@
             <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors bg-white">
               <label class="floating-label" for="guests">Rooms & Guests</label>
               <div class="flex items-center justify-between w-full gap-2.5">
-                <img src="assets/image/user_light.svg" alt="user" class="shrink-0" />
+                <img src="assets/image/user_light.svg" alt="user" class="shrink-0" width="24" height="24" />
                 <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="guests" type="text" name="guests" value="1 room, 2 guests" />
-                <img src="assets/image/chevron_down.svg" alt="" class="shrink-0" />
+                <img src="assets/image/chevron_down.svg" alt="" class="shrink-0" width="24" height="24" />
               </div>
             </div>
           </div>
@@ -264,12 +266,12 @@
           <!-- Actions / Buttons -->
           <div class="flex flex-col sm:flex-row justify-end items-center gap-4 sm:gap-6 mt-1">
             <button type="button" class="w-full sm:w-auto flex items-center justify-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
-              <img src="assets/image/plus.svg" alt="plus" />
+              <img src="assets/image/plus.svg" alt="plus" width="24" height="24" />
               Add Promo Code
             </button>
 
             <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3 sm:py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded-lg sm:rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green shadow-sm">
-              <img src="assets/image/building(16x16)_light.svg" alt="building" />
+              <img src="assets/image/building(16x16)_light.svg" alt="Show Places" width="16" height="16" />
               Show Places
             </button>
           </div>
@@ -290,63 +292,63 @@
       <!-- Destinations Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Istanbul, Turkey.png" alt="Istanbul" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Istanbul, Turkey.png" alt="Istanbul" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Istanbul, Turkey</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Sydney, Australia.png" alt="Sydney" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Sydney, Australia.png" alt="Sydney" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Sydney, Australia</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Baku, Azerbajian.png" alt="Baku,Azerbaijan" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Baku, Azerbajian.png" alt="Baku,Azerbaijan" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Baku,Azerbaijan</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4.svg" alt="Malé, Maldives" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4.svg" alt="Malé, Maldives" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Malé, Maldives</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/paris,france.svg" alt="Paris" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/paris,france.svg" alt="Paris" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Paris, France</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (1).png" alt="New York, US" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (1).png" alt="New York, US" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">New York, US</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3 (1).svg" alt="London, UK" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3 (1).svg" alt="London, UK" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">London, UK</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3.svg" alt="Tokyo, Japan" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3.svg" alt="Tokyo, Japan" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Tokyo, Japan</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
-          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (2).png" alt="Dubai" />
+          <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (2).png" alt="Dubai" width="80" height="80" />
           <div>
             <h3 class="font-semibold text-blackish-green/70">Dubai, UAE</h3>
             <p class="text-sm font-medium text-blackish-green">Flights • Hotels • Resorts</p>
@@ -360,7 +362,7 @@
           <h2 class="text-4xl font-bold mb-2 font-trade-gothic">Flight</h2>
           <p class="text-gray-200 mb-6 max-w-sm">Search Flights & Places Hire to our most popular destinations</p>
           <a href="hotel-listing.html" class="inline-flex items-center justify-center gap-2 bg-mint-green hover:bg-mint-cream text-blackish-green font-semibold py-3 px-6 rounded-sm w-fit transition shadow">
-            <img src="assets/image/paper-plane_light.svg" alt="" />
+            <img src="assets/image/paper-plane_light.svg" alt="Show Flights" width="16" height="16" />
             Show Flights
           </a>
         </div>
@@ -369,7 +371,7 @@
           <h2 class="text-4xl font-bold mb-2 font-trade-gothic">Hotels</h2>
           <p class="text-gray-200 mb-6 max-w-sm">Search Flights & Places Hire to our most popular destinations</p>
           <a href="hotel-listing.html" class="inline-flex items-center justify-center gap-2 bg-mint-green hover:bg-mint-cream text-blackish-green font-semibold py-3 px-6 rounded-sm w-fit transition shadow">
-            <img src="./assets/image/Paper Plane.png" />
+            <img src="./assets/image/Paper Plane.png" alt="Show Stays" width="16" height="16" />
             Show Stays
           </a>
         </div>
@@ -397,27 +399,27 @@
               <div class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
                 <div>
                   <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“A real sense of community, nurtured”</h3>
-                  <p class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+                  <p class="review-text text-blackish-green/50 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
 
                   <div class="text-right mb-4">
                     <button class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View more</button>
                   </div>
 
                   <ul class="flex gap-3 mb-5">
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
                   </ul>
                   <p class="font-bold text-blackish-greeen">Olga</p>
-                  <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
-                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
-                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
+                  <small class="text-blackish-green/70 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
+                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-blackish-green/50">
+                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" width="16" height="16" />
                     Google
                   </div>
                 </div>
-                <img src="./assets/image/review1.png" alt="Review1" class="rounded-xl h-52 w-full object-cover mt-2" />
+                <img src="./assets/image/review1.png" alt="Review1" class="rounded-xl h-52 w-full object-cover mt-2" width="415" height="208" />
               </div>
             </div>
 
@@ -430,27 +432,27 @@
               <div class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
                 <div>
                   <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“The facilities are superb. Clean, slick, bright.”</h3>
-                  <p class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">“A real sense of community, nurtured” Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+                  <p class="review-text text-blackish-green/50 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">“A real sense of community, nurtured” Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
 
                   <div class="text-right mb-4">
                     <button class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View more</button>
                   </div>
 
                   <ul class="flex gap-3 mb-5">
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
                   </ul>
                   <p class="font-bold text-blackish-greeen">Thomas</p>
-                  <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Olympic</small>
-                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
-                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
+                  <small class="text-blackish-green/70 block mb-4 text-[13px] font-medium">Weave Studios – Olympic</small>
+                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-blackish-green/50">
+                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" width="16" height="16" />
                     Google
                   </div>
                 </div>
-                <img src="./assets/image/Rectangle 36.png" alt="Review 2" class="rounded-xl h-52 w-full object-cover mt-2" />
+                <img src="./assets/image/Rectangle 36.png" alt="Review 2" class="rounded-xl h-52 w-full object-cover mt-2" width="415" height="208" />
               </div>
             </div>
 
@@ -463,28 +465,28 @@
               <div class="relative bg-white rounded-3xl p-7 shadow-sm flex flex-col justify-between border border-gray-100 h-full z-10">
                 <div>
                   <h3 class="font-bold text-blackish-greeen text-[24px] leading-tight mb-4">“A real sense of community, nurtured”</h3>
-                  <p class="review-text text-gray-500 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+                  <p class="review-text text-blackish-green/50 font-medium text-[15px] mb-2 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
 
                   <div class="text-right mb-4">
                     <button class="btn-view-more text-blackish-greeen font-bold text-sm hover:underline cursor-pointer">View more</button>
                   </div>
 
                   <ul class="flex gap-3 mb-5">
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
-                    <li><img src="./assets/image/star_yellow.svg" alt="star" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
+                    <li><img src="./assets/image/star_yellow.svg" alt="star" width="16" height="16" /></li>
                   </ul>
 
                   <p class="font-bold text-blackish-greeen">Eliot</p>
-                  <small class="text-gray-400 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
-                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-gray-500">
-                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" />
+                  <small class="text-blackish-green/70 block mb-4 text-[13px] font-medium">Weave Studios – Kai Tak</small>
+                  <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-blackish-green/50">
+                    <img src="./assets/image/flat-color-icons_google.png" alt="Google" class="w-4 h-4" width="16" height="16" />
                     Google
                   </div>
                 </div>
-                <img src="./assets/image/Rectangle 36 (1).png" alt="Review 3" class="rounded-xl h-52 w-full object-cover mt-2" />
+                <img src="./assets/image/Rectangle 36 (1).png" alt="Review 3" class="rounded-xl h-52 w-full object-cover mt-2" width="415" height="208" />
               </div>
             </div>
           </div>
