@@ -9,6 +9,23 @@ export async function initFavorites() {
   let allHotels = [];
   let allFlights = [];
 
+  function getResolvedImageUrl(imagePath) {
+    if (!imagePath) return "";
+    if (imagePath.startsWith("http") || imagePath.startsWith("/")) {
+      return imagePath;
+    }
+    let cleanPath = imagePath.replace(/^(\.\.\/)+/, "");
+    if (cleanPath.startsWith("assets/")) {
+      cleanPath = cleanPath.replace("assets/", "");
+    }
+
+    try {
+      return new URL(`../../${cleanPath}`, import.meta.url).href;
+    } catch (e) {
+      return imagePath;
+    }
+  }
+
   // --- HÀM ANIMATION TRƯỢT TAB ---
   function moveIndicator(tab) {
     if (!indicator) return;
@@ -37,13 +54,16 @@ export async function initFavorites() {
 
   // --- 2. FETCH CÙNG LÚC 2 FILE JSON ---
   try {
-    const [resHotels, resFlights] = await Promise.all([fetch("../assets/data/hotels.json?v=" + new Date().getTime()), fetch("../assets/data/flights.json?v=" + new Date().getTime())]);
+    const hotelsUrl = new URL("/assets/data/hotels.json", import.meta.url).href;
+    const flightsUrl = new URL("/assets/data/flights.json", import.meta.url).href;
+
+    const [resHotels, resFlights] = await Promise.all([fetch(hotelsUrl), fetch(flightsUrl)]);
+
     if (resHotels.ok) allHotels = await resHotels.json();
     if (resFlights.ok) allFlights = await resFlights.json();
   } catch (err) {
     console.error("Lỗi fetch dữ liệu yêu thích:", err);
   }
-
   // --- 3. HÀM RENDER CHÍNH ---
   function renderCurrentTab() {
     updateTabCounts();
@@ -56,32 +76,31 @@ export async function initFavorites() {
         return;
       }
 
-      const favHotels = allHotels.filter((hotel) => hotelIds.includes(hotel.id));
+      const favHotels = allHotels.filter((hotel) => hotelIds.includes(String(hotel.id)));
       container.innerHTML = favHotels
         .map(
           (hotel) => /* Cấu trúc HTML thẻ khách sạn (giữ nguyên như trước) */ `
         <li>
           <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
             <div class="relative w-full h-64 md:h-full min-h-60">
-              <img src="${hotel.image}" alt="${hotel.name}" class="absolute inset-0 w-full h-full object-cover" />
-              <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">${hotel.imagesCount || 9} images</span>
+              <img src="${getResolvedImageUrl(hotel.image)}" alt="${hotel.name}" class="absolute inset-0 w-full h-full object-cover" />  <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">${hotel.imagesCount || 9} images</span>
             </div>
             <div class="md:col-span-2 flex flex-col p-6">
               <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                 <div class="flex flex-col gap-3">
                   <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">${hotel.name}</h2>
                   <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
-                    <img src="../assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    <img src="${getResolvedImageUrl("../image/location_light.svg")}" alt="location" class="w-4 h-4 shrink-0" />
                     ${hotel.location}
                   </span>
                   <div class="flex items-center gap-6 mt-1">
                     <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
-                      <img src="../assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      <img src="${getResolvedImageUrl("../image/5-stars.svg")}" alt="5 star" class="w-16" />
                       ${hotel.stars || 5} Star Hotel
                     </span>
                     <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
-                      <img src="../assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
-                      <strong>${hotel.amenitiesCount || 20}+</strong> Amenities
+                     <img src="${getResolvedImageUrl("../image/cafe_light.svg")}" alt="amenities" class="w-4 h-4 shrink-0" />
+                     <strong>${hotel.amenitiesCount || 20}+</strong> Amenities
                     </span>
                   </div>
                   <div class="flex items-center gap-2 mt-1">
@@ -124,14 +143,14 @@ export async function initFavorites() {
         return;
       }
 
-      const favFlights = allFlights.filter((flight) => flightIds.includes(flight.id));
+      const favFlights = allFlights.filter((flight) => flightIds.includes(String(flight.id)));
       container.innerHTML = favFlights
         .map(
           (ticket) => /* Cấu trúc HTML vé chuyến bay (giữ nguyên như trước) */ `
         <li>
           <article class="flex flex-col md:flex-row bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] p-4 md:p-6 gap-4 md:gap-6 relative overflow-hidden">
             <div class="w-24 md:w-40 mx-auto md:mx-0 shrink-0 flex items-center justify-center">
-              <img class="w-full object-contain max-h-16" src="${ticket.airlineLogo}" alt="${ticket.airlineName}" />
+              <img class="w-full object-contain max-h-16" src="${getResolvedImageUrl(ticket.airlineLogo)}" alt="${ticket.airlineName}" />
             </div>
             <div class="flex-1 flex flex-col justify-between gap-4 md:gap-6 min-w-0">
               <div class="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0">
