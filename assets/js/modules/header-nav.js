@@ -1,6 +1,22 @@
 export function initNav() {
   const mobileToggle = document.querySelector('[aria-controls="nav-mobile"]');
   const mobileMenu = document.getElementById("nav-mobile");
+  const userStr = localStorage.getItem("golobe_current_user");
+
+  if (userStr) {
+    const user = JSON.parse(userStr);
+
+    const displayUserName = document.getElementById("display-user-name");
+    if (displayUserName) {
+      displayUserName.textContent = user.name;
+    }
+
+    const dropdownUserName = document.getElementById("dropdown-user-name");
+    if (dropdownUserName) {
+      // Thêm dấu chấm phía sau cho giống với thiết kế gốc
+      dropdownUserName.textContent = user.name + ".";
+    }
+  }
 
   function setMobileOpen(open) {
     if (!mobileMenu || !mobileToggle) return;

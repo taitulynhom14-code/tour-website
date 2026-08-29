@@ -25,7 +25,7 @@
     <!-- Logo Center -->
     <div class="flex shrink-0 items-center">
       <a href="../index.html" class="flex items-center">
-        <img src="/assets/image/logo-small.png" alt="Golobe" class="h-6 md:h-auto" />
+        <img src="/assets/image/logo-small.png" width="110" height="36" alt="Golobe" class="h-6 md:h-auto" />
       </a>
     </div>
 
@@ -58,9 +58,9 @@
           <!-- User Menu -->
           <div id="user-dropdown" class="hidden flex-col absolute p-6 right-0 top-5 md:top-full mt-5 w-72 max-w-xs rounded-xl z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)]">
             <div class="flex items-center gap-4 py-2">
-              <img src="/assets/image/user-avt.svg" alt="John Doe." />
+              <img src="/assets/image/user-avt.png" alt="John Doe." />
               <div class="flex flex-col w-full gap-1">
-                <span class="text-base font-semibold text-blackish-green">John Doe.</span>
+                <span id="dropdown-user-name" class="font-semibold text-blackish-green">John Doe.</span>
                 <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
               </div>
             </div>
@@ -76,7 +76,7 @@
                 </a>
               </li>
               <li>
-                <a href="../login-signup/account_payment-methods.html" class="dropdown-link">
+                <a href="../login-signup/account.html#payment-section" class="dropdown-link">
                   <img src="/assets/image/card_light.png" alt="#" />
                   Payments
                   <img src="/assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
@@ -118,20 +118,20 @@
   <nav id="nav-mobile" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 z-40">
     <ul class="flex flex-col m-0 p-4 list-none gap-2">
       <li>
-        <a href="../flight-flow/find-flight.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if flight_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
+        <a href="../flight-flow/find-flight.html" class="flex items-center gap-3  text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if flight_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
           <img src="/assets/image/airplane_light.svg" alt="Flight" class="w-5 h-5" />
           Find Flight
         </a>
       </li>
       <li>
-        <a href="../hotel-flow/find-stays.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if stays_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
+        <a href="../hotel-flow/find-stays.html" class="flex items-center gap-3  text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if stays_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
           <img src="/assets/image/bed_light.svg" alt="Stays" class="w-5 h-5" />
           Find Stays
         </a>
       </li>
       <!-- Favourites link visible on mobile if logged in -->
       <li>
-        <a href="../favorites.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if favourites_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
+        <a href="../favorites.html" class="flex items-center gap-3  text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if favourites_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
           <img src="/assets/image/heart_light.svg" alt="Heart" class="w-5 h-5" />
           Favourites
         </a>
