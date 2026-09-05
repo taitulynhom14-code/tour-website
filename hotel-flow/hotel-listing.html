@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golobe - Tour Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tìm kiếm và đặt phòng khách sạn, motel, resort tiện nghi với giá tốt nhất cùng bộ lọc thông minh trên Golobe." />
+    <meta property="og:title" content="Danh Sách Khách Sạn - Hotel Listing | Golobe" />
+    <meta property="og:description" content="Tìm kiếm và đặt phòng khách sạn, motel, resort tiện nghi với giá tốt nhất trên Golobe." />
+    <meta property="og:image" content="../assets/image/banner.png" />
+    <meta property="og:url" content="https://yourdomain.com/hotel-listing.html" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="../assets/css/input.css" />
   </head>
 
@@ -68,8 +77,8 @@
           <div class="relative w-full h-12">
             <div class="absolute top-3 w-full h-0.5 rounded bg-blackish-green/10"></div>
             <div id="slider-fill" class="absolute top-3 h-0.5 rounded bg-blackish-green"></div>
-            <input type="range" id="slider-min" class="absolute top-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-mint-green [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md m-0" min="50" max="1200" value="50" step="10" />
-            <input type="range" id="slider-max" class="absolute top-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-mint-green [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md m-0" min="50" max="1200" value="1200" step="10" />
+            <input type="range" id="slider-min" aria-label="Minimum price" class="absolute top-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-mint-green [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md m-0" min="50" max="1200" value="50" step="10" />
+            <input type="range" id="slider-max" aria-label="Maximum price" class="absolute top-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-mint-green [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md m-0" min="50" max="1200" value="1200" step="10" />
             <div class="flex justify-between absolute top-8 w-full">
               <span id="label-min" class="text-xs font-medium text-blackish-green">$50</span>
               <span id="label-max" class="text-xs font-medium text-blackish-green">$1200</span>

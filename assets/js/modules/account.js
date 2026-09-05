@@ -3,6 +3,27 @@ export function initAccountTabs() {
   const mainTabs = document.querySelectorAll(".main-tab");
   const accountContents = document.querySelectorAll(".account-content");
   const mainIndicator = document.querySelector(".main-tab-indicator");
+  const userStr = localStorage.getItem("golobe_current_user");
+
+  if (userStr) {
+    const user = JSON.parse(userStr);
+
+    // 1. Cập nhật phần Profile Card (dưới avatar to)
+    const profileName = document.getElementById("profile-name");
+    const profileEmail = document.getElementById("profile-email");
+
+    if (profileName) profileName.textContent = user.name + "."; // Thêm dấu chấm cho giống thiết kế
+    if (profileEmail) profileEmail.textContent = user.email;
+
+    // 2. Cập nhật phần Account Details trong tab Account
+    const accDetailName = document.getElementById("account-detail-name");
+    const accDetailEmail = document.getElementById("account-detail-email");
+    const accDetailPhone = document.getElementById("account-detail-phone");
+
+    if (accDetailName) accDetailName.textContent = user.name;
+    if (accDetailEmail) accDetailEmail.textContent = user.email;
+    if (accDetailPhone && user.phone) accDetailPhone.textContent = user.phone;
+  }
 
   function updateMainIndicator(tab) {
     if (!mainIndicator || !tab) return;
@@ -68,15 +89,36 @@ export function initAccountTabs() {
     });
   });
 
-  // --- 3. KHỞI TẠO INDICATOR LÚC MỚI VÀO TRANG ---
+  // --- 3. KHỞI TẠO INDICATOR LÚC MỚI VÀO TRANG & XỬ LÝ HASH TỪ URL ---
+
+  // Tạo một hàm riêng để xử lý việc chuyển tab dựa trên Hash
+  function handleHashChange() {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.substring(1);
+      const targetTab = document.querySelector(`.main-tab[data-target="${targetId}"]`);
+      if (targetTab) {
+        targetTab.click(); // Tự động click vào tab tương ứng
+      }
+    }
+  }
+
+  // Lắng nghe sự thay đổi hash trên URL (dùng khi user click dropdown lúc đang ở sẵn trang account)
+  window.addEventListener("hashchange", handleHashChange);
+
   setTimeout(() => {
-    const activeMain = document.querySelector(".main-tab--active");
-    if (activeMain) updateMainIndicator(activeMain);
+    // Kiểm tra lúc trang vừa load xong (dùng khi user click từ một trang khác tới)
+    if (window.location.hash) {
+      handleHashChange();
+    } else {
+      // Khởi tạo trạng thái mặc định nếu không có Hash
+      const activeMain = document.querySelector(".main-tab--active");
+      if (activeMain) updateMainIndicator(activeMain);
 
-    const activeSub = document.querySelector(".sub-tab--active");
-    if (activeSub) updateSubIndicator(activeSub);
+      const activeSub = document.querySelector(".sub-tab--active");
+      if (activeSub) updateSubIndicator(activeSub);
+    }
   }, 100);
-
   // --- 4. XỬ LÝ ĐÓNG MỞ MODAL PAYMENT ---
   const openModalBtn = document.getElementById("open-popup-btn");
   const uploadPopup = document.getElementById("upload-popup");

@@ -17,11 +17,11 @@ export function initHotelListing() {
     if (imagePath.startsWith("http") || imagePath.startsWith("/")) {
       return imagePath;
     }
-    let cleanPath = imagePath.replace(/^(\.\.\/)+/, '');
-    if (cleanPath.startsWith('assets/')) {
-      cleanPath = cleanPath.replace('assets/', '');
+    let cleanPath = imagePath.replace(/^(\.\.\/)+/, "");
+    if (cleanPath.startsWith("assets/")) {
+      cleanPath = cleanPath.replace("assets/", "");
     }
-    
+
     try {
       return new URL(`../../${cleanPath}`, import.meta.url).href;
     } catch (e) {
@@ -84,7 +84,7 @@ export function initHotelListing() {
   // --- 3. FETCH DỮ LIỆU TỪ JSON (Chuẩn cho Vercel & Vite) ---
   async function fetchHotels() {
     try {
-      const jsonUrl = new URL('../../data/hotels.json', import.meta.url).href;
+      const jsonUrl = new URL("../../data/hotels.json", import.meta.url).href;
       const response = await fetch(jsonUrl);
       if (!response.ok) {
         console.error("Lỗi fetch: Không lấy được dữ liệu khách sạn");
@@ -155,16 +155,16 @@ export function initHotelListing() {
               <div class="flex flex-col gap-3">
                 <h2 class="text-2xl font-bold text-blackish-green leading-none m-0">${hotel.name}</h2>
                 <span class="flex items-center gap-1 text-xs font-medium text-blackish-green/75">
-                  <img src="${getResolvedImageUrl('../image/location_light.svg')}" alt="location" class="w-4 h-4" />
+                  <img src="${getResolvedImageUrl("../image/location_light.svg")}" alt="location" class="w-4 h-4" />
                   ${hotel.location}
                 </span>
                 <div class="flex items-center gap-8 text-xs font-medium text-blackish-green">
                   <span class="flex items-center gap-1">
-                    <img src="${getResolvedImageUrl('../image/5-stars.svg')}" alt="5 star" class="w-20" />
+                    <img src="${getResolvedImageUrl("../image/5-stars.svg")}" alt="5 star" class="w-20" />
                     ${hotel.stars || 5} Star Hotel
                   </span>
                   <span class="flex items-center gap-1">
-                    <img src="${getResolvedImageUrl('../image/cafe_light.svg')}" alt="amenities" class="w-4 h-4" />
+                    <img src="${getResolvedImageUrl("../image/cafe_light.svg")}" alt="amenities" class="w-4 h-4" />
                     <strong>${hotel.amenitiesCount || 20}+</strong> Amenities
                   </span>
                 </div>
@@ -186,7 +186,7 @@ export function initHotelListing() {
             <div class="flex gap-4">
               <label class="btn-favorite group">
                 <input type="checkbox" class="peer hidden favorite-checkbox" data-id="${hotel.id}" ${isFavorited} />
-                <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
+                <div class="w-5 h-5 bg-[url('../image/heart_uncheck.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
                 <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
               </label>
               <a href="hotel-detail-page.html?id=${hotel.id}" class="btn-view-place"> View Place </a>
@@ -284,3 +284,4 @@ export function initHotelListing() {
     cb.addEventListener("change", runFilter);
   });
 }
+

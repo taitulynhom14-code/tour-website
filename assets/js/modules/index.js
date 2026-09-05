@@ -5,16 +5,10 @@ export function initGlobalAuth() {
   const guestMenu = document.getElementById("guest-menu");
   const loggedInMenu = document.getElementById("logged-in-menu");
   const displayUserName = document.getElementById("display-user-name");
-  const displayUserNameDropdown = document.getElementById("display-user-name-dropdown");
-  const displayUserAvatar = document.getElementById("display-user-avatar");
 
-  // Các phần tử menu Responsive
-  const userMenuBtn = document.getElementById("user-menu-button");
-  const userDropdown = document.getElementById("user-dropdown");
-  
-  // Phần tử của Menu 3 gạch (Hamburger)
-  const mobileMenuBtn = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu"); 
+  // Đã sửa ID ở đây cho khớp với HTML của bạn
+  const displayUserNameDropdown = document.getElementById("dropdown-user-name");
+  const displayUserAvatar = document.getElementById("display-user-avatar");
 
   // 1. ĐỒNG BỘ HIỂN THỊ HEADER & THÔNG TIN USER
   if (currentUser && currentUser.isLoggedIn) {
@@ -25,16 +19,17 @@ export function initGlobalAuth() {
     }
 
     if (displayUserName) displayUserName.textContent = currentUser.name;
-    if (displayUserNameDropdown) displayUserNameDropdown.textContent = currentUser.name;
+    // Thêm dấu chấm cho giống định dạng gốc
+    if (displayUserNameDropdown) displayUserNameDropdown.textContent = currentUser.name + ".";
 
     if (displayUserAvatar && currentUser.avatar) {
       if (currentUser.avatar.startsWith("http")) {
         displayUserAvatar.src = currentUser.avatar;
       } else {
-        const fileName = currentUser.avatar.split('/').pop();
+        const fileName = currentUser.avatar.split("/").pop();
         const absoluteAvatarUrl = new URL(`../../image/${fileName}`, import.meta.url).href;
         displayUserAvatar.src = absoluteAvatarUrl;
-        
+
         displayUserAvatar.onerror = function () {
           this.src = new URL(`../../image/default-avatar.png`, import.meta.url).href;
         };
@@ -42,51 +37,7 @@ export function initGlobalAuth() {
     }
   }
 
-  // 2. XỬ LÝ DROPDOWN USER (DESKTOP & MOBILE)
-  if (userMenuBtn && userDropdown) {
-    userMenuBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); 
-      if (mobileMenu) {
-        mobileMenu.classList.add("hidden");
-        mobileMenu.classList.remove("flex");
-      }
-      userDropdown.classList.toggle("hidden");
-      userDropdown.classList.toggle("flex");
-    });
-  }
-
-  // 3. XỬ LÝ MENU ĐIỆN THOẠI (DẤU 3 GẠCH)
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài document
-      console.log("Nút 3 gạch đã được bấm thành công!"); // Kiểm tra trực tiếp trên F12 -> Console
-
-      // Đóng user dropdown nếu đang mở để tránh đè giao diện[cite: 16]
-      if (userDropdown && !userDropdown.classList.contains("hidden")) {
-        userDropdown.classList.add("hidden");
-        userDropdown.classList.remove("flex");
-      }
-      
-      // Bật/tắt menu di động[cite: 16]
-      mobileMenu.classList.toggle("hidden");
-      mobileMenu.classList.toggle("flex");
-    });
-  }
-
-  // 4. TỰ ĐỘNG ĐÓNG MENU KHI CLICK RA NGOÀI MÀN HÌNH
-  document.addEventListener("click", (e) => {
-    // Đóng User Dropdown
-    if (userDropdown && userMenuBtn && !userDropdown.contains(e.target) && !userMenuBtn.contains(e.target)) {
-      userDropdown.classList.add("hidden");
-      userDropdown.classList.remove("flex");
-    }
-    
-    // Đóng Mobile Menu (Menu 3 gạch)
-    if (mobileMenu && mobileMenuBtn && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-      mobileMenu.classList.add("hidden");
-      mobileMenu.classList.remove("flex");
-    }
-  });
+  // LƯU Ý: Đã xóa phần 2, 3, 4 (Xử lý đóng mở Menu/Dropdown) ở đây vì file header-nav.js đã đảm nhiệm việc đó rồi. Việc để cả hai sẽ gây xung đột không mở được dropdown.
 
   // 5. XỬ LÝ LỆNH ĐĂNG XUẤT (LOGOUT)
   const btnLogout = document.getElementById("btn-logout");
@@ -99,7 +50,6 @@ export function initGlobalAuth() {
     });
   }
 }
-
 export function initHome() {
   // --- 1. SỬA LỖI NÚT "VIEW MORE" ---
   const viewMoreBtns = document.querySelectorAll(".btn-view-more");
@@ -172,3 +122,4 @@ export function initHome() {
     }
   };
 }
+
